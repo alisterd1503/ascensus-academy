@@ -1,6 +1,8 @@
 ---
 import Card from "../UI/Card.astro";
 
+const { id } = Astro.props;
+
 const usps = [
   {
     title: "Only A* Tutors",
@@ -25,7 +27,7 @@ const usps = [
 ];
 ---
 
-<section class="py-16 bg-white">
+<section id={id} class="py-16 bg-white">
   <div class="container">
     <div class="text-center mb-12">
       <h2 class="text-3xl md:text-4xl font-bold mb-4">What We Offer</h2>
