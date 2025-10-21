@@ -1,0 +1,65 @@
+---
+import Card from "../UI/Card.astro";
+
+const sermons = [
+  {
+    subject: "Biology",
+    summary: "Caption",
+    image: "/uploads/sermons/love-in-action.webp",
+  },
+  {
+    subject: "Chemistry",
+    summary: "Caption",
+    image: "/uploads/sermons/love-in-action.webp",
+  },
+  {
+    subject: "Physics",
+    summary: "Caption",
+    image: "/uploads/sermons/love-in-action.webp",
+  },
+  {
+    subject: "Maths",
+    summary: "Caption",
+    image: "/uploads/sermons/love-in-action.webp",
+  },
+  {
+    subject: "Further Maths",
+    summary: "Caption",
+    image: "/uploads/sermons/love-in-action.webp",
+  },
+  {
+    subject: "Economics",
+    summary: "Caption",
+    image: "/uploads/sermons/love-in-action.webp",
+  }
+];
+---
+
+ <section class="py-16 bg-gray-50 mb-10">
+  <div class="container">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Subjects We Cover</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Add some subtitle here
+        </p>
+      </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {sermons.map((sermon) => {
+        return (
+        <div class="card text-center p-8">
+          <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-primary-100 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">{sermon.subject}</h3>
+          <p class="text-gray-700 mb-4">
+            {sermon.summary}
+          </p>
+        </div>
+      )
+      })}
+    </div>
+  </div>
+</section>
