@@ -1,7 +1,7 @@
 ---
 import Card from "../UI/Card.astro";
 
-const sermons = [
+const usps = [
   {
     title: "Only A* Tutors",
     summary: "We are a team of A* achievers, stemming from the most prestigious institutions across the UK such as LSE and Imperial College London.",
@@ -35,16 +35,16 @@ const sermons = [
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      {sermons.map((sermon) => {
+      {usps.map((usp) => {
         return <Card
           className="shadow"
-          title={sermon.title}
+          title={usp.title}
           image={{
-            src: sermon.image || "/images/sermon-placeholder.webp",
-            alt: sermon.title
+            src: usp.image || "/images/usp-placeholder.webp",
+            alt: usp.title
           }}
         >
-          <p class="text-gray-700 mb-4">{sermon.summary}</p>
+          <p class="text-gray-700 mb-4">{usp.summary}</p>
         </Card>
       })}
     </div>
