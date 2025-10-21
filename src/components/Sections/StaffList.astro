@@ -8,6 +8,31 @@ const allStaff = await getCollection("staff", ({ data }) =>
 const staffMembers = allStaff
   .sort((a, b) => a.data.order - b.data.order)
   .slice(0, showAll ? undefined : limit);
+
+const tutors = [
+  {
+    name: "Sabrina",
+    title: "Medicine at Imperial College London",
+    photo: "/uploads/staff/sarah-martinez.webp",
+    summary: "abrina is a calm, patient, and encouraging tutor studying Medicine at Imperial College London. Known for her clarity and steady approach, she helps students feel at ease with even the trickiest topics. Achieving A*AAA at A-level and having a strong background in Biology, Sabrina supports her students in building confidence, developing consistency, and making meaningful academic progress - one step at a time.",
+    subjects: "Physics, Biology"
+  },
+  {
+    name: "Sabrina",
+    title: "Medicine at Imperial College London",
+    photo: "/uploads/staff/sarah-martinez.webp",
+    summary: "abrina is a calm, patient, and encouraging tutor studying Medicine at Imperial College London. Known for her clarity and steady approach, she helps students feel at ease with even the trickiest topics. Achieving A*AAA at A-level and having a strong background in Biology, Sabrina supports her students in building confidence, developing consistency, and making meaningful academic progress - one step at a time.",
+    subjects: "Physics, Maths"
+  },
+  {
+    name: "Sabrina",
+    title: "Medicine at Imperial College London",
+    photo: "/uploads/staff/sarah-martinez.webp",
+    summary: "abrina is a calm, patient, and encouraging tutor studying Medicine at Imperial College London. Known for her clarity and steady approach, she helps students feel at ease with even the trickiest topics. Achieving A*AAA at A-level and having a strong background in Biology, Sabrina supports her students in building confidence, developing consistency, and making meaningful academic progress - one step at a time.",
+    subjects: "Physics"
+  },
+];
+
 ---
 
 <!-- ================= STAFF GRID ================= -->
@@ -19,39 +44,24 @@ const staffMembers = allStaff
     </p>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
-      {staffMembers.map(staff => (
+      {tutors.map(tutor => (
         <div class="bg-white rounded-lg shadow overflow-hidden flex flex-col h-full">
           <!-- Foto (4:3) -->
           <div class="relative w-full pb-[100%]">
             <img
-              src={staff.data.image}
-              alt={staff.data.name}
+              src={tutor.photo}
+              alt={tutor.name}
               class="absolute inset-0 w-full h-full object-cover object-center"
             />
           </div>
           <div class="p-4 flex flex-col flex-1 justify-between">
             <div>
-              <h3 class="text-xl font-semibold mb-1">{staff.data.name}</h3>
-              <p class="text-primary-600 mb-2">{staff.data.title}</p>
-              <p class="text-gray-700 text-sm">{staff.data.bio}</p>
+              <h3 class="text-xl font-semibold mb-1">{tutor.name}</h3>
+              <p class="text-primary-600 mb-2">{tutor.title}</p>
+              <p class="text-gray-700 text-sm">{tutor.summary}</p>
             </div>
-            <div class="mt-4 space-y-1 text-sm">
-              {staff.data.email && (
-                <a
-                  href={`mailto:${staff.data.email}`}
-                  class="text-primary-600 hover:underline block"
-                >
-                  {staff.data.email}
-                </a>
-              )}
-              {staff.data.phone && (
-                <a
-                  href={`tel:${staff.data.phone}`}
-                  class="text-primary-600 hover:underline block"
-                >
-                  {staff.data.phone}
-                </a>
-              )}
+            <div class="mt-4 space-y-1 text-sm text-primary-600">
+                  {tutor.subjects}
             </div>
           </div>
         </div>
