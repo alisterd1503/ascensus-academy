@@ -1,46 +1,46 @@
 ---
 import { getCollection } from "astro:content";
+
+const { id } = Astro.props;
+
 const { showAll = true, limit = 6 } = Astro.props;
 
 const allStaff = await getCollection("staff", ({ data }) =>
   import.meta.env.PROD ? !data.draft : true
 );
-const staffMembers = allStaff
-  .sort((a, b) => a.data.order - b.data.order)
-  .slice(0, showAll ? undefined : limit);
 
 const tutors = [
   {
-    name: "Sabrina",
-    title: "Medicine at Imperial College London",
-    photo: "/uploads/staff/sarah-martinez.webp",
-    summary: "abrina is a calm, patient, and encouraging tutor studying Medicine at Imperial College London. Known for her clarity and steady approach, she helps students feel at ease with even the trickiest topics. Achieving A*AAA at A-level and having a strong background in Biology, Sabrina supports her students in building confidence, developing consistency, and making meaningful academic progress - one step at a time.",
-    subjects: "Physics, Biology"
+    name: "Seion",
+    title: "Physics at the University of Warwick",
+    photo: "/uploads/staff/seion.webp",
+    summary: "Seion is a clear-thinking, structured tutor studying Physics at the University of Warwick. He achieved A*A*A*A at A-Levels and scored 1st in his cohort for both A-level Physics and Mathematics. He brings a clear, step-by-step teaching style that helps students master even the most challenging topics. Providing a structured yet friendly approach, Seion focuses on breaking down challenging concepts into clear, manageable steps, whilst building deep understanding in his students.",
+    subjects: "Physics, Mathematics, Further Maths"
   },
   {
     name: "Sabrina",
     title: "Medicine at Imperial College London",
-    photo: "/uploads/staff/sarah-martinez.webp",
-    summary: "abrina is a calm, patient, and encouraging tutor studying Medicine at Imperial College London. Known for her clarity and steady approach, she helps students feel at ease with even the trickiest topics. Achieving A*AAA at A-level and having a strong background in Biology, Sabrina supports her students in building confidence, developing consistency, and making meaningful academic progress - one step at a time.",
-    subjects: "Physics, Maths"
+    photo: "/uploads/staff/sabrina.webp",
+    summary: "Sabrina is a calm, patient, and encouraging tutor studying Medicine at Imperial College London. Known for her clarity and steady approach, she helps students feel at ease with even the trickiest topics. Achieving A*AAA at A-level and having a strong background in Biology, Sabrina supports her students in building confidence, developing consistency, and making meaningful academic progress - one step at a time.",
+    subjects: "Biology, Chemistry"
   },
   {
-    name: "Sabrina",
-    title: "Medicine at Imperial College London",
-    photo: "/uploads/staff/sarah-martinez.webp",
-    summary: "abrina is a calm, patient, and encouraging tutor studying Medicine at Imperial College London. Known for her clarity and steady approach, she helps students feel at ease with even the trickiest topics. Achieving A*AAA at A-level and having a strong background in Biology, Sabrina supports her students in building confidence, developing consistency, and making meaningful academic progress - one step at a time.",
-    subjects: "Physics"
+    name: "Dilan",
+    title: "MORSE at the University of Warwick ",
+    photo: "/uploads/staff/dilan.webp",
+    summary: "Dilan studies MORSE (Mathematics, Operational Research, Statistics & Economics) at the University of Warwick - a degree that reflects his sharp quantitative skills and love for problem-solving. Achieving A*A*A* in Maths, Further Maths, and Physics, he brings a methodical and example-led approach to tutoring. He helps students understand the ‘why’ behind the method and apply it confidently in high-pressure exam settings.",
+    subjects: "Maths, Further Maths, Physics, Economics"
   },
 ];
 
 ---
 
 <!-- ================= STAFF GRID ================= -->
-<section id="staff" class="py-16 bg-white">
+<section id={id} class="py-16 bg-white">
   <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-4">Our Leadership Team</h2>
+    <h2 class="text-3xl font-bold text-center mb-4">Our Tutoring Team</h2>
     <p class="text-center text-gray-600 mb-12">
-      Meet the dedicated individuals who lead and serve our church community
+      Add some subtitle here
     </p>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
