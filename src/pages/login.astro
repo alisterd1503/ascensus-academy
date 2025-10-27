@@ -12,14 +12,30 @@ import PageHeader from "../components/Sections/PageHeader.astro";
     subtitle="Access your Ascensus Academy account"
     backgroundImage="/uploads/contact-header-bg.webp"
   />
-  
-  <!-- Contact Information -->
+
   <section class="py-16">
-    <div class="container">
-      <script
+  <div class="container">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+
+      <!-- Placeholder Image -->
+      <div class="w-full h-full flex items-center justify-center">
+        <img
+          src="/uploads/contact-header-bg.webp"
+          alt="Placeholder image"
+          class="rounded-xl shadow-md object-cover w-full h-full max-h-[600px]"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+
+      <div>
+        <script
         is:inline
         src="https://app.tutorbird.com/Widget/v4/Widget.ashx?settings=eyJTY2hvb2xJRCI6InNjaF9wNDNKViIsIldlYnNpdGVJRCI6Indic181eWxKWSIsIldlYnNpdGVCbG9ja0lEIjoid2JiX0hLWXJKciJ9"
       ></script>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 </BaseLayout>
