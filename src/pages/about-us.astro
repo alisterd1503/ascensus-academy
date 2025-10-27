@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PageHeader from "../components/Sections/PageHeader.astro";
+import Button from "../components/UI/Button.astro";
 ---
 
 <BaseLayout
@@ -67,6 +68,27 @@ import PageHeader from "../components/Sections/PageHeader.astro";
         <p class="text-xl text-gray-600 max-w-6xl mx-auto">
           At Ascensus Academy every student is paired with a personalised mentor: a high-achieving university student studying a similar course pathway. Mentors provide free guidance on personal statements, interviews, and student life, sharing insights from their own experiences to help pupils feel prepared, inspired, and supported at every step.
         </p>
+      </div>
+    </div>
+  </section>
+
+    <section 
+    class="py-20 bg-cover bg-center text-white"
+    style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/uploads/contact-header-bg.webp)"
+  >
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to Apply?</h2>
+        
+        <div class="flex flex-wrap justify-center gap-4">
+          <Button href="/apply" variant="primary" size="lg">
+            Apply Now
+          </Button>
+          
+          <Button href="/contact" variant="outline" size="lg" class="bg-white/10 text-white border-white hover:bg-white hover:text-gray-900 backdrop-blur-sm">
+            Contact Us
+          </Button>
+        </div>
       </div>
     </div>
   </section>
