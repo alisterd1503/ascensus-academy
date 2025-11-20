@@ -13,13 +13,12 @@ export interface Tutor {
   image: string;
   bio: string;
   subjects: string[];
-  achievements: string;
 }
 
 export interface Feature {
   title: string;
   description: string;
-  icon: React.ElementType;
+  image: string;
 }
 
 export interface Subjects {

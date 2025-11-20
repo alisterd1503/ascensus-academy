@@ -18,8 +18,7 @@ export const TUTORS: Tutor[] = [
     university: 'University of Warwick',
     course: 'Physics',
     image: '/uploads/tutors/seion.webp',
-    achievements: 'Achieved A*A*A* at A-Levels',
-    bio: 'Seion is a clear-thinking, structured tutor studying Physics at the University of Warwick. He scored 1st in his cohort for both A-level Physics and Mathematics. He brings a clear, step-by-step teaching style that helps students master even the most challenging topics.',
+    bio: 'Seion is a clear-thinking, structured tutor studying Physics at the University of Warwick. <b>He </b><b>achieved A*A*A*A at A-Levels</b> and scored <b>1st in his cohort for both A-level Physics and Mathematics.</b> He brings a clear, step-by-step teaching style that helps students master even the most challenging topics. Providing a structured yet friendly approach, Seion focuses on breaking down challenging concepts into clear, manageable steps, whilst building deep understanding in his students.',
     subjects: ['Physics', 'Mathematics', 'Further Maths']
   },
   {
@@ -28,18 +27,16 @@ export const TUTORS: Tutor[] = [
     university: 'Imperial College London',
     course: 'Medicine',
     image: '/uploads/tutors/sabrina.webp',
-    achievements: 'Achieved A*AAA at A-level',
-    bio: 'Sabrina is a calm, patient, and encouraging tutor studying Medicine at Imperial. Known for her clarity and steady approach, she helps students feel at ease with even the trickiest topics. She supports her students in building confidence and developing consistency.',
-    subjects: ['Biology', 'Chemistry']
+    bio: 'Sabrina is a calm, patient, and encouraging tutor studying Medicine at Imperial College London. Known for her clarity and steady approach, she helps students feel at ease with even the trickiest topics. <b>Achieving A*AAA at A-level</b> and having a <b>strong background in Biology</b>, Sabrina supports her students in building confidence, developing consistency, and making meaningful academic progress - one step at a time.',
+    subjects: ['Biology']
   },
   {
     id: 'dilan',
     name: 'Dilan',
     university: 'University of Warwick',
-    course: 'MORSE (Maths, OR, Stats, Econ)',
+    course: 'MORSE',
     image: '/uploads/tutors/dilan.webp',
-    achievements: 'Achieved A*A*A* in Maths, FM & Physics',
-    bio: 'Dilan studies MORSE at Warwick. He brings a methodical and example-led approach to tutoring. He helps students understand the "why" behind the method and apply it confidently in high-pressure exam settings.',
+    bio: 'Dilan studies MORSE (Mathematics, Operational Research, Statistics &amp; Economics) at the University of Warwick - a degree that reflects his sharp quantitative skills and love for problem-solving. <b>Achieving A*A*A* in Maths, Further Maths, and Physics</b>, he brings a methodical and example-led approach to tutoring. He helps students understand the ‘why’ behind the method and apply it confidently in high-pressure exam settings.',
     subjects: ['Maths', 'Further Maths', 'Physics', 'Economics']
   }
 ];
@@ -48,22 +45,22 @@ export const FEATURES: Feature[] = [
   {
     title: 'Only A* Tutors',
     description: 'We are a team of <b>A* achievers</b>, stemming from the most prestigious institutions across the UK such as <b>LSE</b> and <b>Imperial College London</b>.',
-    icon: Award
+    image: "/uploads/usp/astar-tutors.webp"
   },
   {
     title: 'Free Mentoring',
     description: 'Every student is paired with a <b>dedicated mentor</b> at <b>no extra cost</b>. This includes guidance on subject choices and university applications.',
-    icon: Users
+    image: "/uploads/usp/free-mentoring.webp"
   },
   {
     title: 'Vetted Mentors',
     description: 'Every tutor at Ascensus Academy has been <b>DBS checked</b> and <b>ID verified</b>, so you can feel confident about who’s teaching your child.',
-    icon: UserCheck
+    image: "/uploads/usp/vetted-mentors.webp"
   },
   {
     title: 'Tailored 1-to-1 Lessons',
     description: 'Our <b>1-1 sessions</b> are online and personalised, giving students focused support that adapts to their individual needs.',
-    icon: Puzzle
+    image: "/uploads/usp/tailored-lessons.webp"
   }
 ];
 

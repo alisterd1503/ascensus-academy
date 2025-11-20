@@ -28,15 +28,9 @@ const Tutors: React.FC = () => {
                 </div>
                 <div className="p-8 flex-grow flex flex-col">
                   <h3 className="text-2xl font-bold text-primary mb-1">{tutor.name}</h3>
-                  <p className="text-gray-500 font-medium mb-6 text-sm tracking-wide">{tutor.course} at <span className="text-primary">{tutor.university}</span></p>
-                  
-                  <div className="mb-6 bg-blue-50/50 p-4 border-l-2 border-primary">
-                    <p className="text-sm font-medium text-gray-800 italic">"{tutor.achievements}"</p>
-                  </div>
+                  <p className="text-primary font-medium mb-6 text-sm tracking-wide">{tutor.course} at <span className="text-primary">{tutor.university}</span></p>
 
-                  <p className="text-gray-600 text-sm leading-relaxed mb-8 flex-grow font-light">
-                    {tutor.bio}
-                  </p>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-8 flex-grow font-light" dangerouslySetInnerHTML={{ __html: tutor.bio }} />
 
                   <div className="pt-6 border-t border-gray-100">
                     <div className="flex flex-wrap gap-2">

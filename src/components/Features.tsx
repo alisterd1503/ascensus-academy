@@ -19,8 +19,14 @@ const Features: React.FC = () => {
               <div 
                 className="bg-white p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center group h-full"
               >
-                <div className="p-5 bg-gray-50 rounded-full text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                  <feature.icon className="h-8 w-8" />
+                <div className="p-0 rounded-full text-primary mb-8 duration-300">
+                  <img
+                    src={feature.image}
+                    alt={feature.title}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover transition-transform duration-300 ease-in-out scale-90 group-hover:scale-105"
+                  />
                 </div>
                 <h3 className="text-xl font-bold text-primary mb-4">{feature.title}</h3>
                 <p className="text-gray-600 leading-relaxed text-sm font-light" dangerouslySetInnerHTML={{ __html: feature.description }} />

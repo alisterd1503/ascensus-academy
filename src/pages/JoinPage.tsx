@@ -38,7 +38,7 @@ const JoinPage: React.FC = () => {
                 {/* LEFT: TutorBird Form */}
                 <div
                 ref={scriptContainer}
-                className="bg-gray-50 p-0 rounded-md shadow-md flex-1"
+                className="bg-gray-50 p-0 rounded-2xl shadow-md flex-1"
                 ></div>
             </div>
           </div>

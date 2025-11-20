@@ -33,7 +33,7 @@ const MedWorkshop: React.FC = () => {
               {/* LEFT: TutorBird Form */}
                 <div
                 ref={scriptContainer}
-                className="bg-gray-50 p-0 rounded-md shadow-md flex-1"
+                className="p-0 rounded-2xl shadow-md flex-1"
                 ></div>
 
                 {/* RIGHT: Image + PriceCard stacked */}
@@ -44,7 +44,7 @@ const MedWorkshop: React.FC = () => {
                     </div>
 
                     {/* Workshop Image */}
-                    <div className="w-full overflow-hidden rounded-md shadow-md max-h-1/2">
+                    <div className="w-full overflow-hidden rounded-md shadow-md max-h-[270px]">
                         <img
                         src="/uploads/med-workshop.webp"
                         alt="Medicine Workshop"

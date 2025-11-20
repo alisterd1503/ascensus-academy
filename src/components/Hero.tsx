@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
             <span className="font-logo">Ascensus Academy</span>
           </h1>
           <p className="text-l md:text-xl text-gray-200 mb-12 font-light tracking-wide tracking-[0.30em] md:tracking-[0.50em]">
-            For students, By Students.
+            For Students, By Students.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
