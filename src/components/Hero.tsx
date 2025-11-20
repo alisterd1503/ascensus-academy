@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1627556592933-ffe99c1cd9eb?q=80&w=2670&auto=format&fit=crop"
+          src="/uploads/index-hero.webp"
           alt="Graduation caps in sky"
           className="w-full h-full object-cover"
         />
@@ -24,18 +24,18 @@ const Hero: React.FC = () => {
             <span className="text-blue-100">Ascensus Academy</span>
           </h1>
           <p className="text-xl md:text-3xl text-gray-200 mb-12 font-light tracking-wide">
-            For students, by students.
+            For students, By Students.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="bg-white text-primary hover:bg-gray-100 px-10 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 shadow-xl flex items-center justify-center">
+            <a href="#services" className="bg-white text-primary hover:bg-gray-100 px-10 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 shadow-xl flex items-center justify-center">
               View Our Services
               <ChevronRight className="ml-2 h-5 w-5" />
-            </button>
-            <button className="bg-transparent border-2 border-white text-white hover:bg-white/10 px-10 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 shadow-xl flex items-center justify-center">
+            </a>
+            <a href="#tutors" className="bg-transparent border-2 border-white text-white hover:bg-white/10 px-10 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 shadow-xl flex items-center justify-center">
               <Users className="mr-2 h-5 w-5" />
               Meet the Team
-            </button>
+            </a>
           </div>
         </Reveal>
       </div>

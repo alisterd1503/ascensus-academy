@@ -21,7 +21,7 @@ const CTA: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <button className="bg-white hover:bg-gray-100 text-primary px-12 py-5 rounded-lg font-bold text-lg shadow-xl transition-transform transform hover:-translate-y-1">
+            <button className="bg-white hover:bg-gray-100 text-primary px-12 py-5 rounded-md font-bold text-lg shadow-xl transition-transform transform hover:-translate-y-1">
               Sign Up
             </button>
             <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary px-12 py-5 rounded-lg font-bold text-lg shadow-xl transition-all transform hover:-translate-y-1">

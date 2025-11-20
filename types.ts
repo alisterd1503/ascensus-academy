@@ -21,3 +21,22 @@ export interface Feature {
   description: string;
   icon: React.ElementType;
 }
+
+export interface Subjects {
+  subject: string;
+  image: string;
+}
+
+export interface Pricing {
+  title: string;
+  price: string;
+  points: string[];
+  secondaryTitle?: string;
+  secondaryPoints?: string[];
+}
+
+export interface Contact {
+  title: string;
+  description: string;
+  email: string;
+}

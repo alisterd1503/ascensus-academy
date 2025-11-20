@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, GraduationCap } from 'lucide-react';
 import { NAV_ITEMS } from '../constants';
+import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,28 +23,42 @@ const Navbar: React.FC = () => {
       {/* Increased max-width to 1800px and adjusted padding for better spacing */}
       <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
         <div className="flex justify-between items-center">
+          
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
-            <GraduationCap className={`h-9 w-9 mr-3 transition-colors ${isSolid ? 'text-primary' : 'text-white'}`} />
-            <span className={`font-serif text-2xl font-bold tracking-tight transition-colors ${isSolid ? 'text-primary' : 'text-white'}`}>
-              Ascensus Academy
-            </span>
+            <a href="/" className="flex items-end transition-colors duration-500">
+              <span className="sr-only">Ascensus Academy</span>
+
+              {/* Logo Image */}
+              <img
+                src="/main-logo.svg"
+                alt="Ascensus Academy Logo"
+                className={`h-12 w-auto mr-2 transition-all duration-500 ${
+                  isSolid ? 'filter-none' : 'invert brightness-0'
+                }`}
+              />
+
+              {/* Logo Text */}
+              <span className={`text-3xl font-bold font-serif transition-colors duration-500 ${isSolid ? 'text-primary-800' : 'text-white'}`}>
+                Ascensus Academy
+              </span>
+            </a>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden xl:flex items-center space-x-8">
             {NAV_ITEMS.map((item) => (
-              <a
+              <Link
                 key={item.label}
-                href={item.href}
+                to={item.href}
                 className={`font-medium transition-colors text-sm uppercase tracking-widest ${isSolid ? 'text-primary hover:text-accent' : 'text-white/90 hover:text-white'}`}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
-            <button className={`px-6 py-3 rounded-full transition-colors font-medium text-sm tracking-wide ${isSolid ? 'bg-primary hover:bg-primary-light text-white' : 'bg-white text-primary hover:bg-gray-100'}`}>
+            <a href="/login" className={`px-6 py-3 rounded-full transition-colors font-medium text-sm tracking-wide ${isSolid ? 'bg-primary hover:bg-primary-light text-white' : 'bg-white text-primary hover:bg-gray-100'}`}>
               Login
-            </button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}

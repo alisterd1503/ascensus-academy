@@ -10,11 +10,11 @@ const About: React.FC = () => {
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
             <div className="w-full lg:w-1/2 relative">
               <Reveal>
-                <div className="absolute top-6 -left-6 w-full h-full bg-gray-100 rounded-sm -z-10"></div>
+                <div className="absolute top-6 -left-6 w-full h-full bg-gray-100 rounded-md -z-10"></div>
                 <img
-                  src="https://images.unsplash.com/photo-1513258496098-3ec6006a7617?q=80&w=2670&auto=format&fit=crop"
+                  src="/uploads/our-story.webp"
                   alt="Student reading book"
-                  className="rounded-sm shadow-2xl w-full h-[500px] object-cover"
+                  className="rounded-md shadow-2xl w-full h-[500px] object-cover"
                 />
               </Reveal>
             </div>
@@ -33,7 +33,7 @@ const About: React.FC = () => {
                     Here, every student is paired with a <span className="font-medium text-primary">personalised mentor</span>: a high achieving university student studying a similar course pathway.
                   </p>
                 </div>
-                <button className="mt-10 bg-primary hover:bg-primary-light text-white px-8 py-4 rounded-lg font-medium transition-all shadow-lg hover:shadow-xl">
+                <button className="mt-10 bg-primary hover:bg-primary-light text-white px-8 py-4 rounded-md font-medium transition-all shadow-lg hover:shadow-xl">
                   Learn More About Us
                 </button>
               </Reveal>

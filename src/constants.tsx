@@ -1,0 +1,147 @@
+import { Award, UserCheck, Users, Puzzle } from 'lucide-react';
+import { NavItem, Tutor, Feature, Subjects, Pricing, Contact } from '../types';
+
+export const NAV_ITEMS: NavItem[] = [
+  { label: 'Services', href: '/#services' },
+  { label: 'About Us', href: '/about-us' },
+  { label: 'Subjects', href: '/subjects' },
+  { label: 'Med Workshop', href: '/med-workshop' },
+  { label: 'Tutors', href: '/#tutors' },
+  { label: 'Apply', href: '/apply' },
+  { label: 'Contact', href: '/contact-us' },
+];
+
+export const TUTORS: Tutor[] = [
+  {
+    id: 'seion',
+    name: 'Seion',
+    university: 'University of Warwick',
+    course: 'Physics',
+    image: '/uploads/tutors/seion.webp',
+    achievements: 'Achieved A*A*A* at A-Levels',
+    bio: 'Seion is a clear-thinking, structured tutor studying Physics at the University of Warwick. He scored 1st in his cohort for both A-level Physics and Mathematics. He brings a clear, step-by-step teaching style that helps students master even the most challenging topics.',
+    subjects: ['Physics', 'Mathematics', 'Further Maths']
+  },
+  {
+    id: 'sabrina',
+    name: 'Sabrina',
+    university: 'Imperial College London',
+    course: 'Medicine',
+    image: '/uploads/tutors/sabrina.webp',
+    achievements: 'Achieved A*AAA at A-level',
+    bio: 'Sabrina is a calm, patient, and encouraging tutor studying Medicine at Imperial. Known for her clarity and steady approach, she helps students feel at ease with even the trickiest topics. She supports her students in building confidence and developing consistency.',
+    subjects: ['Biology', 'Chemistry']
+  },
+  {
+    id: 'dilan',
+    name: 'Dilan',
+    university: 'University of Warwick',
+    course: 'MORSE (Maths, OR, Stats, Econ)',
+    image: '/uploads/tutors/dilan.webp',
+    achievements: 'Achieved A*A*A* in Maths, FM & Physics',
+    bio: 'Dilan studies MORSE at Warwick. He brings a methodical and example-led approach to tutoring. He helps students understand the "why" behind the method and apply it confidently in high-pressure exam settings.',
+    subjects: ['Maths', 'Further Maths', 'Physics', 'Economics']
+  }
+];
+
+export const FEATURES: Feature[] = [
+  {
+    title: 'Only A* Tutors',
+    description: 'We are a team of A* achievers, stemming from the most prestigious institutions across the UK such as LSE and Imperial College London.',
+    icon: Award
+  },
+  {
+    title: 'Free Mentoring',
+    description: 'Every student is paired with a dedicated mentor at no extra cost. This includes guidance on subject choices and university applications.',
+    icon: Users
+  },
+  {
+    title: 'Vetted Mentors',
+    description: 'Every tutor at Ascensus Academy has been DBS checked and ID verified, so you can feel confident about who’s teaching your child.',
+    icon: UserCheck
+  },
+  {
+    title: 'Tailored 1-to-1 Lessons',
+    description: 'Our 1-1 sessions are online and personalised, giving students focused support that adapts to their individual needs.',
+    icon: Puzzle
+  }
+];
+
+export const SUBJECTS: Subjects[] = [
+  {
+    subject: "Biology",
+    image: "/uploads/subjects/biology.webp",
+  },
+  {
+    subject: "Chemistry",
+    image: "/uploads/subjects/chemistry.webp",
+  },
+  {
+    subject: "Physics",
+    image: "/uploads/subjects/physics.webp",
+  },
+  {
+    subject: "Maths",
+    image: "/uploads/subjects/math.webp",
+  },
+  {
+    subject: "Further Maths",
+    image: "/uploads/subjects/further-maths.webp",
+  },
+  {
+    subject: "Economics",
+    image: "/uploads/subjects/economics.webp",
+  }
+];
+
+export const PRICING: Pricing[] = [
+  {
+    title: "A-Level",
+    price: "£36/hour",
+    points: [
+      "Expert tutor with deep knowledge of the A-Level curriculum.",
+      "Lessons tailored to individual learning styles to maximise understanding.",
+      "Exam technique coaching to build confidence and boost performance.",
+    ],
+    secondaryTitle: "Included mentorship",
+    secondaryPoints: [
+      "Guidance for UCAS and Degree Apprenticeship applications.",
+      "Support with university entrance exams, personal statements, assessment centres and more!",
+      "Interview preparation and academic enrichment advice.",
+    ],
+  },
+  {
+    title: "GCSE",
+    price: "£24/hour",
+    points: [
+      "Experienced tutor with a passion for helping students succeed.",
+      "Specialises in making complex topics understandable and engaging.",
+      "Focuses on building confidence and study skills alongside subject knowledge.",
+    ],
+    secondaryTitle: "Included mentorship",
+    secondaryPoints: [
+      "Free personalised guidance on A-Level subject choices.",
+      "Early career insights and pathways.",
+      "Advice on building strong academic habits before sixth form.",
+    ],
+  },
+];
+
+export const MED_WORKSHOP: Pricing = {
+  title: "Medicine Workshop",
+  price: "£34",
+  points: [
+    "Delivered by medics with a <b>100% interview success rate</b> across MMI and Oxbridge formats.",
+    "Includes a 1-to-1 mock for <b>MMI or Oxbridge</b> interviews up to 90 minutes.",
+    "<b>Personalised</b>, detailed feedback on structure, communication, and reasoning provided.",
+    "Proven <b>techniques, frameworks, and strategies</b> used by successful applicants.",
+    "Comes with a <b>FREE</b> interview notes PDF collated by our team."
+  ],
+}
+
+export const CONTACT: Contact = {
+    title: "General Queries",
+    description:
+      "For all your general questions about our tutoring services, scheduling, or policies, please reach out to us at",
+    email: "contact@ascensusacademy.com",
+}
