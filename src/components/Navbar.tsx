@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, GraduationCap } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { NAV_ITEMS } from '../constants';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +17,41 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+
+    // Already on the home page → scroll to top smoothly
+    if (pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    // Not on home page → navigate to home
+    navigate("/");
+  };
+
+  const handleNavClick = (e: React.MouseEvent, href: string) => {
+  // If it’s NOT an in-page anchor, just navigate normally.
+  if (!href.startsWith("/#")) return;
+
+  e.preventDefault();
+  const targetId = href.replace("/#", "");
+
+  if (pathname === "/") {
+    const el = document.getElementById(targetId);
+    el?.scrollIntoView({ behavior: "smooth" });
+    return;
+  }
+
+  // Navigate home, then scroll
+  navigate("/");
+
+  setTimeout(() => {
+    const el = document.getElementById(targetId);
+    el?.scrollIntoView({ behavior: "smooth" });
+  }, 100);
+};
+  
   // Determine if we should show the solid background version
   const isSolid = isScrolled || isOpen;
 
@@ -25,7 +62,7 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center">
           
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
+          <div className="flex-shrink-0 flex items-center cursor-pointer" onClick={handleLogoClick}>
             <a href="/" className="flex items-end transition-colors duration-500">
               <span className="sr-only">Ascensus Academy</span>
 
@@ -51,6 +88,7 @@ const Navbar: React.FC = () => {
               <Link
                 key={item.label}
                 to={item.href}
+                onClick={(e) => handleNavClick(e, item.href)}
                 className={`font-medium transition-colors text-sm uppercase tracking-widest ${isSolid ? 'text-primary hover:text-accent' : 'text-white/90 hover:text-white'}`}
               >
                 {item.label}
@@ -81,7 +119,10 @@ const Navbar: React.FC = () => {
               key={item.label}
               href={item.href}
               className="block px-4 py-4 rounded-md text-lg font-medium text-primary hover:text-primary-light hover:bg-gray-50 border-b border-gray-50 last:border-none"
-              onClick={() => setIsOpen(false)}
+              onClick={(e) => {
+                handleNavClick(e, item.href);
+                setIsOpen(false);
+              }}
             >
               {item.label}
             </a>
