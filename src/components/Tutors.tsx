@@ -8,7 +8,7 @@ const Tutors: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="text-center mb-20">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary">Meet Some Of Our Tutors</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary">Meet Some Of Our Tutors</h2>
             <div className="h-1 w-24 bg-primary mx-auto mt-6"></div>
             <p className="mt-6 text-gray-600 text-xl font-light">Top achievers from the UK's best universities</p>
           </div>
@@ -27,7 +27,7 @@ const Tutors: React.FC = () => {
                   />
                 </div>
                 <div className="p-8 flex-grow flex flex-col">
-                  <h3 className="font-serif text-2xl font-bold text-primary mb-1">{tutor.name}</h3>
+                  <h3 className="text-2xl font-bold text-primary mb-1">{tutor.name}</h3>
                   <p className="text-gray-500 font-medium mb-6 text-sm tracking-wide">{tutor.course} at <span className="text-primary">{tutor.university}</span></p>
                   
                   <div className="mb-6 bg-blue-50/50 p-4 border-l-2 border-primary">

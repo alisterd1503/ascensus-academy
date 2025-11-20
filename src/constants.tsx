@@ -47,22 +47,22 @@ export const TUTORS: Tutor[] = [
 export const FEATURES: Feature[] = [
   {
     title: 'Only A* Tutors',
-    description: 'We are a team of A* achievers, stemming from the most prestigious institutions across the UK such as LSE and Imperial College London.',
+    description: 'We are a team of <b>A* achievers</b>, stemming from the most prestigious institutions across the UK such as <b>LSE</b> and <b>Imperial College London</b>.',
     icon: Award
   },
   {
     title: 'Free Mentoring',
-    description: 'Every student is paired with a dedicated mentor at no extra cost. This includes guidance on subject choices and university applications.',
+    description: 'Every student is paired with a <b>dedicated mentor</b> at <b>no extra cost</b>. This includes guidance on subject choices and university applications.',
     icon: Users
   },
   {
     title: 'Vetted Mentors',
-    description: 'Every tutor at Ascensus Academy has been DBS checked and ID verified, so you can feel confident about who’s teaching your child.',
+    description: 'Every tutor at Ascensus Academy has been <b>DBS checked</b> and <b>ID verified</b>, so you can feel confident about who’s teaching your child.',
     icon: UserCheck
   },
   {
     title: 'Tailored 1-to-1 Lessons',
-    description: 'Our 1-1 sessions are online and personalised, giving students focused support that adapts to their individual needs.',
+    description: 'Our <b>1-1 sessions</b> are online and personalised, giving students focused support that adapts to their individual needs.',
     icon: Puzzle
   }
 ];

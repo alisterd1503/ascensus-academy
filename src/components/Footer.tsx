@@ -19,11 +19,11 @@ const Footer: React.FC = () => {
                   />
 
                   {/* Logo Text */}
-                  <span className={`text-xl font-bold font-serif text-white}`}>
+                  <span className={`text-3xl font-logo text-white}`}>
                     Ascensus Academy
                   </span>
               </div>
-              <p className="text-gray-400 text-sm tracking-[0.20em]">For Students, By Students</p>
+              <p className="text-gray-400 text-sm tracking-[0.4em]">For Students, By Students</p>
             </div>
             <div className="flex items-center text-gray-400 hover:text-white transition-colors">
               <Mail className="h-4 w-4 mr-2" />
@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
           {/* Links Columns - each takes 1 column in the 3-column mobile grid */}
           <div className="col-span-3 md:col-span-1 grid grid-cols-3 gap-8 md:grid-cols-1 lg:flex lg:justify-end lg:items-start lg:gap-16">
             <div className="col-span-1">
-              <h3 className="font-serif text-lg font-bold mb-6">About</h3>
+              <h3 className="text-lg font-bold mb-6">About</h3>
               <ul className="space-y-3">
                 <li><a href="/about-us" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">About Us</a></li>
                 <li><a href="/" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">Services</a></li>
@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
             </div>
 
             <div className="col-span-1">
-              <h3 className="font-serif text-lg font-bold mb-6">Resources</h3>
+              <h3 className="text-lg font-bold mb-6">Resources</h3>
               <ul className="space-y-3">
                 <li><a href="/subjects" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">Subjects</a></li>
                 <li><a href="/subjects" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">Pricing</a></li>
@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
             </div>
 
             <div className="col-span-1">
-              <h3 className="font-serif text-lg font-bold mb-6">Connect</h3>
+              <h3 className="text-lg font-bold mb-6">Connect</h3>
               <ul className="space-y-3">
                 <li><a href="/apply" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">Apply</a></li>
                 <li><a href="/contact-us" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">Contact Us</a></li>

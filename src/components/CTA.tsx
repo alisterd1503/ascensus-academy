@@ -15,7 +15,7 @@ const CTA: React.FC = () => {
       
       <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
         <Reveal>
-          <h2 className="font-serif text-4xl md:text-6xl font-bold text-white mb-8">Sign Up Now</h2>
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-8">Sign Up Now</h2>
           <p className="text-gray-300 text-lg md:text-xl mb-12 max-w-2xl mx-auto font-light leading-relaxed">
             Start your journey to academic excellence today with a mentor who has walked the path before you.
           </p>

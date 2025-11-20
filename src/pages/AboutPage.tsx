@@ -14,7 +14,7 @@ const AboutPage: React.FC = () => {
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <Reveal>
             <div>
-              <h2 className="font-serif text-4xl font-bold text-primary mb-8">
+              <h2 className="text-4xl font-bold text-primary mb-8">
                 Who Are We?
               </h2>
 
@@ -24,7 +24,7 @@ const AboutPage: React.FC = () => {
                   We believe the traditional education system needs an upgrade.
                 </p>
 
-                <h2 className="font-serif text-2xl font-bold text-primary mb-8">
+                <h2 className="text-2xl font-bold text-primary mb-8">
                     What sets our tutors apart?
                 </h2>
 
@@ -87,7 +87,7 @@ const AboutPage: React.FC = () => {
           {/* Text (right) */}
           <Reveal>
             <div>
-              <h2 className="font-serif text-4xl font-bold text-primary mb-8">
+              <h2 className="text-4xl font-bold text-primary mb-8">
                 Our Journey
               </h2>
 

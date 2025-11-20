@@ -21,13 +21,10 @@ const About: React.FC = () => {
             
             <div className="w-full lg:w-1/2">
               <Reveal>
-                <h2 className="font-serif text-5xl font-bold text-primary mb-8">Our Story</h2>
+                <h2 className="text-5xl font-bold text-primary mb-8">Our Story</h2>
                 <div className="space-y-6 text-lg text-gray-600 leading-relaxed font-light">
                   <p>
-                    Ascensus Academy was founded to <span className="font-medium text-primary">revolutionise</span> the future of tutoring. We believe the traditional education system needs an upgrade.
-                  </p>
-                  <p>
-                    That is why we only hire undergraduate tutors who have personally achieved an <span className="font-medium text-primary">A* at A-level in the subject</span> they teach.
+                    Ascensus Academy was founded to <span className="font-medium text-primary">revolutionise</span> the future of tutoring. We believe the traditional education system needs an upgrade. That is why we only hire undergraduate tutors who have personally achieved an <span className="font-medium text-primary">A* at A-level in the subject</span> they teach.
                   </p>
                   <p>
                     Here, every student is paired with a <span className="font-medium text-primary">personalised mentor</span>: a high achieving university student studying a similar course pathway.
@@ -46,8 +43,8 @@ const About: React.FC = () => {
       <div className="w-full bg-primary py-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Reveal>
-            <h3 className="font-serif text-3xl md:text-4xl font-bold text-white mb-10 tracking-wide">Our model is simple</h3>
-            <p className="text-2xl md:text-4xl font-serif text-blue-100 italic leading-relaxed">
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-10 tracking-wide">Our model is simple</h3>
+            <p className="text-2xl md:text-4xl  text-blue-100 italic leading-relaxed">
               "If you want your child to succeed, connect them with someone who already has."
             </p>
           </Reveal>

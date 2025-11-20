@@ -76,7 +76,7 @@ const Navbar: React.FC = () => {
               />
 
               {/* Logo Text */}
-              <span className={`text-3xl font-bold font-serif transition-colors duration-500 ${isSolid ? 'text-primary-800' : 'text-white'}`}>
+              <span className={`text-3xl font-logo transition-colors duration-500 ${isSolid ? 'text-primary-800' : 'text-white'}`}>
                 Ascensus Academy
               </span>
             </a>

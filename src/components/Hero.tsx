@@ -19,11 +19,11 @@ const Hero: React.FC = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         <Reveal>
-          <h1 className="font-serif text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight drop-shadow-lg">
-            Welcome to <br/>
-            <span className="text-blue-100">Ascensus Academy</span>
+          <h2 className="font-thin text-2xl md:text-3xl text-white mb-2 tracking-tight drop-shadow-lg">Welcome to</h2>
+          <h1 className="text-5xl md:text-7xl text-white mb-2 tracking-tight drop-shadow-lg">
+            <span className="font-logo">Ascensus Academy</span>
           </h1>
-          <p className="text-xl md:text-3xl text-gray-200 mb-12 font-light tracking-wide">
+          <p className="text-l md:text-xl text-gray-200 mb-12 font-light tracking-wide tracking-[0.30em] md:tracking-[0.50em]">
             For students, By Students.
           </p>
 
