@@ -30,9 +30,11 @@ const About: React.FC = () => {
                     Here, every student is paired with a <span className="font-medium text-primary">personalised mentor</span>: a high achieving university student studying a similar course pathway.
                   </p>
                 </div>
-                <button className="mt-10 bg-primary hover:bg-primary-light text-white px-8 py-4 rounded-md font-medium transition-all shadow-lg hover:shadow-xl">
+                <a href="/about-us"
+                  className="mt-10 bg-primary hover:bg-primary-light text-white px-8 py-4 rounded-md font-medium transition-all shadow-lg hover:shadow-xl inline-block text-center"
+                >
                   Learn More About Us
-                </button>
+                </a>
               </Reveal>
             </div>
           </div>
@@ -43,7 +45,7 @@ const About: React.FC = () => {
       <div className="w-full bg-primary py-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Reveal>
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-10 tracking-wide">Our model is simple</h3>
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-10 tracking-wide">Our model is simple:</h3>
             <p className="text-2xl md:text-4xl  text-blue-100 italic leading-relaxed">
               "If you want your child to succeed, connect them with someone who already has."
             </p>

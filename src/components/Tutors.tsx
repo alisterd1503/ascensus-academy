@@ -18,7 +18,7 @@ const Tutors: React.FC = () => {
           {TUTORS.map((tutor) => (
             <Reveal key={tutor.id}>
               <div className="bg-white rounded-none border border-gray-100 hover:border-primary/20 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col h-full group">
-                <div className="h-72 overflow-hidden relative">
+                <div className="h-90 overflow-hidden relative">
                   <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors z-10 duration-500"></div>
                   <img 
                     src={tutor.image} 

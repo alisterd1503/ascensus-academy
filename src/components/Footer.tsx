@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
                     Ascensus Academy
                   </span>
               </div>
-              <p className="text-gray-400 text-sm tracking-[0.3em]">For Students, By Students</p>
+              <p className="text-gray-400 text-sm tracking-[0.3em]">For Students, By Students.</p>
             </div>
             <div className="flex items-center text-gray-400 hover:text-white transition-colors">
               <Mail className="h-4 w-4 mr-2" />

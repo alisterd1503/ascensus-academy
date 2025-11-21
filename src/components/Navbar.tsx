@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
           
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center cursor-pointer" onClick={handleLogoClick}>
-            <a href="/" className="flex items-end transition-colors duration-500">
+            <a href="/" className="flex items-center transition-colors duration-500">
               <span className="sr-only">Ascensus Academy</span>
 
               {/* Logo Image */}
