@@ -128,9 +128,9 @@ const Navbar: React.FC = () => {
             </a>
           ))}
           <div className="px-4 pt-6">
-             <button className="w-full bg-primary hover:bg-primary-light text-white px-5 py-4 rounded-lg transition-colors font-bold text-lg">
+             <a href="/login" className="w-full bg-primary hover:bg-primary-light text-white px-5 py-4 rounded-lg transition-colors font-bold text-lg inline-block text-center">
               Login
-            </button>
+            </a>
           </div>
         </div>
       </div>

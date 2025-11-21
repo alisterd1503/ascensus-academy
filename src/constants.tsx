@@ -7,6 +7,7 @@ export const NAV_ITEMS: NavItem[] = [,
   { label: 'New: Med Workshop', href: '/med-workshop' },
   { label: 'Apply', href: '/apply' },
   { label: 'Contact', href: '/contact-us' },
+  { label: 'Join', href: '/join-us' },
 ];
 
 export const TUTORS: Tutor[] = [
