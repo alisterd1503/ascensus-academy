@@ -1,7 +1,7 @@
 import { Award, UserCheck, Users, Puzzle } from 'lucide-react';
 import { NavItem, Tutor, Feature, Subjects, Pricing, Contact } from '../types';
 
-export const NAV_ITEMS: NavItem[] = [,
+export const NAV_ITEMS: NavItem[] = [
   { label: 'About Us', href: '/about-us' },
   { label: 'Subjects & Pricing', href: '/subjects' },
   { label: 'New: Med Workshop', href: '/med-workshop' },
