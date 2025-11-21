@@ -5,9 +5,9 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'About Us', href: '/about-us' },
   { label: 'Subjects & Pricing', href: '/subjects' },
   { label: 'New: Med Workshop', href: '/med-workshop' },
-  { label: 'Apply', href: '/apply' },
+  { label: 'Sign Up', href: '/apply' },
   { label: 'Contact', href: '/contact-us' },
-  { label: 'Join', href: '/join-us' },
+  { label: 'Join The Team', href: '/join-us' },
 ];
 
 export const TUTORS: Tutor[] = [
@@ -43,22 +43,22 @@ export const TUTORS: Tutor[] = [
 export const FEATURES: Feature[] = [
   {
     title: 'Only A* Tutors',
-    description: 'We are a team of <b>A<sup>*</sup> achievers</b>, stemming from the most prestigious institutions across the UK such as <b>LSE</b> and <b>Imperial College London</b>.',
+    description: "We are a team of <span class='font-semibold'>A<sup>*</sup> achievers</span>, stemming from the most prestigious institutions across the UK such as <span class='font-semibold'>LSE</span> and <span class='font-bold'>Imperial College London</span>.",
     image: "/uploads/usp/astar-tutors.webp"
   },
   {
     title: 'Free Mentoring',
-    description: 'Every student is paired with a <b>dedicated mentor</b> at <b>no extra cost</b>. This includes guidance on subject choices and university applications.',
+    description: "Every student is paired with a <span class='font-semibold'>dedicated mentor</span> at <span class='font-semibold'>no extra cost</span>. This includes guidance on subject choices and university applications.",
     image: "/uploads/usp/free-mentoring.webp"
   },
   {
     title: 'Vetted Mentors',
-    description: 'Every tutor at Ascensus Academy has been <b>DBS checked</b> and <b>ID verified</b>, so you can feel confident about who’s teaching your child.',
+    description: "Every tutor at Ascensus Academy has been <span class='font-semibold'>DBS checked</span> and <span class='font-semibold'>ID verified</span>, so you can feel confident about who’s teaching your child.",
     image: "/uploads/usp/vetted-mentors.webp"
   },
   {
     title: 'Tailored 1-to-1 Lessons',
-    description: 'Our <b>1-1 sessions</b> are online and personalised, giving students focused support that adapts to their individual needs.',
+    description: "Our <span class='font-semibold'>1-1 sessions</span> are online and personalised, giving students focused support that adapts to their individual needs.",
     image: "/uploads/usp/tailored-lessons.webp"
   }
 ];

@@ -23,7 +23,7 @@ const MedWorkshop: React.FC = () => {
 
   return (
     <MainLayout>
-      <PageHeader title="Medicine Workshop" />
+      <PageHeader title="Medicine Interview Workshop" />
 
       <Reveal>
         <section className="py-16 bg-white">

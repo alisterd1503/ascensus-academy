@@ -21,7 +21,7 @@ const ApplyPage: React.FC = () => {
 
   return (
     <MainLayout>
-      <PageHeader title="Apply" />
+      <PageHeader title="Sign Up" />
       <Reveal>
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-6">
