@@ -115,9 +115,9 @@ const Navbar: React.FC = () => {
       <div className={`xl:hidden bg-white shadow-lg absolute w-full transition-all duration-300 overflow-hidden ${isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="px-4 pt-4 pb-6 space-y-1 border-t border-gray-100">
           {NAV_ITEMS.map((item) => (
-            <a
+            <Link
               key={item.label}
-              href={item.href}
+              to={item.href}
               className="block px-4 py-4 rounded-md text-lg font-medium text-primary hover:text-primary-light hover:bg-gray-50 border-b border-gray-50 last:border-none"
               onClick={(e) => {
                 handleNavClick(e, item.href);
@@ -125,7 +125,7 @@ const Navbar: React.FC = () => {
               }}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
           <div className="px-4 pt-6">
              <a href="/login" className="w-full bg-primary hover:bg-primary-light text-white px-5 py-4 rounded-lg transition-colors font-bold text-lg inline-block text-center">
