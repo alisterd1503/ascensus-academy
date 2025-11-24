@@ -6,7 +6,6 @@ import Features from "../components/Features";
 import Tutors from "../components/Tutors";
 import CTA from "../components/CTA";
 import UsePageMeta from "../hooks/UsePageMeta";
-;
 
 const HomePage: React.FC = () => {
   UsePageMeta({
