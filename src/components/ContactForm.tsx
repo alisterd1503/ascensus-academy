@@ -31,11 +31,18 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="bg-gray-50 rounded-md shadow-md p-6 flex-1">
+    <div className="bg-gray-50 rounded-md shadow-md p-6 flex-1 min-h-[450px]">
       {success ? (
-        <p className="text-primary-600 font-semibold text-center">
-          Thank you - your message has been sent!
-        </p>
+        <div className="flex items-center justify-center h-full">
+            <div className="flex flex-col items-center justify-center space-y-2">
+                <p className="text-primary-600 font-semibold text-center text-2xl">
+                Thank you
+                </p>
+                <p className="text-primary-600 font-semibold text-center text-md md:text-xl">
+                Your message has been sent!
+                </p>
+            </div>
+        </div>
       ) : (
         <form ref={formRef} onSubmit={sendEmail} className="space-y-4">
 
