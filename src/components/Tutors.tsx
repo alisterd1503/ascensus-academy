@@ -21,6 +21,7 @@ const Tutors: React.FC = () => {
                 <div className="h-90 overflow-hidden relative">
                   <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors z-10 duration-500"></div>
                   <img 
+                    loading="lazy"
                     src={tutor.image} 
                     alt={tutor.name} 
                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
