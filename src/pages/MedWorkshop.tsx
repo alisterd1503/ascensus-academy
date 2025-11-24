@@ -4,7 +4,7 @@ import PageHeader from "../components/PageHeader";
 import { MED_WORKSHOP } from "../constants";
 import PriceCard from "../components/PriceCard";
 import { Reveal } from "../components/Reveal";
-import usePageMeta from "../hooks/UsePageMeta";
+import UsePageMeta from "../hooks/UsePageMeta";
 
 const MedWorkshop: React.FC = () => {
   const scriptContainer = useRef<HTMLDivElement>(null);
@@ -22,7 +22,7 @@ const MedWorkshop: React.FC = () => {
     }
   }, []);
 
-  usePageMeta({
+  UsePageMeta({
     title: "About Ascensus Academy – Our Tutors, Mentorship & Mission",
     description: "Discover Ascensus Academy's mission, our expert A* tutors, and the personalised mentorship approach that empowers students to succeed in today’s education system.",
     url: "https://ascensusacademy.com/med-workshop",

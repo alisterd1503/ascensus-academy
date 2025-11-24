@@ -3,10 +3,10 @@ import MainLayout from "../layouts/MainLayout";
 import PageHeader from "../components/PageHeader";
 import { Reveal } from "../components/Reveal";
 import { Check } from 'lucide-react';
-import usePageMeta from "../hooks/UsePageMeta";
+import UsePageMeta from "../hooks/UsePageMeta";
 
 const AboutPage: React.FC = () => {
-  usePageMeta({
+  UsePageMeta({
     title: "About Ascensus Academy – Our Tutors, Mentorship & Mission",
     description: "Discover Ascensus Academy's mission, our expert A* tutors, and the personalised mentorship approach that empowers students to succeed in today’s education system.",
     url: "https://ascensusacademy.com/about-us",

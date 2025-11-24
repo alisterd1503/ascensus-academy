@@ -7,7 +7,7 @@ interface PageMetaOptions {
   image?: string;
 }
 
-export default function usePageMeta({ title, description, url, image }: PageMetaOptions) {
+export default function UsePageMeta({ title, description, url, image }: PageMetaOptions) {
   useEffect(() => {
     // Set page title
     document.title = title;
