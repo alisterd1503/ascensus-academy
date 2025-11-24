@@ -23,8 +23,8 @@ const MedWorkshop: React.FC = () => {
   }, []);
 
   UsePageMeta({
-    title: "About Ascensus Academy – Our Tutors, Mentorship & Mission",
-    description: "Discover Ascensus Academy's mission, our expert A* tutors, and the personalised mentorship approach that empowers students to succeed in today’s education system.",
+    title: "Medicine Interview Workshop – Ascensus Academy",
+    description: "Join Ascensus Academy's Medicine Workshop, led by successful medics. Gain personalised 1-to-1 mock interviews, detailed feedback, and proven strategies to excel in MMI and Oxbridge interviews.",
     url: "https://ascensusacademy.com/med-workshop",
     image: "/uploads/social-about-us.png",
   });

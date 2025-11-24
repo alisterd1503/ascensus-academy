@@ -23,8 +23,8 @@ const ContactPage: React.FC = () => {
   }, []);
 
   UsePageMeta({
-    title: "About Ascensus Academy – Our Tutors, Mentorship & Mission",
-    description: "Discover Ascensus Academy's mission, our expert A* tutors, and the personalised mentorship approach that empowers students to succeed in today’s education system.",
+    title: "Contact Ascensus Academy – Get in Touch",
+    description: "Reach out to Ascensus Academy for enquiries, support, or guidance on our tutoring and mentorship services. We're here to help students succeed.",
     url: "https://ascensusacademy.com/contact-us",
     image: "/uploads/social-about-us.png",
   });

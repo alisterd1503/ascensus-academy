@@ -21,8 +21,8 @@ const ApplyPage: React.FC = () => {
   }, []);
 
   UsePageMeta({
-    title: "About Ascensus Academy – Our Tutors, Mentorship & Mission",
-    description: "Discover Ascensus Academy's mission, our expert A* tutors, and the personalised mentorship approach that empowers students to succeed in today’s education system.",
+    title: "Sign Up – Ascensus Academy",
+    description: "Register with Ascensus Academy to access personalised tutoring, mentorship, and expert support from A* tutors for GCSE and A-Level students.",
     url: "https://ascensusacademy.com/apply",
     image: "/uploads/social-about-us.png",
   });

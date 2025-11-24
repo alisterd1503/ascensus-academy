@@ -21,8 +21,8 @@ const LoginPage: React.FC = () => {
   }, []);
 
   UsePageMeta({
-    title: "About Ascensus Academy – Our Tutors, Mentorship & Mission",
-    description: "Discover Ascensus Academy's mission, our expert A* tutors, and the personalised mentorship approach that empowers students to succeed in today’s education system.",
+    title: "Student Login – Ascensus Academy Portal",
+    description: "Access your personalised tutoring and mentorship dashboard. Log in to manage lessons, track progress, and communicate with your A* tutor.",
     url: "https://ascensusacademy.com/login",
     image: "/uploads/social-about-us.png",
   });

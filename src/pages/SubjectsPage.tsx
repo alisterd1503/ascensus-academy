@@ -9,8 +9,8 @@ import UsePageMeta from "../hooks/UsePageMeta";
 
 const SubjectsPage: React.FC = () => {
   UsePageMeta({
-    title: "About Ascensus Academy – Our Tutors, Mentorship & Mission",
-    description: "Discover Ascensus Academy's mission, our expert A* tutors, and the personalised mentorship approach that empowers students to succeed in today’s education system.",
+    title: "Subjects & Tutoring – Ascensus Academy",
+    description: "Explore Ascensus Academy's tutoring for GCSE and A-Level students in Biology, Chemistry, Physics, Maths, Further Maths, and Economics. Tailored lessons, mentorship, and exam preparation to help students succeed.",
     url: "https://ascensusacademy.com/subjects",
     image: "/uploads/social-about-us.png",
   });

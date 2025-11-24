@@ -21,8 +21,8 @@ const JoinPage: React.FC = () => {
   }, []);
 
   UsePageMeta({
-    title: "About Ascensus Academy – Our Tutors, Mentorship & Mission",
-    description: "Discover Ascensus Academy's mission, our expert A* tutors, and the personalised mentorship approach that empowers students to succeed in today’s education system.",
+    title: "Join The Team – Become a Tutor at Ascensus Academy",
+    description: "Apply to become a tutor at Ascensus Academy. Join our team of high-achieving A* tutors and help guide students with personalised mentorship and expert tuition.",
     url: "https://ascensusacademy.com/join-us",
     image: "/uploads/social-about-us.png",
   });

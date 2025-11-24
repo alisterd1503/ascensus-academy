@@ -9,8 +9,8 @@ import UsePageMeta from "../hooks/UsePageMeta";
 
 const HomePage: React.FC = () => {
   UsePageMeta({
-    title: "About Ascensus Academy – Our Tutors, Mentorship & Mission",
-    description: "Discover Ascensus Academy's mission, our expert A* tutors, and the personalised mentorship approach that empowers students to succeed in today’s education system.",
+    title: "Ascensus Academy – A-Level Tutoring by Top University Students",
+    description: "Premium A* tutoring by top UK university students. Personalised mentoring, vetted tutors, 1-to-1 online lessons, and tailored academic support.",
     url: "https://ascensusacademy.com/",
     image: "/uploads/social-about-us.png",
   });
