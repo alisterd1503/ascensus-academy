@@ -70,13 +70,13 @@ const Navbar: React.FC = () => {
               <img
                 src="/main-logo.svg"
                 alt="Ascensus Academy Logo"
-                className={`h-12 w-auto mr-2 transition-all duration-500 ${
+                className={`h-8 sm:h-10 md:h-12 w-auto mr-2 transition-all duration-500 ${
                   isSolid ? 'filter-none' : 'invert brightness-0'
                 }`}
               />
 
               {/* Logo Text */}
-              <span className={`text-3xl font-logo transition-colors duration-500 ${isSolid ? 'text-primary-800' : 'text-white'}`}>
+              <span className={`text-2xl sm:text-2xl md:text-3xl font-logo transition-colors duration-500 ${isSolid ? 'text-primary-800' : 'text-white'}`}>
                 Ascensus Academy
               </span>
             </a>

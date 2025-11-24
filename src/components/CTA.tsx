@@ -3,7 +3,7 @@ import { Reveal } from './Reveal';
 
 const CTA: React.FC = () => {
   return (
-    <section id="apply" className="relative py-32 bg-primary overflow-hidden">
+    <section id="apply" className="relative py-16 sm:py-16 md:py-32 bg-primary overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 opacity-10 mix-blend-overlay">
         <img 
@@ -21,13 +21,20 @@ const CTA: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <a href="/apply" className="bg-white hover:bg-gray-100 text-primary px-12 py-5 rounded-md font-bold text-lg shadow-xl transition-transform transform hover:-translate-y-1">
+            <a
+              href="/apply"
+              className="bg-white hover:bg-gray-100 text-primary px-6 sm:px-12 py-3 sm:py-5 rounded-md font-bold text-base sm:text-lg shadow-xl transition-transform transform hover:-translate-y-1"
+            >
               Sign Up
             </a>
-            <a href="contact-us" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary px-12 py-5 rounded-lg font-bold text-lg shadow-xl transition-all transform hover:-translate-y-1">
+            <a
+              href="/contact-us"
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary px-6 sm:px-12 py-3 sm:py-5 rounded-lg font-bold text-base sm:text-lg shadow-xl transition-all transform hover:-translate-y-1"
+            >
               Contact Us
             </a>
           </div>
+
         </Reveal>
       </div>
     </section>

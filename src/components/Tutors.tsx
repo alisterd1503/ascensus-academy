@@ -4,10 +4,10 @@ import { Reveal } from './Reveal';
 
 const Tutors: React.FC = () => {
   return (
-    <section id="tutors" className="py-24 bg-gray-50">
+    <section id="tutors" className="py-5 sm:py-5 md:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <div className="text-center mb-20">
+          <div className="text-center mb-10 md:mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-primary">Meet Some Of Our Tutors</h2>
             <div className="h-1 w-24 bg-primary mx-auto mt-6"></div>
             <p className="mt-6 text-gray-600 text-xl font-light">Top achievers from the UK's best universities</p>

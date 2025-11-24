@@ -31,10 +31,10 @@ const SubjectsPage: React.FC = () => {
             {/* Section Title */}
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Pricing</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-md md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                 Choose the qualification level that suits your needs.
               </p>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto mt-4 leading-relaxed font-medium">
+              <p className="text-md md:text-xl text-gray-600 max-w-3xl mx-auto mt-4 leading-relaxed md:font-medium">
                 Both GCSE and A-Level students receive the same high-quality tutoring, the only difference
                 is the tailored mentorship included for each stage.
               </p>

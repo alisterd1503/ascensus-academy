@@ -4,10 +4,10 @@ import { Reveal } from './Reveal';
 
 const Features: React.FC = () => {
   return (
-    <section id="services" className="py-24 bg-white">
+    <section id="services" className="py-0 sm:py-0 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 bg-gray-50 shadow-sm rounded-md">
         <Reveal>
-          <div className="text-center mb-20">
+          <div className="text-center mb-10 md:mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-primary">What We Offer</h2>
             <div className="h-1 w-24 bg-primary mx-auto mt-6"></div>
           </div>

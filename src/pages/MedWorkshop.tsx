@@ -39,28 +39,29 @@ const MedWorkshop: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch rounded-md">
 
               {/* LEFT: TutorBird Form */}
-                <div
+              <div
                 ref={scriptContainer}
-                className="p-0 rounded-2xl shadow-md flex-1"
-                ></div>
+                className="p-0 rounded-2xl shadow-md flex-1 order-3 lg:order-1"
+              ></div>
 
-                {/* RIGHT: Image + PriceCard stacked */}
-                <div className="flex flex-col flex-1 gap-6">
-                    {/* Pricing Card */}
-                    <div className="flex-1">
-                        <PriceCard item={MED_WORKSHOP} />
-                    </div>
-
-                    {/* Workshop Image */}
-                    <div className="w-full overflow-hidden rounded-md shadow-md max-h-[370px]">
-                        <img
-                          loading="lazy"
-                          src="/uploads/med-workshop.webp"
-                          alt="Medicine Workshop"
-                          className="w-full h-full object-cover"
-                        />
-                    </div>
+              {/* RIGHT: Image + PriceCard stacked */}
+              <div className="flex flex-col flex-1 gap-6 order-1 lg:order-2">
+                
+                {/* Pricing Card */}
+                <div className="flex-1 order-1">
+                  <PriceCard item={MED_WORKSHOP} />
                 </div>
+
+                {/* Workshop Image */}
+                <div className="w-full overflow-hidden rounded-md shadow-md max-h-[370px] order-2">
+                  <img
+                    loading="lazy"
+                    src="/uploads/med-workshop.webp"
+                    alt="Medicine Workshop"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </section>

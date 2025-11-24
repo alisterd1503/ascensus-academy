@@ -3,7 +3,7 @@ import { GraduationCap, Facebook, Instagram, Youtube, Mail } from 'lucide-react'
 
 const Footer: React.FC = () => {
   return (
-    <footer id="contact" className="bg-[#0f172a] text-white pt-20 pb-10">
+    <footer id="contact" className="bg-[#0f172a] text-white pt-5 sm:pt-5 md:pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Modified grid to use 3 columns on mobile so the links sit in a row */}
         <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-[1fr_auto] gap-x-4 gap-y-12 mb-5">

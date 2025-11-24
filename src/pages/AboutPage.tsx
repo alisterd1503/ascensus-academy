@@ -16,16 +16,13 @@ const AboutPage: React.FC = () => {
     <MainLayout>
       <PageHeader title="About Us" />
 
-      <div className="max-w-7xl mx-auto px-6 py-24 space-y-32">
+      <div className="max-w-7xl mx-auto px-6 py-8 sm:py-8 md:py-24 space-y-16 sm:space-y-16 md:space-y-32">
 
         {/* SECTION 1 */}
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <Reveal>
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-stretch">
+          <Reveal className="flex flex-col justify-center">
             <div>
-              <h2 className="text-4xl font-bold text-primary mb-8">
-                Who Are We?
-              </h2>
-
+              <h2 className="text-2xl md:text-4xl font-bold text-primary mb-4 md:mb-8">Who are we?</h2>
               <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
                 <p>
                   Ascensus Academy was founded to <b>revolutionise</b> the future of tutoring.
@@ -63,42 +60,30 @@ const AboutPage: React.FC = () => {
               </div>
             </div>
           </Reveal>
-
           {/* Image */}
-          <Reveal>
-            <div className="h-[450px] w-full relative">
-              <div className="absolute top-6 -left-6 w-full h-full bg-gray-100 rounded-md -z-10"></div>
-              <img
-                src="/uploads/who-are-we.webp"
-                alt="Students studying"
-                className="w-full h-full object-cover rounded-md shadow-2xl"
-              />
-            </div>
+          <Reveal className="flex">
+            <img
+              src="/uploads/who-are-we.webp"
+              alt="Students studying"
+              className="rounded-md w-full h-full object-cover"
+            />
           </Reveal>
         </section>
 
         {/* SECTION 2 */}
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-stretch">
           {/* Image (left) */}
-          <Reveal>
-            <div className="order-1 lg:order-none h-[450px] w-full relative">
-              <div className="absolute top-6 -right-6 w-full h-full bg-gray-100 rounded-md -z-10"></div>
-              <img
-                src="/uploads/our-journey.webp"
-                alt="Mentorship process"
-                className="w-full h-full object-cover rounded-md shadow-2xl"
-              />
-            </div>
+          <Reveal className="flex order-1 lg:order-none">
+            <img
+              src="/uploads/our-journey.webp"
+              alt="Mentorship process"
+              className="rounded-md w-full h-full object-cover shadow-2xl"
+            />
           </Reveal>
-
           {/* Text (right) */}
-          <Reveal>
+          <Reveal className="flex flex-col justify-center">
             <div>
-              <h2 className="text-4xl font-bold text-primary mb-8">
-                Our Journey
-              </h2>
-
+              <h2 className="text-4xl font-bold text-primary mb-8">Our Journey</h2>
               <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
                 <p>
                     This mentorship programme was born out of a <b>shared vision</b> to support students in navigating academic challenges, career choices, and personal growth.
