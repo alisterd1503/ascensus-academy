@@ -1,10 +1,9 @@
-import { Award, UserCheck, Users, Puzzle } from 'lucide-react';
-import { NavItem, Tutor, Feature, Subjects, Pricing, Contact } from '../types';
+import { NavItem, Tutor, Feature, Subjects, Pricing, Contact } from './types';
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'About Us', href: '/about-us' },
+  { label: 'New: Med Workshop', href: '/med-workshop', preserveCase: true },
   { label: 'Subjects & Pricing', href: '/subjects' },
-  { label: 'New: Med Workshop', href: '/med-workshop' },
   { label: 'Sign Up', href: '/apply' },
   { label: 'Contact', href: '/contact-us' },
   { label: 'Join The Team', href: '/join-us' },
@@ -58,7 +57,7 @@ export const FEATURES: Feature[] = [
   },
   {
     title: 'Tailored 1-to-1 Lessons',
-    description: "Our <span class='font-semibold'>1-1 sessions</span> are online and personalised, giving students focused support that adapts to their individual needs.",
+    description: "Our <span class='font-semibold'>1-to-1 sessions</span> are online and personalised, giving students focused support that adapts to their individual needs.",
     image: "/uploads/usp/tailored-lessons.webp"
   }
 ];

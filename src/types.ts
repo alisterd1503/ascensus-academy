@@ -1,8 +1,7 @@
-import React from 'react';
-
 export interface NavItem {
   label: string;
   href: string;
+  preserveCase?: boolean;
 }
 
 export interface Tutor {

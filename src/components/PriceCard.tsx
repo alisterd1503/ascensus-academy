@@ -1,4 +1,4 @@
-import { Pricing } from "@/types";
+import { Pricing } from "@/src/types";
 
 interface Props {
   item: Pricing;

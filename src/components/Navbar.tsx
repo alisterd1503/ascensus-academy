@@ -89,7 +89,9 @@ const Navbar: React.FC = () => {
                 key={item.label}
                 to={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className={`font-medium transition-colors text-sm uppercase tracking-widest ${isSolid ? 'text-primary hover:text-accent' : 'text-white/90 hover:text-white'}`}
+                className={`font-medium transition-colors text-sm tracking-widest ${
+                  item.preserveCase ? '' : 'uppercase'
+                } ${isSolid ? 'text-primary hover:text-accent' : 'text-white/90 hover:text-white'}`}
               >
                 {item.label}
               </Link>
