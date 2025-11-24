@@ -4,23 +4,9 @@ import PageHeader from "../components/PageHeader";
 import { Reveal } from "../components/Reveal";
 import { CONTACT } from "../constants";
 import UsePageMeta from "../hooks/UsePageMeta";
+import ContactForm from "../components/ContactForm";
 
 const ContactPage: React.FC = () => {
-  const scriptContainer = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const container = scriptContainer.current;
-    if (!container) return;
-
-    // Prevent multiple loads (React Strict Mode)
-    if (container.childElementCount === 0) {
-      const script = document.createElement("script");
-      script.src =
-        "https://app.tutorbird.com/Widget/v4/Widget.ashx?settings=eyJTY2hvb2xJRCI6InNjaF9wZG5KZyIsIldlYnNpdGVJRCI6Indic181MlZKYyIsIldlYnNpdGVCbG9ja0lEIjoid2JiX1FMZm1KMiJ9";
-      script.async = true;
-      container.appendChild(script);
-    }
-  }, []);
 
   UsePageMeta({
     title: "Contact Ascensus Academy – Get in Touch",
@@ -49,10 +35,7 @@ const ContactPage: React.FC = () => {
               </div>
 
               {/* TutorBird Form */}
-              <div
-                ref={scriptContainer}
-                className="bg-gray-50 rounded-md shadow-md flex-1"
-              />
+              <ContactForm/>
             </div>
           </div>
         </section>

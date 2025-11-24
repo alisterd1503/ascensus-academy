@@ -1,8 +1,8 @@
-import { NavItem, Tutor, Feature, Subjects, Pricing, Contact } from './types';
+import { NavItem, Tutor, Feature, Subjects, Pricing, Contact, EmailJS } from './types';
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'About Us', href: '/about-us' },
-  { label: 'New: Med Workshop', href: '/med-workshop', preserveCase: true },
+  { label: 'NEW: Med Workshop', href: '/med-workshop', preserveCase: true },
   { label: 'Subjects & Pricing', href: '/subjects' },
   { label: 'Sign Up', href: '/apply' },
   { label: 'Contact', href: '/contact-us' },
@@ -139,4 +139,10 @@ export const CONTACT: Contact = {
     description:
       "For all your general questions about our tutoring services, scheduling, or policies, please reach out to us at",
     email: "contact@ascensusacademy.com",
+}
+
+export const EMAILJS: EmailJS = {
+  serviceId: "service_qk3z7ry",
+  templateId: "template_prycer9",
+  publicKey: "e3K5prMTEGo3mj5h0",
 }

@@ -38,3 +38,9 @@ export interface Contact {
   description: string;
   email: string;
 }
+
+export interface EmailJS {
+  serviceId: string;
+  templateId: string;
+  publicKey: string;
+}
