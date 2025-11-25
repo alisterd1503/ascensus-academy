@@ -1,12 +1,12 @@
 import { NavItem, Tutor, Feature, Subjects, Pricing, Contact, EmailJS } from './types';
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: 'About Us', href: '/about-us' },
+  { label: 'About Us', href: '/about-us', preserveCase: true },
   { label: 'NEW: Med Workshop', href: '/med-workshop', preserveCase: true },
-  { label: 'Subjects & Pricing', href: '/subjects' },
-  { label: 'Sign Up', href: '/apply' },
-  { label: 'Contact', href: '/contact-us' },
-  { label: 'Join The Team', href: '/join-us' },
+  { label: 'Subjects & Pricing', href: '/subjects', preserveCase: true },
+  { label: 'Sign Up', href: '/apply', preserveCase: true },
+  { label: 'Contact', href: '/contact-us', preserveCase: true },
+  { label: 'Join The Team', href: '/join-us', preserveCase: true },
 ];
 
 export const TUTORS: Tutor[] = [
