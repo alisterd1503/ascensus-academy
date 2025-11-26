@@ -35,19 +35,19 @@ const AboutPage: React.FC = () => {
 
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
-                    <Check size={25}/>
+                    <Check className="h-5 w-5 flex-shrink-0 text-primary" />
                     <span>
                     They have <b>recently</b> been through the <b>same exams</b> themselves.
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Check size={35}/>
+                    <Check className="h-5 w-5 flex-shrink-0 text-primary" />
                     <span>
                     They have <b>first-hand insight</b> into the demands, pressures and challenges that students face today.
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Check size={35}/>
+                    <Check className="h-5 w-5 flex-shrink-0 text-primary" />
                     <span>
                     They bring<b> personalised and proven strategies</b> that actually work in today’s education system.
                     </span>

@@ -85,18 +85,35 @@ const Navbar: React.FC = () => {
           {/* Desktop Menu */}
           <div className="hidden xl:flex items-center space-x-8">
             {NAV_ITEMS.map((item) => (
-              <Link
-                key={item.label}
-                to={item.href}
-                onClick={(e) => handleNavClick(e, item.href)}
-                className={`font-medium transition-colors text-sm tracking-widest ${
-                  item.preserveCase ? '' : 'uppercase'
-                } ${isSolid ? 'text-primary hover:text-accent' : 'text-white/90 hover:text-white'}`}
-              >
-                {item.label}
-              </Link>
+              <div key={item.label} className="relative">
+                <Link
+                  to={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className={`font-medium transition-colors text-sm tracking-widest ${
+                    item.preserveCase ? '' : 'uppercase'
+                  } ${isSolid ? 'text-primary hover:text-accent' : 'text-white/90 hover:text-white'}`}
+                >
+                  {item.label}
+                </Link>
+
+                {item.tag && (
+                  <span
+                    className={`absolute -top-5 -right-4 text-[10px] px-2 py-0.5 rounded-full ${isScrolled ? 'bg-primary text-white' : 'bg-white text-primary'}`}
+                  >
+                    {item.tag}
+                  </span>
+                )}
+              </div>
             ))}
-            <a href="/login" className={`px-6 py-3 rounded-full transition-colors font-medium text-sm tracking-wide ${isSolid ? 'bg-primary hover:bg-primary-light text-white' : 'bg-white text-primary hover:bg-gray-100'}`}>
+
+            <a
+              href="/login"
+              className={`px-6 py-3 rounded-full transition-colors font-medium text-sm tracking-wide ${
+                isSolid
+                  ? 'bg-primary hover:bg-primary-light text-white'
+                  : 'bg-white text-primary hover:bg-gray-100'
+              }`}
+            >
               Login
             </a>
           </div>
@@ -120,13 +137,19 @@ const Navbar: React.FC = () => {
             <Link
               key={item.label}
               to={item.href}
-              className="block px-4 py-4 rounded-md text-lg font-medium text-primary hover:text-primary-light hover:bg-gray-50 border-b border-gray-50 last:border-none"
+              className="flex items-center justify-between px-4 py-4 rounded-md text-lg font-medium text-primary hover:text-primary-light hover:bg-gray-50 border-b border-gray-50 last:border-none"
               onClick={(e) => {
                 handleNavClick(e, item.href);
                 setIsOpen(false);
               }}
             >
-              {item.label}
+              <span>{item.label}</span>
+
+              {item.tag && (
+                <span className={`bg-primary text-white text-xs px-2 py-0.5 rounded-full ml-3`}>
+                  {item.tag}
+                </span>
+              )}
             </Link>
           ))}
           <div className="px-4 pt-6">

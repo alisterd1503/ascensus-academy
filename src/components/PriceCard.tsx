@@ -1,4 +1,5 @@
 import { Pricing } from "@/src/types";
+import { Check } from 'lucide-react';
 
 interface Props {
   item: Pricing;
@@ -16,17 +17,8 @@ const PricingCard: React.FC<Props> = ({ item }) => {
       {/* Main bullet points */}
       <ul className="space-y-3 mb-4">
         {item.points.map((point, index) => (
-          <li key={index} className="flex items-start text-gray-700">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-4 h-4 text-primary-600 mt-1 mr-2 flex-shrink-0"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
+          <li key={index} className="flex items-start gap-2 text-gray-700">
+            <Check className="h-5 w-5 flex-shrink-0 text-primary" />
             <span dangerouslySetInnerHTML={{ __html: point }}></span>
           </li>
         ))}
@@ -40,17 +32,8 @@ const PricingCard: React.FC<Props> = ({ item }) => {
           </h5>
           <ul className="space-y-3 mb-4">
             {item.secondaryPoints.map((point, index) => (
-              <li key={index} className="flex items-start text-gray-700">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-4 h-4 text-primary-600 mt-1 mr-2 flex-shrink-0"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
+              <li key={index} className="flex items-start gap-2 text-gray-700">
+                <Check className="h-5 w-5 flex-shrink-0 text-primary" />
                 <span>{point}</span>
               </li>
             ))}

@@ -29,19 +29,19 @@ const JoinPage: React.FC = () => {
 
   return (
     <MainLayout>
-      <PageHeader title="Join Us" />
+      <PageHeader title="Join The Team" />
 
       <Reveal>
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch rounded-md">
                 {/* Workshop Image */}
-                <div className="w-full overflow-hidden rounded-md shadow-md max-h-1/2">
-                    <img
+                <div className="w-full overflow-hidden rounded-md shadow-md h-[200px] sm:h-auto">
+                  <img
                     src="/uploads/join-us.webp"
                     alt="Medicine Workshop"
                     className="w-full h-full object-cover"
-                    />
+                  />
                 </div>
                 {/* LEFT: TutorBird Form */}
                 <div

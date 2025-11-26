@@ -2,6 +2,7 @@ export interface NavItem {
   label: string;
   href: string;
   preserveCase?: boolean;
+  tag?: string;
 }
 
 export interface Tutor {

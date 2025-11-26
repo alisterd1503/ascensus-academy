@@ -4,7 +4,7 @@ import PageHeader from "../components/PageHeader";
 import { Reveal } from "../components/Reveal";
 import UsePageMeta from "../hooks/UsePageMeta";
 
-const ApplyPage: React.FC = () => {
+const SignUpPage: React.FC = () => {
   const scriptContainer = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const ApplyPage: React.FC = () => {
   UsePageMeta({
     title: "Sign Up – Ascensus Academy",
     description: "Register with Ascensus Academy to access personalised tutoring, mentorship, and expert support from A* tutors for GCSE and A-Level students.",
-    url: "https://ascensusacademy.com/apply",
+    url: "https://ascensusacademy.com/sign-up",
     image: "/uploads/social-about-us.png",
   });
 
@@ -31,15 +31,18 @@ const ApplyPage: React.FC = () => {
     <MainLayout>
       <PageHeader title="Sign Up" />
       <Reveal>
-        <section className="py-16 bg-white">
+        <section className="py-10 bg-white">
           <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-2xl md:text-4xl font-bold text-primary mb-4 md:mb-8 text-center">
+              Sign Up For a Free Consultation Call
+            </h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch rounded-md">
                 {/* Workshop Image */}
-                <div className="w-full overflow-hidden rounded-md shadow-md max-h-1/2">
+                <div className="w-full overflow-hidden rounded-md shadow-md h-[200px] sm:h-auto">
                     <img
-                    src="/uploads/sign-up.webp"
-                    alt="Medicine Workshop"
-                    className="w-full h-full object-cover"
+                      src="/uploads/sign-up.webp"
+                      alt="Medicine Workshop"
+                      className="w-full h-full object-cover"
                     />
                 </div>
               {/* LEFT: TutorBird Form */}
@@ -55,4 +58,4 @@ const ApplyPage: React.FC = () => {
   );
 };
 
-export default ApplyPage;
+export default SignUpPage;

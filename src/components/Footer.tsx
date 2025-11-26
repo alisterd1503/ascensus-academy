@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
               </div>
               <p className="text-gray-400 text-sm tracking-[0.3em]">For Students, By Students.</p>
             </div>
-            <div className="flex items-center text-gray-400 hover:text-white transition-colors">
+            {/* <div className="flex items-center text-gray-400 hover:text-white transition-colors">
               <Mail className="h-4 w-4 mr-2" />
               <a href="mailto:contact@ascensusacademy.com" className="text-sm">contact@ascensusacademy.com</a>
             </div>
@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
               <a href="/" className="text-gray-400 hover:text-white transition-colors p-2 rounded-full">
                 <Youtube className="h-5 w-5" />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Links Columns - each takes 1 column in the 3-column mobile grid */}
@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
             <div className="col-span-1">
               <h3 className="text-lg font-bold mb-6">Connect</h3>
               <ul className="space-y-3">
-                <li><a href="/apply" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">Apply</a></li>
+                <li><a href="/sign-up" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">Sign Up</a></li>
                 <li><a href="/contact-us" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">Contact Us</a></li>
                 <li><a href="/join-us" className="text-gray-400 hover:text-white transition-colors text-xs sm:text-sm">Join Us</a></li>
               </ul>

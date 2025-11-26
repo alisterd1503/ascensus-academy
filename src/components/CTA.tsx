@@ -20,9 +20,9 @@ const CTA: React.FC = () => {
             Start your journey to academic excellence today with a mentor who has walked the path before you.
           </p>
           
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
+          <div className="flex flex-col sm:flex-row justify-center gap-6 mb-8">
             <a
-              href="/apply"
+              href="/sign-up"
               className="bg-white hover:bg-gray-100 text-primary px-6 sm:px-12 py-3 sm:py-5 rounded-md font-bold text-base sm:text-lg shadow-xl transition-transform transform hover:-translate-y-1"
             >
               Sign Up
@@ -34,6 +34,10 @@ const CTA: React.FC = () => {
               Contact Us
             </a>
           </div>
+
+          <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
+            Sign up for a free consultation call
+          </p>
 
         </Reveal>
       </div>

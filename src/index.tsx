@@ -6,7 +6,7 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import SubjectsPage from "./pages/SubjectsPage";
 import MedWorkshop from './pages/MedWorkshop';
-import ApplyPage from './pages/ApplyPage';
+import SignUp from './pages/SignUp';
 import LoginPage from './pages/LoginPage';
 import ContactPage from './pages/ContactPage';
 import JoinPage from './pages/JoinPage';
@@ -24,7 +24,7 @@ ReactDOM.createRoot(rootElement).render(
         <Route path="/about-us" element={<AboutPage />} />
         <Route path="/subjects" element={<SubjectsPage />} />
         <Route path="/med-workshop" element={<MedWorkshop />} />
-        <Route path="/apply" element={<ApplyPage />} />
+        <Route path="/sign-up" element={<SignUp />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/contact-us" element={<ContactPage />} />
         <Route path="/join-us" element={<JoinPage />} />

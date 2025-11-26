@@ -53,7 +53,7 @@ const MedWorkshop: React.FC = () => {
                 </div>
 
                 {/* Workshop Image */}
-                <div className="w-full overflow-hidden rounded-md shadow-md max-h-[370px] order-2">
+                <div className="w-full overflow-hidden rounded-md shadow-md max-h-[285px] order-2">
                   <img
                     loading="lazy"
                     src="/uploads/med-workshop.webp"

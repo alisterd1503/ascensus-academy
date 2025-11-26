@@ -1,12 +1,12 @@
 import { NavItem, Tutor, Feature, Subjects, Pricing, Contact, EmailJS } from './types';
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: 'About Us', href: '/about-us' },
-  { label: 'NEW: Med Workshop', href: '/med-workshop', preserveCase: true },
-  { label: 'Subjects & Pricing', href: '/subjects' },
-  { label: 'Sign Up', href: '/apply' },
-  { label: 'Contact', href: '/contact-us' },
-  { label: 'Join The Team', href: '/join-us' },
+  { label: 'About Us', href: '/about-us', preserveCase: false },
+  { label: 'Med Workshop', href: '/med-workshop', preserveCase: false, tag: 'New' },
+  { label: 'Subjects & Pricing', href: '/subjects', preserveCase: false },
+  { label: 'Sign Up', href: '/sign-up', preserveCase: false },
+  { label: 'Contact', href: '/contact-us', preserveCase: false },
+  { label: 'Join The Team', href: '/join-us', preserveCase: false },
 ];
 
 export const TUTORS: Tutor[] = [
@@ -16,7 +16,7 @@ export const TUTORS: Tutor[] = [
     university: 'University of Warwick',
     course: 'Physics',
     image: '/uploads/tutors/seion.webp',
-    bio: 'Seion is a clear-thinking, structured tutor studying Physics at the University of Warwick. <b>He </b><b>achieved A<sup>*</sup>A<sup>*</sup>A<sup>*</sup>A at A-Levels</b> and scored <b>1st in his cohort for both A-level Physics and Mathematics.</b> He brings a clear, step-by-step teaching style that helps students master even the most challenging topics. Providing a structured yet friendly approach, Seion focuses on breaking down challenging concepts into clear, manageable steps, whilst building deep understanding in his students.',
+    bio: "Seion is a clear-thinking, structured tutor studying Physics at the University of Warwick. <span class='font-semibold'>He achieved A<sup>*</sup>A<sup>*</sup>A<sup>*</sup>A at A-Levels</span> and scored <span class='font-semibold'>1st in his cohort for both A-level Physics and Mathematics.</span> He brings a clear, step-by-step teaching style that helps students master even the most challenging topics. Providing a structured yet friendly approach, Seion focuses on breaking down challenging concepts into clear, manageable steps, whilst building deep understanding in his students.",
     subjects: ['Physics', 'Mathematics', 'Further Maths']
   },
   {
@@ -25,7 +25,7 @@ export const TUTORS: Tutor[] = [
     university: 'Imperial College London',
     course: 'Medicine',
     image: '/uploads/tutors/sabrina.webp',
-    bio: 'Sabrina is a calm, patient, and encouraging tutor studying Medicine at Imperial College London. Known for her clarity and steady approach, she helps students feel at ease with even the trickiest topics. <b>Achieving A<sup>*</sup>AAA at A-level</b> and having a <b>strong background in Biology</b>, Sabrina supports her students in building confidence, developing consistency, and making meaningful academic progress - one step at a time.',
+    bio: "Sabrina is a calm, patient, and encouraging tutor studying Medicine at Imperial College London. Known for her clarity and steady approach, she helps students feel at ease with even the trickiest topics. <span class='font-semibold'>Achieving A<sup>*</sup>AAA at A-level</span> and having a <span class='font-semibold'>strong background in Biology</span>, Sabrina supports her students in building confidence, developing consistency, and making meaningful academic progress - one step at a time.",
     subjects: ['Biology']
   },
   {
@@ -34,7 +34,7 @@ export const TUTORS: Tutor[] = [
     university: 'University of Warwick',
     course: 'MORSE',
     image: '/uploads/tutors/dilan.webp',
-    bio: 'Dilan studies MORSE (Mathematics, Operational Research, Statistics &amp; Economics) at the University of Warwick - a degree that reflects his sharp quantitative skills and love for problem-solving. <b>Achieving A<sup>*</sup>A<sup>*</sup>A<sup>*</sup> in Maths, Further Maths, and Physics</b>, he brings a methodical and example-led approach to tutoring. He helps students understand the ‘why’ behind the method and apply it confidently in high-pressure exam settings.',
+    bio: "Dilan studies MORSE (Mathematics, Operational Research, Statistics &amp; Economics) at the University of Warwick - a degree that reflects his sharp quantitative skills and love for problem-solving. <span class='font-semibold'>Achieving A<sup>*</sup>A<sup>*</sup>A<sup>*</sup> in Maths, Further Maths, and Physics</span>, he brings a methodical and example-led approach to tutoring. He helps students understand the ‘why’ behind the method and apply it confidently in high-pressure exam settings.",
     subjects: ['Maths', 'Further Maths', 'Physics', 'Economics']
   }
 ];
