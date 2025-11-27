@@ -6,10 +6,11 @@ const CTA: React.FC = () => {
     <section id="apply" className="relative py-16 sm:py-16 md:py-32 bg-primary overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 opacity-10 mix-blend-overlay">
-        <img 
-          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2670&auto=format&fit=crop" 
-          alt="Typing on keyboard" 
-          className="w-full h-full object-cover grayscale"
+        <img
+          loading="lazy"
+          src="/uploads/med-workshop.webp"
+          alt="Medicine Workshop"
+          className="w-full h-full object-cover"
         />
       </div>
       
