@@ -14,6 +14,12 @@ const LoginPage = lazy(() => import('./pages/LoginPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const JoinPage = lazy(() => import('./pages/JoinPage'));
 
+const Spinner = () => (
+  <div className="fixed inset-0 flex items-center justify-center bg-primary">
+    <div className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+  </div>
+);
+
 const rootElement = document.getElementById('root');
 if (!rootElement) throw new Error("Root element missing");
 
@@ -21,7 +27,7 @@ ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
     <BrowserRouter>
       <ScrollToTop />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Spinner />}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about-us" element={<AboutPage />} />
