@@ -18,7 +18,7 @@ const PricingCard: React.FC<Props> = ({ item }) => {
       <ul className="space-y-3 mb-4">
         {item.points.map((point, index) => (
           <li key={index} className="flex items-start gap-2 text-gray-700">
-            <Check className="h-5 w-5 flex-shrink-0 text-primary" />
+            <Check className="h-5 w-5 flex-shrink-0 text-primary-light" />
             <span dangerouslySetInnerHTML={{ __html: point }}></span>
           </li>
         ))}
@@ -33,7 +33,7 @@ const PricingCard: React.FC<Props> = ({ item }) => {
           <ul className="space-y-3 mb-4">
             {item.secondaryPoints.map((point, index) => (
               <li key={index} className="flex items-start gap-2 text-gray-700">
-                <Check className="h-5 w-5 flex-shrink-0 text-primary" />
+                <Check className="h-5 w-5 flex-shrink-0 text-primary-light" />
                 <span>{point}</span>
               </li>
             ))}
