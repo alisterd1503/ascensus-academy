@@ -29,41 +29,32 @@ export const TUTORS: Tutor[] = [
     subjects: ['Biology']
   },
   {
-    id: 'dilan',
-    name: 'Dilan',
-    university: 'University of Warwick',
-    course: 'MORSE',
-    image: '/uploads/tutors/dilan.webp',
-    bio: "Dilan studies MORSE (Mathematics, Operational Research, Statistics &amp; Economics) at the University of Warwick - a degree that reflects his sharp quantitative skills and love for problem-solving. <span class='font-semibold'>Achieving A<sup>*</sup>A<sup>*</sup>A<sup>*</sup> in Maths, Further Maths, and Physics</span>, he brings a methodical and example-led approach to tutoring. He helps students understand the ‘why’ behind the method and apply it confidently in high-pressure exam settings.",
-    subjects: ['Maths', 'Further Maths', 'Physics', 'Economics']
+    id: 'jeff',
+    name: 'Jeff',
+    university: 'University of Birmingham',
+    course: 'Medicine',
+    image: '/uploads/tutors/jeff.webp',
+    bio: "Jeff is a dedicated, methodical tutor studying Medicine at the University of Birmingham. Achieving <span class='font-semibold'>A<sup>*</sup>A<sup>*</sup>A in Biology, Chemistry, and Mathematics</span>, he brings a strong scientific foundation and a calm, structured approach to his teaching. He helps students break down complex concepts with clarity, building confidence through step-by-step explanations and practical exam strategies. Jeff’s supportive style helps students develop consistency and achieve tangible progress across even the most demanding topics.",
+    subjects: ['Biology', 'Chemistry']
   },
-  // {
-  //   id: 'jeff',
-  //   name: 'Jeff',
-  //   university: 'University of Birmingham',
-  //   course: 'Medicine',
-  //   image: '/uploads/tutors/jeff.webp',
-  //   bio: "Jeff is a dedicated, methodical tutor studying Medicine at the University of Birmingham. Achieving <span class='font-semibold'>A<sup>*</sup>A<sup>*</sup>A in Biology, Chemistry, and Mathematics</span>, he brings a strong scientific foundation and a calm, structured approach to his teaching. He helps students break down complex concepts with clarity, building confidence through step-by-step explanations and practical exam strategies. Jeff’s supportive style helps students develop consistency and achieve tangible progress across even the most demanding topics.",
-  //   subjects: ['Biology', 'Chemistry']
-  // },
-  // {
-  //   id: 'shainuja',
-  //   name: 'Shainuja',
-  //   university: 'Imperial College London',
-  //   course: 'Medicine',
-  //   image: '/uploads/tutors/shainuja.webp',
-  //   bio: "Shainuja is a patient, results-driven tutor studying Medicine at Imperial College London. She achieved <span class='font-semibold'>A<sup>*</sup>A<sup>*</sup>AA in Chemistry, Mathematics, Biology, and Further Maths</span>, placing her among the top of her cohort in quantitative and scientific subjects. She combines a gentle teaching manner with rigorous academic discipline, helping students grasp difficult material through clear frameworks, worked examples, and steady reinforcement. Shainuja focuses on confidence-building and long-term retention, guiding students to excel in both understanding and exam performance.",
-  //   subjects: ['Chemistry', 'Maths']
-  // },
-  // {
-  //   id: 'sajana',
-  //   name: 'Sajana',
-  //   university: 'University of Bath',
-  //   course: 'Aerospace Engineering',
-  //   image: '/uploads/tutors/sajana.webp',
-  //   bio: "Sajana is an analytical, forward-thinking tutor studying Aerospace Engineering at the University of Bath. With <span class='font-semibold'>A<sup>*</sup>A<sup>*</sup>A<sup>*</sup> in Mathematics, Physics, and Design Technology</span>, he brings a strong technical background and a passion for problem-solving. His teaching style blends logical breakdowns with real-world application, making abstract concepts intuitive and engaging. He supports students by simplifying challenging topics into manageable steps and encouraging structured thinking, essential skills for high-level STEM success.",
-  //   subjects: ['Chemistry', 'Maths']
-  // },
+  {
+    id: 'shainuja',
+    name: 'Shainuja',
+    university: 'Imperial College London',
+    course: 'Medicine',
+    image: '/uploads/tutors/shainuja.webp',
+    bio: "Shainuja is a patient, results-driven tutor studying Medicine at Imperial College London. She achieved <span class='font-semibold'>A<sup>*</sup>A<sup>*</sup>AA in Chemistry, Mathematics, Biology, and Further Maths</span>, placing her among the top of her cohort in quantitative and scientific subjects. She combines a gentle teaching manner with rigorous academic discipline, helping students grasp difficult material through clear frameworks, worked examples, and steady reinforcement. Shainuja focuses on confidence-building and long-term retention, guiding students to excel in both understanding and exam performance.",
+    subjects: ['Chemistry', 'Maths']
+  },
+  {
+    id: 'sajana',
+    name: 'Sajana',
+    university: 'University of Bath',
+    course: 'Aerospace Engineering',
+    image: '/uploads/tutors/sajana.webp',
+    bio: "Sajana is an analytical, forward-thinking tutor studying Aerospace Engineering at the University of Bath. With <span class='font-semibold'>A<sup>*</sup>A<sup>*</sup>A<sup>*</sup> in Mathematics, Physics, and Design Technology</span>, he brings a strong technical background and a passion for problem-solving. His teaching style blends logical breakdowns with real-world application, making abstract concepts intuitive and engaging. He supports students by simplifying challenging topics into manageable steps and encouraging structured thinking, essential skills for high-level STEM success.",
+    subjects: ['Chemistry', 'Maths']
+  },
 ];
 
 export const FEATURES: Feature[] = [
