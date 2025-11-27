@@ -74,12 +74,12 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-gray-800 pt-4 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-500 text-xs mb-4 md:mb-0">
+          <p className="text-gray-400 text-xs mb-4 md:mb-0">
             © 2025 Ascensus Academy. All rights reserved.
           </p>
           <div className="flex space-x-6">
-            <a href="/" className="text-gray-500 hover:text-white text-xs">Privacy Policy</a>
-            <a href="/" className="text-gray-500 hover:text-white text-xs">Terms of Service</a>
+            <a href="/" className="text-gray-400 hover:text-white text-xs">Privacy Policy</a>
+            <a href="/" className="text-gray-400 hover:text-white text-xs">Terms of Service</a>
           </div>
         </div>
       </div>

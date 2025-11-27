@@ -122,6 +122,7 @@ const Navbar: React.FC = () => {
           <div className="xl:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
+              aria-label="Open menu"
               className={`focus:outline-none transition-colors ${isSolid ? 'text-primary hover:text-primary-light' : 'text-white hover:text-gray-200'}`}
             >
               {isOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}

@@ -53,7 +53,7 @@ export const TUTORS: Tutor[] = [
     course: 'Aerospace Engineering',
     image: '/uploads/tutors/sajana.webp',
     bio: "Sajana is an analytical, forward-thinking tutor studying Aerospace Engineering at the University of Bath. With <span class='font-semibold'>A<sup>*</sup>A<sup>*</sup>A<sup>*</sup> in Mathematics, Physics, and Design Technology</span>, he brings a strong technical background and a passion for problem-solving. His teaching style blends logical breakdowns with real-world application, making abstract concepts intuitive and engaging. He supports students by simplifying challenging topics into manageable steps and encouraging structured thinking, essential skills for high-level STEM success.",
-    subjects: ['Chemistry', 'Maths']
+    subjects: ['Physics', 'Maths']
   },
 ];
 
