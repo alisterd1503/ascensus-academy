@@ -13,7 +13,7 @@ const CTA: React.FC = () => {
         />
       </div>
       
-      <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
         <Reveal>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-8">Sign up for a free consultation call!</h2>
           <p className="text-gray-300 text-lg md:text-xl mb-12 max-w-2xl mx-auto font-light leading-relaxed">
