@@ -1,17 +1,18 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import '../index.css';
-
-import HomePage from "./pages/HomePage";
-import AboutPage from "./pages/AboutPage";
-import SubjectsPage from "./pages/SubjectsPage";
-import MedWorkshop from './pages/MedWorkshop';
-import SignUp from './pages/SignUp';
-import LoginPage from './pages/LoginPage';
-import ContactPage from './pages/ContactPage';
-import JoinPage from './pages/JoinPage';
 import ScrollToTop from './components/ScrollToTop';
+
+// Lazy-load pages
+const HomePage = lazy(() => import('./pages/HomePage'));
+const AboutPage = lazy(() => import('./pages/AboutPage'));
+const SubjectsPage = lazy(() => import('./pages/SubjectsPage'));
+const MedWorkshop = lazy(() => import('./pages/MedWorkshop'));
+const SignUp = lazy(() => import('./pages/SignUp'));
+const LoginPage = lazy(() => import('./pages/LoginPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+const JoinPage = lazy(() => import('./pages/JoinPage'));
 
 const rootElement = document.getElementById('root');
 if (!rootElement) throw new Error("Root element missing");
@@ -19,17 +20,19 @@ if (!rootElement) throw new Error("Root element missing");
 ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
     <BrowserRouter>
-      <ScrollToTop/>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about-us" element={<AboutPage />} />
-        <Route path="/subjects" element={<SubjectsPage />} />
-        <Route path="/med-workshop" element={<MedWorkshop />} />
-        <Route path="/sign-up" element={<SignUp />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/contact-us" element={<ContactPage />} />
-        <Route path="/join-us" element={<JoinPage />} />
-      </Routes>
+      <ScrollToTop />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about-us" element={<AboutPage />} />
+          <Route path="/subjects" element={<SubjectsPage />} />
+          <Route path="/med-workshop" element={<MedWorkshop />} />
+          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/contact-us" element={<ContactPage />} />
+          <Route path="/join-us" element={<JoinPage />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   </React.StrictMode>
 );
