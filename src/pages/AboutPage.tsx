@@ -35,19 +35,19 @@ const AboutPage: React.FC = () => {
 
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
-                    <Check className="h-5 w-5 flex-shrink-0 text-primary" />
+                    <Check className="h-5 w-5 shrink-0 text-primary" />
                     <span>
                     They have <b>recently</b> been through the <b>same exams</b> themselves.
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Check className="h-5 w-5 flex-shrink-0 text-primary" />
+                    <Check className="h-5 w-5 shrink-0 text-primary" />
                     <span>
                     They have <b>first-hand insight</b> into the demands, pressures and challenges that students face today.
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Check className="h-5 w-5 flex-shrink-0 text-primary" />
+                    <Check className="h-5 w-5 shrink-0 text-primary" />
                     <span>
                     They bring<b> personalised and proven strategies</b> that actually work in today’s education system.
                     </span>
@@ -73,7 +73,7 @@ const AboutPage: React.FC = () => {
         {/* SECTION 2 */}
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-stretch">
           {/* Image (left) */}
-          <Reveal className="flex order-1 lg:order-none">
+          <Reveal className="flex order-1 lg:order-0">
             <img
               src="/uploads/our-journey.webp"
               alt="Mentorship process"
