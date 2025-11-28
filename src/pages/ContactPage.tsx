@@ -12,7 +12,7 @@ const ContactPage: React.FC = () => {
     title: "Contact Ascensus Academy – Get in Touch",
     description: "Reach out to Ascensus Academy for enquiries, support, or guidance on our tutoring and mentorship services. We're here to help students succeed.",
     url: "https://ascensusacademy.com/contact-us",
-    image: "/main-logo.svg",
+    image: "/uploads/ascensus-academy.jpg",
   });
 
   return (

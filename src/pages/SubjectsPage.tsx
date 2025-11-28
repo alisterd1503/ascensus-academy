@@ -12,7 +12,7 @@ const SubjectsPage: React.FC = () => {
     title: "Subjects & Tutoring – Ascensus Academy",
     description: "Explore Ascensus Academy's tutoring for GCSE and A-Level students in Biology, Chemistry, Physics, Maths, Further Maths, and Economics. Tailored lessons, mentorship, and exam preparation to help students succeed.",
     url: "https://ascensusacademy.com/subjects",
-    image: "/uploads/social-about-us.png",
+    image: "/uploads/ascensus-academy.jpg",
   });
   return (
     <MainLayout>

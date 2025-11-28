@@ -12,7 +12,7 @@ const HomePage: React.FC = () => {
     title: "Ascensus Academy – A-Level Tutoring by Top University Students",
     description: "Premium A* tutoring by top UK university students. Personalised mentoring, vetted tutors, 1-to-1 online lessons, and tailored academic support.",
     url: "https://ascensusacademy.com/",
-    image: "/uploads/social-about-us.png",
+    image: "/uploads/ascensus-academy.jpg",
   });
   
   return (

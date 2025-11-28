@@ -24,7 +24,7 @@ const LoginPage: React.FC = () => {
     title: "Student Login – Ascensus Academy Portal",
     description: "Access your personalised tutoring and mentorship dashboard. Log in to manage lessons, track progress, and communicate with your A* tutor.",
     url: "https://ascensusacademy.com/login",
-    image: "/uploads/social-about-us.png",
+    image: "/uploads/ascensus-academy.jpg",
   });
 
   return (

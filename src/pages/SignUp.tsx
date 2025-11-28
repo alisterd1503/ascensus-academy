@@ -24,7 +24,7 @@ const SignUpPage: React.FC = () => {
     title: "Sign Up – Ascensus Academy",
     description: "Register with Ascensus Academy to access personalised tutoring, mentorship, and expert support from A* tutors for GCSE and A-Level students.",
     url: "https://ascensusacademy.com/sign-up",
-    image: "/uploads/social-about-us.png",
+    image: "/uploads/ascensus-academy.jpg",
   });
 
   return (

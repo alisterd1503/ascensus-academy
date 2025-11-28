@@ -24,7 +24,7 @@ const JoinPage: React.FC = () => {
     title: "Join The Team – Become a Tutor at Ascensus Academy",
     description: "Apply to become a tutor at Ascensus Academy. Join our team of high-achieving A* tutors and help guide students with personalised mentorship and expert tuition.",
     url: "https://ascensusacademy.com/join-us",
-    image: "/uploads/social-about-us.png",
+    image: "/uploads/ascensus-academy.jpg",
   });
 
   return (

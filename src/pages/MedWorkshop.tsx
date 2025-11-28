@@ -26,7 +26,7 @@ const MedWorkshop: React.FC = () => {
     title: "Medicine Interview Workshop – Ascensus Academy",
     description: "Join Ascensus Academy's Medicine Workshop, led by successful medics. Gain personalised 1-to-1 mock interviews, detailed feedback, and proven strategies to excel in MMI and Oxbridge interviews.",
     url: "https://ascensusacademy.com/med-workshop",
-    image: "/uploads/social-about-us.png",
+    image: "/uploads/ascensus-academy.jpg",
   });
 
   return (
