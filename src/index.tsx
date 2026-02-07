@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import '../index.css';
 import ScrollToTop from './components/ScrollToTop';
+import HomePage from './pages/HomePage';
 
 // Lazy-load pages
-const HomePage = lazy(() => import('./pages/HomePage'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
 const SubjectsPage = lazy(() => import('./pages/SubjectsPage'));
 const MedWorkshop = lazy(() => import('./pages/MedWorkshop'));
