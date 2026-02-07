@@ -1,6 +1,7 @@
 import path from 'path';
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
+import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'; // 1. Add this import
 
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
@@ -9,7 +10,10 @@ export default defineConfig(({ mode }) => {
         port: 3000,
         host: '0.0.0.0',
       },
-      plugins: [react()],
+      plugins: [
+        react(), 
+        cssInjectedByJsPlugin() // 2. Add this to the plugins array
+      ],
       build: {
         assetsInlineLimit: 10240, 
       },
