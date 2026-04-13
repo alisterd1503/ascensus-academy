@@ -20,7 +20,7 @@ export const FOUNDERS: Founder[] = [
   },
   {
     id: 'noel',
-    name: 'Noel Chako',
+    name: 'Noel Chacko',
     title: 'Medical Student at the University of Birmingham',
     image: '/uploads/tutors/noel.webp',
     bio: "Noel achieved <span class='font-semibold'>A<sup>*</sup>AA at A-Level in Biology, Chemistry, and Mathematics</span>, ranking <span class='font-semibold'>1st in his cohort for Biology</span>. He is a second-year Medical student at the University of Birmingham, with a strong academic foundation and a precise, methodical approach to learning.",
