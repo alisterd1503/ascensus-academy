@@ -1,4 +1,4 @@
-import { NavItem, Tutor, Feature, Subjects, Pricing, Contact, EmailJS } from './types';
+import { NavItem, Tutor, Feature, Subjects, Pricing, Contact, EmailJS, Founder } from './types';
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'About Us', href: '/about-us', preserveCase: false },
@@ -8,6 +8,25 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'Contact', href: '/contact-us', preserveCase: false },
   { label: 'Join The Team', href: '/join-us', preserveCase: false },
 ];
+
+export const FOUNDERS: Founder[] = [
+  {
+    id: 'austin',
+    name: 'Austin Jiji',
+    title: 'Incoming Level 7 Degree Apprentice with PwC (Chartered Accountancy)',
+    image: '/uploads/tutors/austin.webp',
+    bio: "Austin achieved <span class='font-semibold'>A<sup>*</sup>AB at A-Level in Economics, Mathematics, and Physics</span>, ranking <span class='font-semibold'>1st in his cohort for Economics.</span> He is an incoming Degree Apprentice in Chartered Accountancy with PwC and the University of Nottingham, starting in September 2026, bringing a structured, results-driven approach shaped by both academic and professional experience.",
+    subjects: ['Economics']
+  },
+  {
+    id: 'noel',
+    name: 'Noel Chako',
+    title: 'Medical Student at the University of Birmingham',
+    image: '/uploads/tutors/noel.webp',
+    bio: "Noel achieved <span class='font-semibold'>A<sup>*</sup>AA at A-Level in Biology, Chemistry, and Mathematics</span>, ranking <span class='font-semibold'>1st in his cohort for Biology</span>. He is a second-year Medical student at the University of Birmingham, with a strong academic foundation and a precise, methodical approach to learning.",
+    subjects: ['Biology']
+  },
+]
 
 export const TUTORS: Tutor[] = [
   {
@@ -54,6 +73,24 @@ export const TUTORS: Tutor[] = [
     image: '/uploads/tutors/sajana.webp',
     bio: "Sajana is an analytical, forward-thinking tutor studying Aerospace Engineering at the University of Bath. With <span class='font-semibold'>A<sup>*</sup>A<sup>*</sup>A<sup>*</sup> in Mathematics, Physics, and Design Technology</span>, he brings a strong technical background and a passion for problem-solving. His teaching style blends logical breakdowns with real-world application, making abstract concepts intuitive and engaging. He supports students by simplifying challenging topics into manageable steps and encouraging structured thinking, essential skills for high-level STEM success.",
     subjects: ['Physics', 'Maths']
+  },
+  {
+    id: 'felix',
+    name: 'Felix',
+    university: 'University College London',
+    course: 'Economics',
+    image: '/uploads/tutors/felix.webp',
+    bio: "Felix is a clear-thinking and structured tutor studying Economics at UCL. <span class='font-semibold'>He achieved A<sup>*</sup>A<sup>*</sup>AA in Mathematics, Physics, Economics, and Further Mathematics.</span> He brings a logical, step-by-step approach to teaching, helping students break down complex concepts into manageable steps. Felix focuses on building strong fundamentals and exam confidence, enabling students to make consistent progress.",
+    subjects: ['Maths', 'Physics']
+  },
+  {
+    id: 'azam',
+    name: 'Azam',
+    university: 'University of Warwick',
+    course: 'Physics',
+    image: '/uploads/tutors/azam.webp',
+    bio: "Azam is a dedicated and methodical tutor studying Physics at the University of Warwick.<span class='font-semibold'> He achieved A<sup>*</sup>A<sup>*</sup>A<sup>*</sup> at A-Level in Mathematics, Physics, and Biology.</span> With a calm and structured approach, Azam simplifies challenging topics and supports students in building confidence and precision. He focuses on clear understanding and consistent progress across all areas.",
+    subjects: ['Maths','Physics','Biology']
   },
 ];
 

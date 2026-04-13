@@ -5,6 +5,15 @@ export interface NavItem {
   tag?: string;
 }
 
+export interface Founder {
+  id: string;
+  name: string;
+  title: string;
+  image: string;
+  bio: string;
+  subjects: string[];
+}
+
 export interface Tutor {
   id: string;
   name: string;

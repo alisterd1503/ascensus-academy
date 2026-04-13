@@ -6,6 +6,7 @@ import Features from "../components/Features";
 import Tutors from "../components/Tutors";
 import CTA from "../components/CTA";
 import UsePageMeta from "../hooks/UsePageMeta";
+import Founders from "../components/Founders";
 
 const HomePage: React.FC = () => {
   UsePageMeta({
@@ -21,6 +22,7 @@ const HomePage: React.FC = () => {
       <About />
       <Features />
       <Tutors />
+      <Founders/>
       <CTA />
     </MainLayout>
   );
