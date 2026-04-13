@@ -4,7 +4,7 @@ import { Reveal } from './Reveal';
 
 const Founders: React.FC = () => {
   return (
-    <section id="founders" className="py-5 sm:py-5 md:py-24 bg-gray-100">
+    <section id="founders" className="py-20 md:py-24 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="text-center mb-10 md:mb-20">
