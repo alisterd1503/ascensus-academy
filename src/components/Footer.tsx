@@ -1,5 +1,4 @@
 import React from 'react';
-import { GraduationCap, Facebook, Instagram, Youtube, Mail } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -9,37 +8,23 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-[1fr_auto] gap-x-4 gap-y-12 mb-5">
           {/* Brand Column - spans full width (3 cols) on mobile, 1 col on md+ */}
           <div className="col-span-3 md:col-span-1 space-y-6">
-            <div className="space-y-2">
-              <div className="flex-shrink-0 flex items-end gap-2">
-                  {/* Logo Image */}
-                  <img
-                    src="/main-logo.svg"
-                    alt="Ascensus Academy Logo"
-                    className={`h-12 w-auto invert brightness-0`}
-                  />
-
-                  {/* Logo Text */}
-                  <span className={`text-3xl font-logo text-white}`}>
-                    Ascensus Academy
-                  </span>
+            <div className="flex items-center gap-4">
+              {/* Logo Image on the left */}
+              <img
+                src="/main-logo.svg"
+                alt="Ascensus Academy Logo"
+                className="h-14 w-auto invert brightness-0 flex-shrink-0"
+              />
+              {/* Grouped Text Container */}
+              <div className="flex flex-col items-start">
+                <span className="text-3xl font-logo text-white leading-tight">
+                  Ascensus Academy
+                </span>
+                <p className="text-gray-400 text-[10px] tracking-[0.38em] uppercase">
+                  For Students, By Students.
+                </p>
               </div>
-              <p className="text-gray-400 text-sm tracking-[0.3em]">For Students, By Students.</p>
             </div>
-            {/* <div className="flex items-center text-gray-400 hover:text-white transition-colors">
-              <Mail className="h-4 w-4 mr-2" />
-              <a href="mailto:contact@ascensusacademy.com" className="text-sm">contact@ascensusacademy.com</a>
-            </div>
-            <div className="flex space-x-4">
-              <a href="/" className="text-gray-400 hover:text-white transition-colors p-2 rounded-full">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="/" className="text-gray-400 hover:text-white transition-colors p-2 rounded-full">
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a href="/" className="text-gray-400 hover:text-white transition-colors p-2 rounded-full">
-                <Youtube className="h-5 w-5" />
-              </a>
-            </div> */}
           </div>
 
           {/* Links Columns - each takes 1 column in the 3-column mobile grid */}
@@ -73,13 +58,24 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
+        {/*Updated this section so that on mobile screens All rights served is at the top. Pricacy and Terms are stacked below on the left and ADI is on the right.
+        On bigger screens it should all be in a row*/}
         <div className="border-t border-gray-800 pt-4 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-xs mb-4 md:mb-0">
-            © 2025 Ascensus Academy. All rights reserved.
-          </p>
           <div className="flex space-x-6">
             <a href="/" className="text-gray-400 hover:text-white text-xs">Privacy Policy</a>
             <a href="/" className="text-gray-400 hover:text-white text-xs">Terms of Service</a>
+          </div>
+          <p className="text-gray-400 text-xs mb-4 md:mb-0">
+            © 2026 Ascensus Academy. All rights reserved.
+          </p>
+          <div>
+            <a target="_blank" rel="noopener noreferrer" href="https://adistudio.co.uk" className="block opacity-70 hover:opacity-100 transition-opacity">
+              <img
+                  src="/adi-studio.svg"
+                  alt="Ascensus Academy Logo"
+                  className="h-8 w-auto invert brightness-0 flex-shrink-0"
+              />
+            </a>
           </div>
         </div>
       </div>
