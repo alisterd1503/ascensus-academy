@@ -141,6 +141,26 @@ export const SUBJECTS: Subjects[] = [
   {
     subject: "Economics",
     image: "/uploads/subjects/economics.webp",
+  },
+  {
+    subject: "Business",
+    image: "/uploads/subjects/business.webp",
+  },
+  {
+    subject: "English Literature",
+    image: "/uploads/subjects/english-lit.webp",
+  },
+  {
+    subject: "English Language",
+    image: "/uploads/subjects/english-lan.webp",
+  },
+  {
+    subject: "History",
+    image: "/uploads/subjects/history.webp",
+  },
+  {
+    subject: "Psychology",
+    image: "/uploads/subjects/psychology.webp",
   }
 ];
 
