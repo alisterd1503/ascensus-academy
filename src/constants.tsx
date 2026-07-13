@@ -1,4 +1,4 @@
-import { NavItem, Tutor, Feature, Subjects, Pricing, Contact, EmailJS, Founder } from './types';
+import { NavItem, Tutor, Feature, Subjects, Pricing, Contact, EmailJS, Founder, HomePage } from './types';
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'About Us', href: '/about-us', preserveCase: false },
@@ -8,6 +8,11 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'Contact', href: '/contact-us', preserveCase: false },
   { label: 'Join The Team', href: '/join-us', preserveCase: false },
 ];
+
+export const HOMEPAGE: HomePage = {
+  story: "Ascensus Academy was founded to <span class='font-medium text-primary'>revolutionise</span> the future of tutoring. We believe the traditional education system needs an upgrade. That is why we only hire undergraduate tutors who have personally achieved an <span class='font-medium text-primary'>A* at A-level in the subject</span> they teach.</br></br>Here, every student is paired with a <span class='font-medium text-primary'>personalised mentor</span>: a high achieving university student studying a similar course pathway.",
+  model: `"If you want your child to succeed, connect them with someone who already has."`
+};
 
 export const FOUNDERS: Founder[] = [
   {

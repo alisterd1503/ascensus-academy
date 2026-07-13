@@ -5,6 +5,11 @@ export interface NavItem {
   tag?: string;
 }
 
+export interface HomePage {
+  story: string;
+  model: string;
+}
+
 export interface Founder {
   id: string;
   name: string;

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Reveal } from './Reveal';
+import { HOMEPAGE } from '../constants';
 
 const About: React.FC = () => {
   return (
@@ -22,14 +23,9 @@ const About: React.FC = () => {
             <div className="w-full lg:w-1/2">
               <Reveal>
                 <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4 md:mb-8">Our Story</h2>
-                <div className="space-y-6 text-lg text-gray-600 leading-relaxed font-light">
-                  <p>
-                    Ascensus Academy was founded to <span className="font-medium text-primary">revolutionise</span> the future of tutoring. We believe the traditional education system needs an upgrade. That is why we only hire undergraduate tutors who have personally achieved an <span className="font-medium text-primary">A* at A-level in the subject</span> they teach.
-                  </p>
-                  <p>
-                    Here, every student is paired with a <span className="font-medium text-primary">personalised mentor</span>: a high achieving university student studying a similar course pathway.
-                  </p>
-                </div>
+                <div className="space-y-6 text-lg text-gray-600 leading-relaxed font-light"
+                  dangerouslySetInnerHTML={{ __html: HOMEPAGE.story }}
+                />
                 <a href="/about-us"
                   className="mt-10 bg-primary hover:bg-primary-light text-white px-8 py-4 rounded-md font-medium transition-all shadow-lg hover:shadow-xl inline-block text-center"
                 >
@@ -47,7 +43,7 @@ const About: React.FC = () => {
           <Reveal>
             <h3 className="text-2xl sm:text-2xl md:text-4xl font-bold text-white mb-3 sm:mb-3 md:mb-10 tracking-wide">Our model is simple:</h3>
             <p className="text-xl sm:text-xl md:text-4xl  text-blue-100 italic leading-relaxed">
-              "If you want your child to succeed, connect them with someone who already has."
+              {HOMEPAGE.model}
             </p>
           </Reveal>
         </div>
