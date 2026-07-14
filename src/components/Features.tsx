@@ -1,8 +1,20 @@
 import React from 'react';
-import { FEATURES } from '../constants';
 import { Reveal } from './Reveal';
+import { urlFor } from '../lib/sanity';
 
-const Features: React.FC = () => {
+interface Feature {
+  title: string;
+  description: string;
+  image: any;
+}
+
+interface Props {
+  features: Feature[];
+}
+
+const Features: React.FC<Props> = ({ features }) => {
+  if (!features.length) return null;
+
   return (
     <section id="services" className="py-0 sm:py-0 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 bg-gray-50 shadow-sm rounded-md">
@@ -14,14 +26,12 @@ const Features: React.FC = () => {
         </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          {FEATURES.map((feature, index) => (
+          {features.map((feature, index) => (
             <Reveal key={index} className={`delay-[${index * 100}ms]`}>
-              <div 
-                className="bg-white p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center group h-full"
-              >
+              <div className="bg-white p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center group h-full">
                 <div className="p-0 rounded-full text-primary mb-8 duration-300">
                   <img
-                    src={feature.image}
+                    src={urlFor(feature.image).url()}
                     alt={feature.title}
                     loading="lazy"
                     decoding="async"

@@ -1,13 +1,20 @@
 import React from 'react';
 import { Reveal } from './Reveal';
-import { HOMEPAGE } from '../constants';
 
-const About: React.FC = () => {
+interface HomepageData {
+  story: string;
+  model: string;
+}
+
+interface Props {
+  homepage: HomepageData;
+}
+
+const About: React.FC<Props> = ({ homepage }) => {
   return (
     <section id="about">
       <div className="py-20 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Our Story Section */}
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
             <div className="w-full lg:w-1/2 relative">
               <Reveal>
@@ -24,7 +31,7 @@ const About: React.FC = () => {
               <Reveal>
                 <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4 md:mb-8">Our Story</h2>
                 <div className="space-y-6 text-lg text-gray-600 leading-relaxed font-light"
-                  dangerouslySetInnerHTML={{ __html: HOMEPAGE.story }}
+                  dangerouslySetInnerHTML={{ __html: homepage.story }}
                 />
                 <a href="/about-us"
                   className="mt-10 bg-primary hover:bg-primary-light text-white px-8 py-4 rounded-md font-medium transition-all shadow-lg hover:shadow-xl inline-block text-center"
@@ -37,13 +44,12 @@ const About: React.FC = () => {
         </div>
       </div>
 
-      {/* Our Model Quote - Full Width */}
       <div className="w-full bg-primary py-10 sm:py-10 md:py-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Reveal>
             <h3 className="text-2xl sm:text-2xl md:text-4xl font-bold text-white mb-3 sm:mb-3 md:mb-10 tracking-wide">Our model is simple:</h3>
-            <p className="text-xl sm:text-xl md:text-4xl  text-blue-100 italic leading-relaxed">
-              {HOMEPAGE.model}
+            <p className="text-xl sm:text-xl md:text-4xl text-blue-100 italic leading-relaxed">
+              {homepage.model}
             </p>
           </Reveal>
         </div>

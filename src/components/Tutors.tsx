@@ -1,8 +1,24 @@
 import React from 'react';
-import { TUTORS } from '../constants';
 import { Reveal } from './Reveal';
+import { urlFor } from '../lib/sanity';
 
-const Tutors: React.FC = () => {
+interface Tutor {
+  id: { current: string };
+  name: string;
+  university: string;
+  course: string;
+  image: any;
+  bio: string;
+  subjects: string[];
+}
+
+interface Props {
+  tutors: Tutor[];
+}
+
+const Tutors: React.FC<Props> = ({ tutors }) => {
+  if (!tutors.length) return null;
+
   return (
     <section id="tutors" className="py-5 sm:py-5 md:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,24 +31,22 @@ const Tutors: React.FC = () => {
         </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {TUTORS.map((tutor) => (
-            <Reveal key={tutor.id}>
+          {tutors.map((tutor) => (
+            <Reveal key={tutor.id.current}>
               <div className="bg-white rounded-none border border-gray-100 hover:border-primary/20 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col h-full group">
                 <div className="h-90 overflow-hidden relative">
                   <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors z-10 duration-500"></div>
-                  <img 
+                  <img
                     loading="lazy"
-                    src={tutor.image} 
-                    alt={tutor.name} 
+                    src={urlFor(tutor.image).url()}
+                    alt={tutor.name}
                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                   />
                 </div>
                 <div className="p-8 flex-grow flex flex-col">
                   <h3 className="text-2xl font-bold text-primary mb-1">{tutor.name}</h3>
                   <p className="text-primary font-medium mb-6 text-sm tracking-wide">{tutor.course} at <span className="text-primary">{tutor.university}</span></p>
-
                   <p className="text-gray-600 text-sm leading-relaxed mb-8 flex-grow font-light" dangerouslySetInnerHTML={{ __html: tutor.bio }} />
-
                   <div className="pt-6 border-t border-gray-100">
                     <div className="flex flex-wrap gap-2">
                       {tutor.subjects.map((subject) => (
