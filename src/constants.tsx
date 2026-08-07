@@ -10,9 +10,28 @@ export const NAV_ITEMS: NavItem[] = [
 ];
 
 export const HOMEPAGE: HomePage = {
-  story: "Ascensus Academy was founded to <span class='font-medium text-primary'>revolutionise</span> the future of tutoring. We believe the traditional education system needs an upgrade. That is why we only hire undergraduate tutors who have personally achieved an <span class='font-medium text-primary'>A* at A-level in the subject</span> they teach.</br></br>Here, every student is paired with a <span class='font-medium text-primary'>personalised mentor</span>: a high achieving university student studying a similar course pathway.",
-  model: `"If you want your child to succeed, connect them with someone who already has."`
-};
+  hero: {
+    welcomeText: 'Welcome to',
+    title: 'Ascensus Academy',
+    tagline: 'For Students, By Students.',
+    primaryButtonLabel: 'View Our Services',
+    secondaryButtonLabel: 'Meet the Team',
+  },
+  story: {
+    text: "Ascensus Academy was founded to <span class='font-medium text-primary'>revolutionise</span> the future of tutoring. We believe the traditional education system needs an upgrade. That is why we only hire undergraduate tutors who have personally achieved an <span class='font-medium text-primary'>A* at A-level in the subject</span> they teach.</br></br>Here, every student is paired with a <span class='font-medium text-primary'>personalised mentor</span>: a high achieving university student studying a similar course pathway.",
+    buttonLabel: 'Learn More About Us',
+  },
+  model: {
+    heading: 'Our model is simple:',
+    quote: '"If you want your child to succeed, connect them with someone who already has."',
+  },
+  cta: {
+    title: 'Sign up for a free consultation call!',
+    text: 'Start your journey to academic excellence today with a mentor who has walked the path before you.',
+    primaryButtonLabel: 'Sign Up',
+    secondaryButtonLabel: 'Contact Us',
+  },
+}
 
 export const FOUNDERS: Founder[] = [
   {

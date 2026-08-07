@@ -1,16 +1,22 @@
 import React from 'react';
 import { Reveal } from './Reveal';
 
-interface HomepageData {
-  story: string;
-  model: string;
+interface HomeStory {
+  text: string;
+  buttonLabel: string;
+}
+
+interface HomeModel {
+  heading: string;
+  quote: string;
 }
 
 interface Props {
-  homepage: HomepageData;
+  story: HomeStory;
+  model: HomeModel;
 }
 
-const About: React.FC<Props> = ({ homepage }) => {
+const About: React.FC<Props> = ({ story, model }) => {
   return (
     <section id="about">
       <div className="py-20 md:py-24 bg-white">
@@ -31,12 +37,12 @@ const About: React.FC<Props> = ({ homepage }) => {
               <Reveal>
                 <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4 md:mb-8">Our Story</h2>
                 <div className="space-y-6 text-lg text-gray-600 leading-relaxed font-light"
-                  dangerouslySetInnerHTML={{ __html: homepage.story }}
+                  dangerouslySetInnerHTML={{ __html: story.text }}
                 />
                 <a href="/about-us"
                   className="mt-10 bg-primary hover:bg-primary-light text-white px-8 py-4 rounded-md font-medium transition-all shadow-lg hover:shadow-xl inline-block text-center"
                 >
-                  Learn More About Us
+                  {story.buttonLabel}
                 </a>
               </Reveal>
             </div>
@@ -47,9 +53,9 @@ const About: React.FC<Props> = ({ homepage }) => {
       <div className="w-full bg-primary py-10 sm:py-10 md:py-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Reveal>
-            <h3 className="text-2xl sm:text-2xl md:text-4xl font-bold text-white mb-3 sm:mb-3 md:mb-10 tracking-wide">Our model is simple:</h3>
+            <h3 className="text-2xl sm:text-2xl md:text-4xl font-bold text-white mb-3 sm:mb-3 md:mb-10 tracking-wide">{model.heading}</h3>
             <p className="text-xl sm:text-xl md:text-4xl text-blue-100 italic leading-relaxed">
-              {homepage.model}
+              {model.quote}
             </p>
           </Reveal>
         </div>

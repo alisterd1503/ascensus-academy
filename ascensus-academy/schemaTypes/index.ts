@@ -3,6 +3,6 @@ import { founder } from './founder'
 import { subject } from './subject'
 import { feature } from './feature'
 import { pricing } from './pricing'
-import { siteSettings } from './siteSettings'
+import { homePage } from './homePage'
 
-export const schemaTypes = [tutor, founder, subject, feature, pricing, siteSettings]
+export const schemaTypes = [tutor, founder, subject, feature, pricing, homePage]

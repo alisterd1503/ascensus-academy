@@ -20,6 +20,6 @@ export async function getPricing() {
   return client.fetch(`*[_type == "pricing"] | order(order asc)`)
 }
 
-export async function getSiteSettings() {
-  return client.fetch(`*[_type == "siteSettings"][0]`)
+export async function getHomePage() {
+  return client.fetch(`*[_type == "homePage"][0]`)
 }

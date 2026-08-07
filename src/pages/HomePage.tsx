@@ -7,10 +7,10 @@ import Tutors from "../components/Tutors";
 import CTA from "../components/CTA";
 import UsePageMeta from "../hooks/UsePageMeta";
 import Founders from "../components/Founders";
-import { getSiteSettings, getTutors, getFounders, getFeatures, getSubjects, getPricing } from "../lib/queries";
+import { getHomePage, getTutors, getFounders, getFeatures } from "../lib/queries";
 
 const HomePage: React.FC = () => {
-  const [siteSettings, setSiteSettings] = useState<any>(null);
+  const [homePage, setHomePage] = useState<any>(null);
   const [tutors, setTutors] = useState<any[]>([]);
   const [founders, setFounders] = useState<any[]>([]);
   const [features, setFeatures] = useState<any[]>([]);
@@ -23,22 +23,22 @@ const HomePage: React.FC = () => {
   });
 
   useEffect(() => {
-    getSiteSettings().then(setSiteSettings);
+    getHomePage().then(setHomePage);
     getTutors().then(setTutors);
     getFounders().then(setFounders);
     getFeatures().then(setFeatures);
   }, []);
 
-  if (!siteSettings) return null;
+  if (!homePage) return null;
 
   return (
     <MainLayout>
-      <Hero />
-      <About homepage={siteSettings.homepage} />
+      <Hero hero={homePage.hero} />
+      <About story={homePage.story} model={homePage.model} />
       <Features features={features} />
       <Tutors tutors={tutors} />
       <Founders founders={founders} />
-      <CTA />
+      <CTA cta={homePage.cta} />
     </MainLayout>
   );
 };

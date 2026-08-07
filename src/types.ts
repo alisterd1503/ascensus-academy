@@ -5,9 +5,36 @@ export interface NavItem {
   tag?: string;
 }
 
+export interface HomeHero {
+  welcomeText: string;
+  title: string;
+  tagline: string;
+  primaryButtonLabel: string;
+  secondaryButtonLabel: string;
+}
+
+export interface HomeStory {
+  text: string;
+  buttonLabel: string;
+}
+
+export interface HomeModel {
+  heading: string;
+  quote: string;
+}
+
+export interface HomeCTA {
+  title: string;
+  text: string;
+  primaryButtonLabel: string;
+  secondaryButtonLabel: string;
+}
+
 export interface HomePage {
-  story: string;
-  model: string;
+  hero: HomeHero;
+  story: HomeStory;
+  model: HomeModel;
+  cta: HomeCTA;
 }
 
 export interface Founder {
