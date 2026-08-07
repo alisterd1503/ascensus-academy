@@ -23,3 +23,8 @@ export async function getPricing() {
 export async function getHomePage() {
   return client.fetch(`*[_type == "homePage"][0]`)
 }
+
+
+export async function getAboutPage() {
+  return client.fetch(`*[_type == "aboutPage"][0]`)
+}

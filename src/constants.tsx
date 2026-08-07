@@ -1,4 +1,4 @@
-import { NavItem, Tutor, Feature, Subjects, Pricing, Contact, EmailJS, Founder, HomePage } from './types';
+import { NavItem, Tutor, Feature, Subjects, Pricing, Contact, EmailJS, Founder, HomePage, AboutPage } from './types';
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'About Us', href: '/about-us', preserveCase: false },
@@ -34,6 +34,27 @@ export const HOMEPAGE: HomePage = {
     secondaryButtonLabel: 'Contact Us',
   },
 }
+
+export const ABOUTPAGE: AboutPage = {
+  title: 'About Us',
+  aboutUs: {
+    title: 'Who are we?',
+    text: "Ascensus Academy was founded to <b>revolutionise</b> the future of tutoring. We believe the traditional education system needs an upgrade.",
+    secondaryTitle: 'What sets our tutors apart?',
+    points: [
+      "They have <b>recently</b> been through the <b>same exams</b> themselves.",
+      "They have <b>first-hand insight</b> into the demands, pressures and challenges that students face today.",
+      "They bring<b> personalised and proven strategies</b> that actually work in today’s education system."
+    ],
+    secondaryText: "That’s why we only hire undergraduate tutors who have <b>personally achieved an A* at A-level</b> in the subject they teach. They’ve not only been through the system recently; <b>they’ve mastered it.</b>",
+    image: '/uploads/who-are-we.webp',
+  },
+  aboutJourney: {
+    title: 'Our Journey',
+    text: "This mentorship programme was born out of a <b>shared vision</b> to support students in navigating academic challenges, career choices, and personal growth.<br />Having personally experienced the struggles of balancing studies, ambitions, and wellbeing, the founders wanted to create a <b>supportive and structured platform</b> that empowers others to thrive. Over time, the founders have reflected the <b>power of mentorship</b> in shaping confidence, resilience, and direction. While the programme began with personal experiences, it has since grown into a wider community effort - one that connects students with guidance, resources, and opportunity. The aim of Ascensus Academy is not just to mentor, but to build a <b>culture of support</b> that continues long after each individual’s journey with us.",
+    image: '/uploads/our-journey.webp',
+  },
+} 
 
 export const FOUNDERS: Founder[] = [
   {
