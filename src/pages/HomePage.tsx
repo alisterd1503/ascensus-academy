@@ -8,12 +8,13 @@ import CTA from "../components/CTA";
 import UsePageMeta from "../hooks/UsePageMeta";
 import Founders from "../components/Founders";
 import { getHomePage, getTutors, getFounders, getFeatures } from "../lib/queries";
+import { FeatureSection } from "../types";
 
 const HomePage: React.FC = () => {
   const [homePage, setHomePage] = useState<any>(null);
   const [tutors, setTutors] = useState<any[]>([]);
   const [founders, setFounders] = useState<any[]>([]);
-  const [features, setFeatures] = useState<any[]>([]);
+  const [featuresSection, setFeaturesSection] = useState<FeatureSection | null>(null);
 
   UsePageMeta({
     title: "Ascensus Academy – A-Level Tutoring by Top University Students",
@@ -26,7 +27,8 @@ const HomePage: React.FC = () => {
     getHomePage().then(setHomePage);
     getTutors().then(setTutors);
     getFounders().then(setFounders);
-    getFeatures().then(setFeatures);
+    getFeatures().then(setFeaturesSection);
+    console.log(featuresSection);
   }, []);
 
   if (!homePage) return null;
@@ -35,7 +37,7 @@ const HomePage: React.FC = () => {
     <MainLayout>
       <Hero hero={homePage.hero} />
       <About story={homePage.story} model={homePage.model} />
-      <Features features={features} />
+      <Features features={featuresSection?.features || []} />
       <Tutors tutors={tutors} />
       <Founders founders={founders} />
       <CTA cta={homePage.cta} />

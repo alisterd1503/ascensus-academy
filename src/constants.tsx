@@ -1,4 +1,4 @@
-import { NavItem, Tutor, Feature, Subjects, Pricing, Contact, EmailJS, Founder, HomePage, AboutPage } from './types';
+import { NavItem, Tutor, Subjects, Pricing, Contact, EmailJS, Founder, HomePage, AboutPage, FeatureSection } from './types';
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'About Us', href: '/about-us', preserveCase: false },
@@ -19,6 +19,7 @@ export const HOMEPAGE: HomePage = {
     image: '/uploads/index-hero.webp',
   },
   story: {
+    title: 'Our Story',
     text: "Ascensus Academy was founded to <span class='font-medium text-primary'>revolutionise</span> the future of tutoring. We believe the traditional education system needs an upgrade. That is why we only hire undergraduate tutors who have personally achieved an <span class='font-medium text-primary'>A* at A-level in the subject</span> they teach.</br></br>Here, every student is paired with a <span class='font-medium text-primary'>personalised mentor</span>: a high achieving university student studying a similar course pathway.",
     buttonLabel: 'Learn More About Us',
     image: '/uploads/our-story.webp',
@@ -51,7 +52,7 @@ export const ABOUTPAGE: AboutPage = {
   },
   aboutJourney: {
     title: 'Our Journey',
-    text: "This mentorship programme was born out of a <b>shared vision</b> to support students in navigating academic challenges, career choices, and personal growth.<br />Having personally experienced the struggles of balancing studies, ambitions, and wellbeing, the founders wanted to create a <b>supportive and structured platform</b> that empowers others to thrive. Over time, the founders have reflected the <b>power of mentorship</b> in shaping confidence, resilience, and direction. While the programme began with personal experiences, it has since grown into a wider community effort - one that connects students with guidance, resources, and opportunity. The aim of Ascensus Academy is not just to mentor, but to build a <b>culture of support</b> that continues long after each individual’s journey with us.",
+    text: "This mentorship programme was born out of a <b>shared vision</b> to support students in navigating academic challenges, career choices, and personal growth.<br /><br />Having personally experienced the struggles of balancing studies, ambitions, and wellbeing, the founders wanted to create a <b>supportive and structured platform</b> that empowers others to thrive.<br /><br />Over time, the founders have reflected the <b>power of mentorship</b> in shaping confidence, resilience, and direction. While the programme began with personal experiences, it has since grown into a wider community effort - one that connects students with guidance, resources, and opportunity.<br /><br />The aim of Ascensus Academy is not just to mentor, but to build a <b>culture of support</b> that continues long after each individual’s journey with us.",
     image: '/uploads/our-journey.webp',
   },
 } 
@@ -141,28 +142,31 @@ export const TUTORS: Tutor[] = [
   },
 ];
 
-export const FEATURES: Feature[] = [
-  {
-    title: 'Only A* Tutors',
-    description: "We are a team of <span class='font-semibold'>A<sup>*</sup> achievers</span>, stemming from the most prestigious institutions across the UK such as <span class='font-semibold'>LSE</span> and <span class='font-bold'>Imperial College London</span>.",
-    image: "/uploads/usp/astar-tutors.webp"
-  },
-  {
-    title: 'Free Mentoring',
-    description: "Every student is paired with a <span class='font-semibold'>dedicated mentor</span> at <span class='font-semibold'>no extra cost</span>. This includes guidance on subject choices and university applications.",
-    image: "/uploads/usp/free-mentoring.webp"
-  },
-  {
-    title: 'Vetted Mentors',
-    description: "Every tutor at Ascensus Academy has been <span class='font-semibold'>DBS checked</span> and <span class='font-semibold'>ID verified</span>, so you can feel confident about who’s teaching your child.",
-    image: "/uploads/usp/vetted-mentors.webp"
-  },
-  {
-    title: 'Tailored 1-to-1 Lessons',
-    description: "Our <span class='font-semibold'>1-to-1 sessions</span> are online and personalised, giving students focused support that adapts to their individual needs.",
-    image: "/uploads/usp/tailored-lessons.webp"
-  }
-];
+export const FEATURESSECTION: FeatureSection = {
+  title: 'What We Offer',
+  features: [
+    {
+      title: 'Only A* Tutors',
+      description: "We are a team of <span class='font-semibold'>A<sup>*</sup> achievers</span>, stemming from the most prestigious institutions across the UK such as <span class='font-semibold'>LSE</span> and <span class='font-bold'>Imperial College London</span>.",
+      image: "/uploads/usp/astar-tutors.webp"
+    },
+    {
+      title: 'Free Mentoring',
+      description: "Every student is paired with a <span class='font-semibold'>dedicated mentor</span> at <span class='font-semibold'>no extra cost</span>. This includes guidance on subject choices and university applications.",
+      image: "/uploads/usp/free-mentoring.webp"
+    },
+    {
+      title: 'Vetted Mentors',
+      description: "Every tutor at Ascensus Academy has been <span class='font-semibold'>DBS checked</span> and <span class='font-semibold'>ID verified</span>, so you can feel confident about who’s teaching your child.",
+      image: "/uploads/usp/vetted-mentors.webp"
+    },
+    {
+      title: 'Tailored 1-to-1 Lessons',
+      description: "Our <span class='font-semibold'>1-to-1 sessions</span> are online and personalised, giving students focused support that adapts to their individual needs.",
+      image: "/uploads/usp/tailored-lessons.webp"
+    }
+  ]
+}
 
 export const SUBJECTS: Subjects[] = [
   {

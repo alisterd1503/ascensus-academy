@@ -15,6 +15,7 @@ export interface HomeHero {
 }
 
 export interface HomeStory {
+  title: string;
   text: string;
   buttonLabel: string;
   image: string;
@@ -83,6 +84,11 @@ export interface Feature {
   title: string;
   description: string;
   image: string;
+}
+
+export interface FeatureSection {
+  title: string;
+  features: Feature[];
 }
 
 export interface Subjects {

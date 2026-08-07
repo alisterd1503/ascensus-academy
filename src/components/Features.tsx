@@ -1,18 +1,14 @@
 import React from 'react';
 import { Reveal } from './Reveal';
 import { urlFor } from '../lib/sanity';
-
-interface Feature {
-  title: string;
-  description: string;
-  image: any;
-}
+import { Feature } from '../types';
 
 interface Props {
+  title?: string;
   features: Feature[];
 }
 
-const Features: React.FC<Props> = ({ features }) => {
+const Features: React.FC<Props> = ({ title, features = [] }) => {
   if (!features.length) return null;
 
   return (
@@ -20,7 +16,7 @@ const Features: React.FC<Props> = ({ features }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 bg-gray-50 shadow-sm rounded-md">
         <Reveal>
           <div className="text-center mb-10 md:mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary">What We Offer</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary">{title || 'What We Offer'}</h2>
             <div className="h-1 w-24 bg-primary mx-auto mt-6"></div>
           </div>
         </Reveal>
