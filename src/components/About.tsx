@@ -1,15 +1,7 @@
 import React from 'react';
 import { Reveal } from './Reveal';
-
-interface HomeStory {
-  text: string;
-  buttonLabel: string;
-}
-
-interface HomeModel {
-  heading: string;
-  quote: string;
-}
+import { urlFor } from '../lib/sanity';
+import { HomeStory, HomeModel } from '../types';
 
 interface Props {
   story: HomeStory;
@@ -26,7 +18,7 @@ const About: React.FC<Props> = ({ story, model }) => {
               <Reveal>
                 <div className="absolute top-6 -left-6 w-full h-full bg-gray-100 rounded-md -z-10"></div>
                 <img
-                  src="/uploads/our-story.webp"
+                  src={story.image ? urlFor(story.image).url() : '/uploads/our-story.webp'}
                   alt="Student reading book"
                   className="rounded-md shadow-2xl w-full h-[200px] sm:h-[200px] md:h-[400px] object-cover"
                 />

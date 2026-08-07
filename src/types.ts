@@ -11,11 +11,13 @@ export interface HomeHero {
   tagline: string;
   primaryButtonLabel: string;
   secondaryButtonLabel: string;
+  image: string;
 }
 
 export interface HomeStory {
   text: string;
   buttonLabel: string;
+  image: string;
 }
 
 export interface HomeModel {

@@ -16,10 +16,12 @@ export const HOMEPAGE: HomePage = {
     tagline: 'For Students, By Students.',
     primaryButtonLabel: 'View Our Services',
     secondaryButtonLabel: 'Meet the Team',
+    image: '/uploads/index-hero.webp',
   },
   story: {
     text: "Ascensus Academy was founded to <span class='font-medium text-primary'>revolutionise</span> the future of tutoring. We believe the traditional education system needs an upgrade. That is why we only hire undergraduate tutors who have personally achieved an <span class='font-medium text-primary'>A* at A-level in the subject</span> they teach.</br></br>Here, every student is paired with a <span class='font-medium text-primary'>personalised mentor</span>: a high achieving university student studying a similar course pathway.",
     buttonLabel: 'Learn More About Us',
+    image: '/uploads/our-story.webp',
   },
   model: {
     heading: 'Our model is simple:',

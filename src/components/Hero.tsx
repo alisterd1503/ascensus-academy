@@ -2,6 +2,7 @@ import React from 'react';
 import { ChevronRight, Users } from 'lucide-react';
 import { Reveal } from './Reveal';
 import { HomeHero } from '../types';
+import { urlFor } from '../lib/sanity';
 
 interface Props {
   hero: HomeHero;
@@ -13,7 +14,7 @@ const Hero: React.FC<Props> = ({ hero }) => {
       <div className="absolute inset-0 z-0">
         <img
           rel="preload"
-          src="/uploads/index-hero.webp"
+          src={hero.image ? urlFor(hero.image).url() : '/uploads/index-hero.webp'}
           alt="Graduation caps in sky"
           className="w-full h-full object-cover"
         />

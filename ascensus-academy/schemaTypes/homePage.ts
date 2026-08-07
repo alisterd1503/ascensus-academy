@@ -15,6 +15,7 @@ export const homePage = defineType({
         defineField({ name: 'tagline', title: 'Tagline', type: 'string' }),
         defineField({ name: 'primaryButtonLabel', title: 'Primary Button Label', type: 'string' }),
         defineField({ name: 'secondaryButtonLabel', title: 'Secondary Button Label', type: 'string' }),
+        defineField({ name: 'image', title: 'Background Image', type: 'image', options: { hotspot: true } }),
       ]
     }),
     defineField({
@@ -24,6 +25,7 @@ export const homePage = defineType({
       fields: [
         defineField({ name: 'text', title: 'Story Text', type: 'text', description: 'HTML is supported' }),
         defineField({ name: 'buttonLabel', title: 'Button Label', type: 'string' }),
+        defineField({ name: 'image', title: 'Our Story Image', type: 'image', options: { hotspot: true } }),
       ]
     }),
     defineField({
