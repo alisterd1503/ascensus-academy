@@ -23,6 +23,7 @@ export const homePage = defineType({
       title: 'Our Story',
       type: 'object',
       fields: [
+        defineField({ name: 'title', title: 'Title', type: 'string' }),
         defineField({ name: 'text', title: 'Story Text', type: 'text', description: 'HTML is supported' }),
         defineField({ name: 'buttonLabel', title: 'Button Label', type: 'string' }),
         defineField({ name: 'image', title: 'Our Story Image', type: 'image', options: { hotspot: true } }),

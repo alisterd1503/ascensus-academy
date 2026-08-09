@@ -27,7 +27,7 @@ const About: React.FC<Props> = ({ story, model }) => {
             
             <div className="w-full lg:w-1/2">
               <Reveal>
-                <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4 md:mb-8">Our Story</h2>
+                <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4 md:mb-8">{story.title}</h2>
                 <div className="space-y-6 text-lg text-gray-600 leading-relaxed font-light"
                   dangerouslySetInnerHTML={{ __html: story.text }}
                 />
