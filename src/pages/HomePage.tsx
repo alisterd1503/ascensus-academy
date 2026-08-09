@@ -8,11 +8,11 @@ import CTA from "../components/CTA";
 import UsePageMeta from "../hooks/UsePageMeta";
 import Founders from "../components/Founders";
 import { getHomePage, getTutors, getFounders, getFeatures } from "../lib/queries";
-import { FeatureSection } from "../types";
+import { FeatureSection, TutorSection } from "../types";
 
 const HomePage: React.FC = () => {
   const [homePage, setHomePage] = useState<any>(null);
-  const [tutors, setTutors] = useState<any[]>([]);
+  const [tutorsSection, setTutorsSection] = useState<TutorSection | null>(null);
   const [founders, setFounders] = useState<any[]>([]);
   const [featuresSection, setFeaturesSection] = useState<FeatureSection | null>(null);
 
@@ -25,7 +25,7 @@ const HomePage: React.FC = () => {
 
   useEffect(() => {
     getHomePage().then(setHomePage);
-    getTutors().then(setTutors);
+    getTutors().then(setTutorsSection);
     getFounders().then(setFounders);
     getFeatures().then(setFeaturesSection);
     console.log(featuresSection);
@@ -38,7 +38,7 @@ const HomePage: React.FC = () => {
       <Hero hero={homePage.hero} />
       <About story={homePage.story} model={homePage.model} />
       <Features features={featuresSection?.features || []} />
-      <Tutors tutors={tutors} />
+      <Tutors tutors={tutorsSection?.tutors || []} />
       <Founders founders={founders} />
       <CTA cta={homePage.cta} />
     </MainLayout>

@@ -71,13 +71,19 @@ export interface Founder {
 }
 
 export interface Tutor {
-  id: string;
+  _key?: string;
   name: string;
   university: string;
   course: string;
-  image: string;
+  image?: any;
   bio: string;
   subjects: string[];
+}
+
+export interface TutorSection {
+  title: string;
+  subtitle: string;
+  tutors: Tutor[];
 }
 
 export interface Feature {

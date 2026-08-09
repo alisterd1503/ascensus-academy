@@ -1,7 +1,7 @@
 import { client } from './sanity'
 
 export async function getTutors() {
-  return client.fetch(`*[_type == "tutor"] | order(order asc)`)
+  return client.fetch(`*[_type == "tutorsSection"][0]{ title, subtitle, tutors}`)
 }
 
 export async function getFounders() {

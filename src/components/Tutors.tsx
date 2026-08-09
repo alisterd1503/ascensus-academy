@@ -1,22 +1,15 @@
 import React from 'react';
 import { Reveal } from './Reveal';
 import { urlFor } from '../lib/sanity';
-
-interface Tutor {
-  id: { current: string };
-  name: string;
-  university: string;
-  course: string;
-  image: any;
-  bio: string;
-  subjects: string[];
-}
+import { Tutor } from '../types';
 
 interface Props {
-  tutors: Tutor[];
+  title?: string;
+  subtitle?: string;
+  tutors?: Tutor[];
 }
 
-const Tutors: React.FC<Props> = ({ tutors }) => {
+const Tutors: React.FC<Props> = ({ title, subtitle, tutors = [] }) => {
   if (!tutors.length) return null;
 
   return (
@@ -24,15 +17,15 @@ const Tutors: React.FC<Props> = ({ tutors }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="text-center mb-10 md:mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary">Meet Some Of Our Tutors</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary">{title || 'Meet Some Of Our Tutors'}</h2>
             <div className="h-1 w-24 bg-primary mx-auto mt-6"></div>
-            <p className="mt-6 text-gray-600 text-xl font-light">Top achievers from the UK's best universities</p>
+            <p className="mt-6 text-gray-600 text-xl font-light">{subtitle || "Top achievers from the UK's best universities"}</p>
           </div>
         </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {tutors.map((tutor) => (
-            <Reveal key={tutor.id.current}>
+          {tutors.map((tutor, index) => (
+            <Reveal key={tutor._key || index}>
               <div className="bg-white rounded-none border border-gray-100 hover:border-primary/20 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col h-full group">
                 <div className="h-90 overflow-hidden relative">
                   <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors z-10 duration-500"></div>
