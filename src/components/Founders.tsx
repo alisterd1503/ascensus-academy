@@ -1,21 +1,15 @@
 import React from 'react';
 import { Reveal } from './Reveal';
 import { urlFor } from '../lib/sanity';
-
-interface Founder {
-  id: { current: string };
-  name: string;
-  title: string;
-  image: any;
-  bio: string;
-  subjects: string[];
-}
+import { Founder } from '../types';
 
 interface Props {
-  founders: Founder[];
+  title?: string;
+  subtitle?: string;
+  founders?: Founder[];
 }
 
-const Founders: React.FC<Props> = ({ founders }) => {
+const Founders: React.FC<Props> = ({ title, subtitle, founders = [] }) => {
   if (!founders.length) return null;
 
   return (
@@ -23,19 +17,15 @@ const Founders: React.FC<Props> = ({ founders }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="text-center mb-10 md:mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary">Meet the Founders</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary">{title || 'Meet the Founders'}</h2>
             <div className="h-1 w-24 bg-primary mx-auto mt-6"></div>
-            <p className="mt-6 text-gray-600 text-xl font-light">
-              <span className="text-gray-900 font-bold">Over 7 years of tutoring experience between us</span>, 
-              we built Ascensus Academy to deliver the kind of structured, high-impact support we felt 
-              was missing; focused not just on understanding, but on achieving top grades.
-            </p>
+            <p className="mt-6 text-gray-600 text-xl font-light" dangerouslySetInnerHTML={{ __html: subtitle || "<span style='color: #111827; font-weight: 700;'>Over 7 years of tutoring experience between us</span>, we built Ascensus Academy to deliver the kind of structured, high-impact support we felt was missing; focused not just on understanding, but on achieving top grades." }}  />
           </div>
         </Reveal>
 
         <div className="grid grid-cols-1 md:flex md:flex-row md:justify-center gap-20 [&>*]:w-full [&>*]:max-w-md">
-          {founders.map((founder) => (
-            <Reveal key={founder.id.current}>
+          {founders.map((founder, index) => (
+            <Reveal key={founder._key || index}>
               <div className="bg-white rounded-none border border-gray-100 hover:border-primary/20 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col h-full group">
                 <div className="h-90 overflow-hidden relative">
                   <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors z-10 duration-500"></div>

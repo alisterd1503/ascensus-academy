@@ -62,12 +62,18 @@ export interface AboutPage {
 }
 
 export interface Founder {
-  id: string;
+  _key?: string;
   name: string;
   title: string;
-  image: string;
+  image?: string;
   bio: string;
   subjects: string[];
+}
+
+export interface FounderSection {
+  title: string;
+  subtitle: string;
+  founders: Founder[];
 }
 
 export interface Tutor {

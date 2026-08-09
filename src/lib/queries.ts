@@ -5,7 +5,7 @@ export async function getTutors() {
 }
 
 export async function getFounders() {
-  return client.fetch(`*[_type == "founder"] | order(order asc)`)
+  return client.fetch(`*[_type == "foundersSection"][0]{ title, subtitle, founders }`)
 }
 
 export async function getFeatures() {
