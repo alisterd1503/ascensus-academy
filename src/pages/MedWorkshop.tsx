@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import MainLayout from "../layouts/MainLayout";
 import PageHeader from "../components/PageHeader";
-import { MED_WORKSHOP } from "../constants";
 import PriceCard from "../components/PriceCard";
 import { Reveal } from "../components/Reveal";
 import UsePageMeta from "../hooks/UsePageMeta";
@@ -13,9 +12,12 @@ const MedWorkshop: React.FC = () => {
   const scriptContainer = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!scriptContainer.current) return;
+    getMedicineWorkshop().then(setMedicineWorkshop);
+  }, []);
 
-    // Prevent multiple scripts (React 18 StrictMode)
+  useEffect(() => {
+    if (!medicineWorkshop) return;
+    if (!scriptContainer.current) return;
     if (scriptContainer.current.childElementCount === 0) {
       const script = document.createElement("script");
       script.src =
@@ -23,7 +25,7 @@ const MedWorkshop: React.FC = () => {
       script.async = true;
       scriptContainer.current.appendChild(script);
     }
-  }, []);
+  }, [medicineWorkshop]);
 
   UsePageMeta({
     title: "Medicine Interview Workshop – Ascensus Academy",
@@ -32,12 +34,7 @@ const MedWorkshop: React.FC = () => {
     image: "/uploads/ascensus-academy.jpg",
   });
 
-  useEffect(() => {
-      getMedicineWorkshop().then(setMedicineWorkshop);
-    }, []);
-  
-    if (!medicineWorkshop) return null;
-  
+  if (!medicineWorkshop) return null;
 
   return (
     <MainLayout>
