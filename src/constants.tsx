@@ -1,4 +1,4 @@
-import { NavItem, Subjects, Contact, EmailJS, HomePage, AboutPage, FeatureSection, TutorSection, FounderSection, QualificationSection, Qualification } from './types';
+import { NavItem, Subjects, Contact, EmailJS, HomePage, AboutPage, FeatureSection, TutorSection, FounderSection, QualificationSection, Qualification, MedicineWorkshop } from './types';
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'About Us', href: '/about-us', preserveCase: false },
@@ -263,16 +263,20 @@ export const QUALIFICATIONS: QualificationSection = {
   ]
 };
 
-export const MED_WORKSHOP: Qualification = {
-  title: "Medicine Workshop",
-  price: "£34",
-  points: [
-    "Delivered by medics with a <b>100% interview success rate</b> across MMI and Oxbridge formats.",
-    "Includes a 1-to-1 mock for <b>MMI or Oxbridge</b> interviews up to 90 minutes.",
-    "<b>Personalised</b>, detailed feedback on structure, communication, and reasoning provided.",
-    "Proven <b>techniques, frameworks, and strategies</b> used by successful applicants.",
-    "Comes with a <b>FREE</b> interview notes PDF collated by our team."
-  ],
+export const MED_WORKSHOP: MedicineWorkshop = {
+  heading: "Medicine Interview Workshop",
+  information: {
+    _key: 'medicine',
+    title: "Medicine Workshop",
+    price: "£34",
+    points: [
+      "Delivered by medics with a <b>100% interview success rate</b> across MMI and Oxbridge formats.",
+      "Includes a 1-to-1 mock for <b>MMI or Oxbridge</b> interviews up to 90 minutes.",
+      "<b>Personalised</b>, detailed feedback on structure, communication, and reasoning provided.",
+      "Proven <b>techniques, frameworks, and strategies</b> used by successful applicants.",
+      "Comes with a <b>FREE</b> interview notes PDF collated by our team."
+    ],
+  }
 }
 
 export const CONTACT: Contact = {

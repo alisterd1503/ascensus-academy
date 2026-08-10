@@ -27,7 +27,7 @@ const SubjectsPage: React.FC = () => {
   return (
     <MainLayout>
       {/* Page Header */}
-      <PageHeader title="Subjects" />
+      <PageHeader title={qualificationsSection.heading} />
 
       {/* Subject list */}
       <Reveal>

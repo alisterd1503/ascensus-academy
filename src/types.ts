@@ -124,6 +124,11 @@ export interface QualificationSection {
   qualifications: Qualification[];
 }
 
+export interface MedicineWorkshop {
+  heading: string;
+  information: Qualification;
+}
+
 export interface Contact {
   title: string;
   description: string;

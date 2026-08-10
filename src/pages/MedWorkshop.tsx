@@ -1,12 +1,15 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import MainLayout from "../layouts/MainLayout";
 import PageHeader from "../components/PageHeader";
 import { MED_WORKSHOP } from "../constants";
 import PriceCard from "../components/PriceCard";
 import { Reveal } from "../components/Reveal";
 import UsePageMeta from "../hooks/UsePageMeta";
+import { MedicineWorkshop } from "../types";
+import { getMedicineWorkshop } from "../lib/queries";
 
 const MedWorkshop: React.FC = () => {
+  const [medicineWorkshop, setMedicineWorkshop] = useState<MedicineWorkshop | null>(null);
   const scriptContainer = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -29,9 +32,16 @@ const MedWorkshop: React.FC = () => {
     image: "/uploads/ascensus-academy.jpg",
   });
 
+  useEffect(() => {
+      getMedicineWorkshop().then(setMedicineWorkshop);
+    }, []);
+  
+    if (!medicineWorkshop) return null;
+  
+
   return (
     <MainLayout>
-      <PageHeader title="Medicine Interview Workshop" />
+      <PageHeader title={medicineWorkshop.heading} />
 
       <Reveal>
         <section className="py-16 bg-white">
@@ -49,7 +59,7 @@ const MedWorkshop: React.FC = () => {
                 
                 {/* Pricing Card */}
                 <div className="flex-1 order-1">
-                  <PriceCard item={MED_WORKSHOP} />
+                  <PriceCard item={medicineWorkshop.information} />
                 </div>
 
                 {/* Workshop Image */}
