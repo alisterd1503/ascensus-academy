@@ -16,8 +16,8 @@ export async function getSubjects() {
   return client.fetch(`*[_type == "subject"] | order(order asc)`)
 }
 
-export async function getPricing() {
-  return client.fetch(`*[_type == "pricing"] | order(order asc)`)
+export async function getQualifications() {
+  return client.fetch(`*[_type == "qualificationsSection"][0]`)
 }
 
 export async function getHomePage() {

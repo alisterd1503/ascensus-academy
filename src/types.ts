@@ -108,12 +108,20 @@ export interface Subjects {
   image: string;
 }
 
-export interface Pricing {
+export interface Qualification {
+  _key?: string;
   title: string;
   price: string;
   points: string[];
   secondaryTitle?: string;
   secondaryPoints?: string[];
+}
+
+export interface QualificationSection {
+  heading: string;
+  subheading: string;
+  description: string;
+  qualifications: Qualification[];
 }
 
 export interface Contact {

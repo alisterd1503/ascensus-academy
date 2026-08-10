@@ -8,35 +8,52 @@ const client = createClient({
   useCdn: false,
 })
 
-const foundersSectionData = {
-  _type: 'foundersSection',
-  _id: 'foundersSection',
-  title: 'Meet The Founders',
-  subtitle: "<span className='text-gray-900 font-bold'>Over 7 years of tutoring experience between us</span>, we built Ascensus Academy to deliver the kind of structured, high-impact support we felt was missing; focused not just on understanding, but on achieving top grades.",
-  founders: [
+const qualificationsSectionData = {
+  _type: 'qualificationsSection',
+  _id: 'qualificationsSection',
+   heading: "Pricing",
+  subheading: "Choose the qualification level that suits your needs.",
+  description: "Both GCSE and A-Level students receive the same high-quality tutoring, the only difference is the tailored mentorship included for each stage.",
+  qualifications: [
     {
-      _key: 'austin',
-      name: 'Austin Jiji',
-      title: 'Incoming Level 7 Degree Apprentice with PwC (Chartered Accountancy)',
-      image: '/uploads/tutors/austin.webp',
-      bio: "Austin achieved <span class='font-semibold'>A<sup>*</sup>AB at A-Level in Economics, Mathematics, and Physics</span>, ranking <span class='font-semibold'>1st in his cohort for Economics.</span> He is an incoming Degree Apprentice in Chartered Accountancy with PwC and the University of Nottingham, starting in September 2026, bringing a structured, results-driven approach shaped by both academic and professional experience.",
-      subjects: ['Economics']
+      _key: "a-level",
+      title: "A-Level",
+      price: "£36/hour",
+      points: [
+        "Expert tutor with deep knowledge of the A-Level curriculum.",
+        "Lessons tailored to individual learning styles to maximise understanding.",
+        "Exam technique coaching to build confidence and boost performance.",
+      ],
+      secondaryTitle: "Included mentorship",
+      secondaryPoints: [
+        "Guidance for UCAS and Degree Apprenticeship applications.",
+        "Support with university entrance exams, personal statements, assessment centres and more!",
+        "Interview preparation and academic enrichment advice.",
+      ],
     },
     {
-      _key: 'noel',
-      name: 'Noel Chacko',
-      title: 'Medical Student at the University of Birmingham',
-      image: '/uploads/tutors/noel.webp',
-      bio: "Noel achieved <span class='font-semibold'>A<sup>*</sup>AA at A-Level in Biology, Chemistry, and Mathematics</span>, ranking <span class='font-semibold'>1st in his cohort for Biology</span>. He is a second-year Medical student at the University of Birmingham, with a strong academic foundation and a precise, methodical approach to learning.",
-      subjects: ['Biology']
+      _key: "gcse",
+      title: "GCSE",
+      price: "£24/hour",
+      points: [
+        "Experienced tutor with a passion for helping students succeed.",
+        "Specialises in making complex topics understandable and engaging.",
+        "Focuses on building confidence and study skills alongside subject knowledge.",
+      ],
+      secondaryTitle: "Included mentorship",
+      secondaryPoints: [
+        "Free personalised guidance on A-Level subject choices.",
+        "Early career insights and pathways.",
+        "Advice on building strong academic habits before sixth form.",
+      ],
     },
   ]
 }
 
-async function migrateFounders() {
-  console.log('Migrating founders section...')
-  await client.createOrReplace(foundersSectionData)
-  console.log('Done migrating founders section.')
+async function migrateQualifications() {
+  console.log('Migrating qualifications section...')
+  await client.createOrReplace(qualificationsSectionData)
+  console.log('Done migrating qualifications section.')
 }
 
-migrateFounders().catch(console.error)
+migrateQualifications().catch(console.error)

@@ -1,4 +1,4 @@
-import { NavItem, Tutor, Subjects, Pricing, Contact, EmailJS, Founder, HomePage, AboutPage, FeatureSection, TutorSection, FounderSection } from './types';
+import { NavItem, Subjects, Contact, EmailJS, HomePage, AboutPage, FeatureSection, TutorSection, FounderSection, QualificationSection, Qualification } from './types';
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'About Us', href: '/about-us', preserveCase: false },
@@ -223,40 +223,47 @@ export const SUBJECTS: Subjects[] = [
   }
 ];
 
-export const PRICING: Pricing[] = [
-  {
-    title: "A-Level",
-    price: "£36/hour",
-    points: [
-      "Expert tutor with deep knowledge of the A-Level curriculum.",
-      "Lessons tailored to individual learning styles to maximise understanding.",
-      "Exam technique coaching to build confidence and boost performance.",
-    ],
-    secondaryTitle: "Included mentorship",
-    secondaryPoints: [
-      "Guidance for UCAS and Degree Apprenticeship applications.",
-      "Support with university entrance exams, personal statements, assessment centres and more!",
-      "Interview preparation and academic enrichment advice.",
-    ],
-  },
-  {
-    title: "GCSE",
-    price: "£24/hour",
-    points: [
-      "Experienced tutor with a passion for helping students succeed.",
-      "Specialises in making complex topics understandable and engaging.",
-      "Focuses on building confidence and study skills alongside subject knowledge.",
-    ],
-    secondaryTitle: "Included mentorship",
-    secondaryPoints: [
-      "Free personalised guidance on A-Level subject choices.",
-      "Early career insights and pathways.",
-      "Advice on building strong academic habits before sixth form.",
-    ],
-  },
-];
+export const QUALIFICATIONS: QualificationSection = {
+  heading: "Pricing",
+  subheading: "Choose the qualification level that suits your needs.",
+  description: "Both GCSE and A-Level students receive the same high-quality tutoring, the only difference is the tailored mentorship included for each stage.",
+  qualifications: [
+    {
+      _key: 'alevel',
+      title: "A-Level",
+      price: "£36/hour",
+      points: [
+        "Expert tutor with deep knowledge of the A-Level curriculum.",
+        "Lessons tailored to individual learning styles to maximise understanding.",
+        "Exam technique coaching to build confidence and boost performance.",
+      ],
+      secondaryTitle: "Included mentorship",
+      secondaryPoints: [
+        "Guidance for UCAS and Degree Apprenticeship applications.",
+        "Support with university entrance exams, personal statements, assessment centres and more!",
+        "Interview preparation and academic enrichment advice.",
+      ],
+    },
+    {
+      _key: 'gcse',
+      title: "GCSE",
+      price: "£24/hour",
+      points: [
+        "Experienced tutor with a passion for helping students succeed.",
+        "Specialises in making complex topics understandable and engaging.",
+        "Focuses on building confidence and study skills alongside subject knowledge.",
+      ],
+      secondaryTitle: "Included mentorship",
+      secondaryPoints: [
+        "Free personalised guidance on A-Level subject choices.",
+        "Early career insights and pathways.",
+        "Advice on building strong academic habits before sixth form.",
+      ],
+    },
+  ]
+};
 
-export const MED_WORKSHOP: Pricing = {
+export const MED_WORKSHOP: Qualification = {
   title: "Medicine Workshop",
   price: "£34",
   points: [
