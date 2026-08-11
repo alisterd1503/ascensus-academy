@@ -104,8 +104,14 @@ export interface FeatureSection {
 }
 
 export interface Subjects {
+  _key?: string;
   subject: string;
   image: string;
+}
+
+export interface SubjectsSection {
+  title: string;
+  subjects: Subjects[];
 }
 
 export interface Qualification {

@@ -13,7 +13,7 @@ export async function getFeatures() {
 }
 
 export async function getSubjects() {
-  return client.fetch(`*[_type == "subject"] | order(order asc)`)
+  return client.fetch(`*[_type == "subjectsSection"][0]`)
 }
 
 export async function getQualifications() {

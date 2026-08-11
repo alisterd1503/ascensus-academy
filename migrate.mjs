@@ -8,29 +8,73 @@ const client = createClient({
   useCdn: false,
 })
 
-const medicineWorkshopData = {
-  _type: 'medicineWorkshop',
-  _id: 'medicineWorkshop',
-  heading: "Medicine Interview Workshop",
-  information: {
-    title: "Medicine Workshop",
-    price: "£34",
-    points: [
-      "Delivered by medics with a <b>100% interview success rate</b> across MMI and Oxbridge formats.",
-      "Includes a 1-to-1 mock for <b>MMI or Oxbridge</b> interviews up to 90 minutes.",
-      "<b>Personalised</b>, detailed feedback on structure, communication, and reasoning provided.",
-      "Proven <b>techniques, frameworks, and strategies</b> used by successful applicants.",
-      "Comes with a <b>FREE</b> interview notes PDF collated by our team."
-    ],
-    secondaryTitle: '',
-    secondaryPoints: [],
-  }
+const subjectsSectionData = {
+  _type: 'subjectsSection',
+  _id: 'subjectsSection',
+  title: "Subjects We Cover",
+  subjects: [
+    {
+      _key: 'biology',
+      subject: "Biology",
+      order: 1,
+    },
+    {
+      _key: 'chemistry',
+      subject: "Chemistry",
+      order: 2,
+    },
+    {
+      _key: 'physics',
+      subject: "Physics",
+      order: 3,
+    },
+    {
+      _key: 'maths',
+      subject: "Maths",
+      order: 4,
+    },
+    {
+      _key: 'further-maths',
+      subject: "Further Maths",
+      order: 5,
+    },
+    {
+      _key: 'economics',
+      subject: "Economics",
+      order: 6,
+    },
+    {
+      _key: 'business',
+      subject: "Business",
+      order: 7,
+    },
+    {
+      _key: 'english-lit',
+      subject: "English Literature",
+      order: 8,
+    },
+    {
+      _key: 'english-lan',
+      subject: "English Language",
+      order: 9,
+    },
+    {
+      _key: 'history',
+      subject: "History",
+      order: 10,
+    },
+    {
+      _key: 'psychology',
+      subject: "Psychology",
+      order: 11,
+    }
+  ]
 }
 
-async function migrateMedicineWorkshop() {
-  console.log('Migrating medicine workshop...')
-  await client.createOrReplace(medicineWorkshopData)
-  console.log('Done migrating medicine workshop.')
+async function migrateSubjectsSection() {
+  console.log('Migrating subjects section...')
+  await client.createOrReplace(subjectsSectionData)
+  console.log('Done migrating subjects section!')
 }
 
-migrateMedicineWorkshop().catch(console.error)
+migrateSubjectsSection().catch(console.error)

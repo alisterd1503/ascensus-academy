@@ -1,4 +1,4 @@
-import { NavItem, Subjects, Contact, EmailJS, HomePage, AboutPage, FeatureSection, TutorSection, FounderSection, QualificationSection, Qualification, MedicineWorkshop } from './types';
+import { NavItem, Subjects, Contact, EmailJS, HomePage, AboutPage, FeatureSection, TutorSection, FounderSection, QualificationSection, Qualification, MedicineWorkshop, SubjectsSection } from './types';
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'About Us', href: '/about-us', preserveCase: false },
@@ -176,52 +176,66 @@ export const FEATURESSECTION: FeatureSection = {
   ]
 }
 
-export const SUBJECTS: Subjects[] = [
-  {
-    subject: "Biology",
-    image: "/uploads/subjects/biology.webp",
-  },
-  {
-    subject: "Chemistry",
-    image: "/uploads/subjects/chemistry.webp",
-  },
-  {
-    subject: "Physics",
-    image: "/uploads/subjects/physics.webp",
-  },
-  {
-    subject: "Maths",
-    image: "/uploads/subjects/math.webp",
-  },
-  {
-    subject: "Further Maths",
-    image: "/uploads/subjects/further-maths.webp",
-  },
-  {
-    subject: "Economics",
-    image: "/uploads/subjects/economics.webp",
-  },
-  {
-    subject: "Business",
-    image: "/uploads/subjects/business.webp",
-  },
-  {
-    subject: "English Literature",
-    image: "/uploads/subjects/english-lit.webp",
-  },
-  {
-    subject: "English Language",
-    image: "/uploads/subjects/english-lan.webp",
-  },
-  {
-    subject: "History",
-    image: "/uploads/subjects/history.webp",
-  },
-  {
-    subject: "Psychology",
-    image: "/uploads/subjects/psychology.webp",
-  }
-];
+export const SUBJECTSSECTION: SubjectsSection = {
+  title: "Subjects We Cover",
+  subjects: [
+    {
+      _key: 'biology',
+      subject: "Biology",
+      image: "/uploads/subjects/biology.webp",
+    },
+    {
+      _key: 'chemistry',
+      subject: "Chemistry",
+      image: "/uploads/subjects/chemistry.webp",
+    },
+    {
+      _key: 'physics',
+      subject: "Physics",
+      image: "/uploads/subjects/physics.webp",
+    },
+    {
+      _key: 'maths',
+      subject: "Maths",
+      image: "/uploads/subjects/math.webp",
+    },
+    {
+      _key: 'further-maths',
+      subject: "Further Maths",
+      image: "/uploads/subjects/further-maths.webp",
+    },
+    {
+      _key: 'economics',
+      subject: "Economics",
+      image: "/uploads/subjects/economics.webp",
+    },
+    {
+      _key: 'business',
+      subject: "Business",
+      image: "/uploads/subjects/business.webp",
+    },
+    {
+      _key: 'english-lit',
+      subject: "English Literature",
+      image: "/uploads/subjects/english-lit.webp",
+    },
+    {
+      _key: 'english-lan',
+      subject: "English Language",
+      image: "/uploads/subjects/english-lan.webp",
+    },
+    {
+      _key: 'history',
+      subject: "History",
+      image: "/uploads/subjects/history.webp",
+    },
+    {
+      _key: 'psychology',
+      subject: "Psychology",
+      image: "/uploads/subjects/psychology.webp",
+    }
+  ]
+}
 
 export const QUALIFICATIONS: QualificationSection = {
   heading: "Pricing",

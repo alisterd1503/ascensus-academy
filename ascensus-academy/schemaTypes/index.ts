@@ -1,4 +1,4 @@
-import { subject } from './subject'
+import { subjectsSection } from './subjectsSection'
 import { featuresSection } from './featuresSection'
 import { tutorsSection } from './tutorsSection'
 import { foundersSection } from './foundersSection'
@@ -7,4 +7,4 @@ import { homePage } from './homePage'
 import { aboutPage } from './aboutPage'
 import { medicineWorkshop } from './medicineWorkshop'
 
-export const schemaTypes = [tutorsSection, subject, featuresSection, qualificationsSection, homePage, aboutPage, foundersSection, medicineWorkshop] 
+export const schemaTypes = [tutorsSection, subjectsSection, featuresSection, qualificationsSection, homePage, aboutPage, foundersSection, medicineWorkshop] 
