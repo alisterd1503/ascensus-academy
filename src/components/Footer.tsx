@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
             <a href="/" className="text-gray-400 hover:text-white text-xs">Terms of Service</a>
           </div>
           <p className="text-gray-400 text-xs mb-4 md:mb-0">
-            Ponagranet WAS HERE!
+            © 2026 Ascensus Academy. All rights reserved.
           </p>
           <div>
             <a target="_blank" rel="noopener noreferrer" href="https://adistudio.co.uk" className="block opacity-70 hover:opacity-100 transition-opacity">

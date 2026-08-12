@@ -1,4 +1,4 @@
-import { NavItem, Subjects, Contact, EmailJS, HomePage, AboutPage, FeatureSection, TutorSection, FounderSection, QualificationSection, Qualification, MedicineWorkshop, SubjectsSection, SignUpPage, JoinTheTeamPage } from './types';
+import { NavItem, Contact, EmailJS, HomePage, AboutPage, FeatureSection, TutorSection, FounderSection, QualificationSection, MedicineWorkshop, SubjectsSection, SignUpPage, JoinTheTeamPage, PortalLoginPage } from './types';
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'About Us', href: '/about-us', preserveCase: false },
@@ -303,6 +303,11 @@ export const SIGNUPPAGE: SignUpPage = {
 export const JOINTHETEAMPAGE: JoinTheTeamPage = {
   heading: "Join The Team",
   image: "/uploads/join-us.webp",
+}
+
+export const LOGINPAGE: PortalLoginPage = {
+  heading: "Login",
+  image: "/uploads/log-in.webp",
 }
 
 export const CONTACT: Contact = {

@@ -1,14 +1,24 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import MainLayout from "../layouts/MainLayout";
 import PageHeader from "../components/PageHeader";
 import { Reveal } from "../components/Reveal";
 import UsePageMeta from "../hooks/UsePageMeta";
+import { PortalLoginPage } from "../types";
+import { getPortalLoginPage } from "../lib/queries";
+import { urlFor } from "../lib/sanity";
 
 const LoginPage: React.FC = () => {
+  const [portalLoginPage, setPortalLoginPage] = useState<PortalLoginPage | null>(null);
   const scriptContainer = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+      getPortalLoginPage().then(setPortalLoginPage);
+    }, []);
+
+  useEffect(() => {
+    if (!portalLoginPage) return;
     if (!scriptContainer.current) return;
+    
 
     // Prevent multiple scripts (React 18 StrictMode)
     if (scriptContainer.current.childElementCount === 0) {
@@ -18,7 +28,7 @@ const LoginPage: React.FC = () => {
       script.async = true;
       scriptContainer.current.appendChild(script);
     }
-  }, []);
+  }, [portalLoginPage]);
 
   UsePageMeta({
     title: "Student Login – Ascensus Academy Portal",
@@ -27,9 +37,11 @@ const LoginPage: React.FC = () => {
     image: "/uploads/ascensus-academy.jpg",
   });
 
+  if (!portalLoginPage) return null;
+
   return (
     <MainLayout>
-      <PageHeader title="Portal Login" />
+      <PageHeader title={portalLoginPage.heading} />
 
       <Reveal>
         <section className="py-16 bg-white">
@@ -38,8 +50,8 @@ const LoginPage: React.FC = () => {
                 {/* Workshop Image */}
                 <div className="w-full overflow-hidden rounded-md shadow-md max-h-1/2">
                     <img
-                    src="/uploads/log-in.webp"
-                    alt="Medicine Workshop"
+                    src={portalLoginPage.image ? urlFor(portalLoginPage.image).url() : '/uploads/login-in.webp'}
+                    alt="Portal Login"
                     className="w-full h-full object-cover"
                     />
                 </div>

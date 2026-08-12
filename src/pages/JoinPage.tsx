@@ -12,8 +12,8 @@ const JoinPage: React.FC = () => {
   const scriptContainer = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-        getJoinTheTeamPage().then(setJoinTheTeamPage);
-      }, []);
+    getJoinTheTeamPage().then(setJoinTheTeamPage);
+  }, []);
 
   useEffect(() => {
     if (!joinTheTeamPage) return;

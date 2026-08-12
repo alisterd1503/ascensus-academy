@@ -158,3 +158,8 @@ export interface JoinTheTeamPage {
   heading: string;
   image: string;
 }
+
+export interface PortalLoginPage {
+  heading: string;
+  image: string;
+}

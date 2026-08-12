@@ -8,5 +8,6 @@ import { aboutPage } from './aboutPage'
 import { medicineWorkshop } from './medicineWorkshop'
 import { signUpPage } from './signUpPage'
 import { joinTheTeamPage } from './joinTheTeamPage'
+import { portalLoginPage } from './portalLoginPage'
 
-export const schemaTypes = [tutorsSection, subjectsSection, featuresSection, qualificationsSection, homePage, aboutPage, foundersSection, medicineWorkshop, signUpPage, joinTheTeamPage] 
+export const schemaTypes = [tutorsSection, subjectsSection, featuresSection, qualificationsSection, homePage, aboutPage, foundersSection, medicineWorkshop, signUpPage, joinTheTeamPage, portalLoginPage] 

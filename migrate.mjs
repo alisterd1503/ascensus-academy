@@ -8,16 +8,16 @@ const client = createClient({
   useCdn: false,
 })
 
-const joinTheTeamPageData = {
-  _type: 'joinTheTeamPage',
-  _id: 'joinTheTeamPage',
-  heading: "Join The Team",
+const portalLoginPageData = {
+  _type: 'portalLoginPage',
+  _id: 'portalLoginPage',
+  heading: "Portal Login",
 }
 
-async function migrateJoinTheTeamPage() {
-  console.log('Migrating join the team page...')
-  await client.createOrReplace(joinTheTeamPageData)
-  console.log('Done migrating join the team page!')
+async function migratePortalLoginPage() {
+  console.log('Migrating portal login page...')
+  await client.createOrReplace(portalLoginPageData)
+  console.log('Done migrating portal login page!')
 }
 
-migrateJoinTheTeamPage().catch(console.error)
+migratePortalLoginPage().catch(console.error)
