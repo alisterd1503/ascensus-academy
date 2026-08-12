@@ -6,6 +6,7 @@ import { Reveal } from "../components/Reveal";
 import UsePageMeta from "../hooks/UsePageMeta";
 import { MedicineWorkshop } from "../types";
 import { getMedicineWorkshop } from "../lib/queries";
+import { urlFor } from "../lib/sanity";
 
 const MedWorkshop: React.FC = () => {
   const [medicineWorkshop, setMedicineWorkshop] = useState<MedicineWorkshop | null>(null);
@@ -63,7 +64,7 @@ const MedWorkshop: React.FC = () => {
                 <div className="w-full overflow-hidden rounded-md shadow-md max-h-[285px] order-2">
                   <img
                     loading="lazy"
-                    src={medicineWorkshop.image}
+                    src={medicineWorkshop.image ? urlFor(medicineWorkshop.image).url() : '/uploads/med-workshop.webp'}
                     alt="Medicine Workshop"
                     className="w-full h-full object-cover"
                   />

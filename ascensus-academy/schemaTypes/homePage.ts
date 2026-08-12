@@ -47,6 +47,7 @@ export const homePage = defineType({
         defineField({ name: 'text', title: 'Text', type: 'text' }),
         defineField({ name: 'primaryButtonLabel', title: 'Primary Button Label', type: 'string' }),
         defineField({ name: 'secondaryButtonLabel', title: 'Secondary Button Label', type: 'string' }),
+        defineField({ name: 'image', title: 'Background Image', type: 'image', options: { hotspot: true } }),
       ]
     }),
   ]

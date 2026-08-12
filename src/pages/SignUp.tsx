@@ -5,6 +5,7 @@ import { Reveal } from "../components/Reveal";
 import UsePageMeta from "../hooks/UsePageMeta";
 import type { SignUpPage } from "../types";
 import { getSignUpPage } from "../lib/queries";
+import { urlFor } from "../lib/sanity";
 
 const SignUpPage: React.FC = () => {
   const [signUpPage, setSignUpPage] = useState<SignUpPage | null>(null);
@@ -15,6 +16,7 @@ const SignUpPage: React.FC = () => {
     }, []);
 
   useEffect(() => {
+    if (!signUpPage) return;
     if (!scriptContainer.current) return;
 
     // Prevent multiple scripts (React 18 StrictMode)
@@ -25,9 +27,7 @@ const SignUpPage: React.FC = () => {
       script.async = true;
       scriptContainer.current.appendChild(script);
     }
-  }, []);
-
-  if (!signUpPage) return null;
+  }, [signUpPage]);
 
   UsePageMeta({
     title: "Sign Up – Ascensus Academy",
@@ -35,6 +35,8 @@ const SignUpPage: React.FC = () => {
     url: "https://ascensusacademy.com/sign-up",
     image: "/uploads/ascensus-academy.jpg",
   });
+
+  if (!signUpPage) return null;
 
   return (
     <MainLayout>
@@ -49,7 +51,7 @@ const SignUpPage: React.FC = () => {
                 {/* Workshop Image */}
                 <div className="w-full overflow-hidden rounded-md shadow-md h-[200px] sm:h-auto">
                     <img
-                      src={signUpPage.image}
+                      src={signUpPage.image ? urlFor(signUpPage.image).url() : '/uploads/sign-up.webp'}
                       alt="Sign Up"
                       className="w-full h-full object-cover"
                     />

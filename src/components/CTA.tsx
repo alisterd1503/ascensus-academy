@@ -1,11 +1,13 @@
 import React from 'react';
 import { Reveal } from './Reveal';
+import { urlFor } from '../lib/sanity';
 
 interface HomeCTA {
   title: string;
   text: string;
   primaryButtonLabel: string;
   secondaryButtonLabel: string;
+  image: string;
 }
 
 interface Props {
@@ -18,7 +20,7 @@ const CTA: React.FC<Props> = ({ cta }) => {
       <div className="absolute inset-0 opacity-10 mix-blend-overlay">
         <img
           loading="lazy"
-          src="/uploads/med-workshop.webp"
+          src={cta.image ? urlFor(cta.image).url() : '/uploads/med-workshop.webp'}
           alt="Medicine Workshop"
           className="w-full h-full object-cover"
         />
