@@ -6,5 +6,6 @@ import { qualificationsSection } from './qualificationsSection'
 import { homePage } from './homePage'
 import { aboutPage } from './aboutPage'
 import { medicineWorkshop } from './medicineWorkshop'
+import { signUpPage } from './signUpPage'
 
-export const schemaTypes = [tutorsSection, subjectsSection, featuresSection, qualificationsSection, homePage, aboutPage, foundersSection, medicineWorkshop] 
+export const schemaTypes = [tutorsSection, subjectsSection, featuresSection, qualificationsSection, homePage, aboutPage, foundersSection, medicineWorkshop, signUpPage] 

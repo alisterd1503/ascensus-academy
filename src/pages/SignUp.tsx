@@ -1,11 +1,18 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import MainLayout from "../layouts/MainLayout";
 import PageHeader from "../components/PageHeader";
 import { Reveal } from "../components/Reveal";
 import UsePageMeta from "../hooks/UsePageMeta";
+import type { SignUpPage } from "../types";
+import { getSignUpPage } from "../lib/queries";
 
 const SignUpPage: React.FC = () => {
+  const [signUpPage, setSignUpPage] = useState<SignUpPage | null>(null);
   const scriptContainer = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+      getSignUpPage().then(setSignUpPage);
+    }, []);
 
   useEffect(() => {
     if (!scriptContainer.current) return;
@@ -20,6 +27,8 @@ const SignUpPage: React.FC = () => {
     }
   }, []);
 
+  if (!signUpPage) return null;
+
   UsePageMeta({
     title: "Sign Up – Ascensus Academy",
     description: "Register with Ascensus Academy to access personalised tutoring, mentorship, and expert support from A* tutors for GCSE and A-Level students.",
@@ -29,19 +38,19 @@ const SignUpPage: React.FC = () => {
 
   return (
     <MainLayout>
-      <PageHeader title="Sign Up" />
+      <PageHeader title={signUpPage.heading} />
       <Reveal>
         <section className="py-10 bg-white">
           <div className="max-w-7xl mx-auto px-6">
             <h2 className="text-2xl md:text-4xl font-bold text-primary mb-4 md:mb-8 text-center">
-              Sign Up For a Free Consultation Call
+              {signUpPage.subheading}
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch rounded-md">
                 {/* Workshop Image */}
                 <div className="w-full overflow-hidden rounded-md shadow-md h-[200px] sm:h-auto">
                     <img
-                      src="/uploads/sign-up.webp"
-                      alt="Medicine Workshop"
+                      src={signUpPage.image}
+                      alt="Sign Up"
                       className="w-full h-full object-cover"
                     />
                 </div>

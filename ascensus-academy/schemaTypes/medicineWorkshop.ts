@@ -6,6 +6,7 @@ export const medicineWorkshop = defineType({
   type: 'document',
   fields: [
     defineField({ name: 'heading', title: 'Heading', type: 'string' }),
+    defineField({ name: 'image', title: 'Background Image', type: 'image', options: { hotspot: true } }),
     defineField({
       name: 'information',
       title: 'Information',

@@ -8,73 +8,17 @@ const client = createClient({
   useCdn: false,
 })
 
-const subjectsSectionData = {
-  _type: 'subjectsSection',
-  _id: 'subjectsSection',
-  title: "Subjects We Cover",
-  subjects: [
-    {
-      _key: 'biology',
-      subject: "Biology",
-      order: 1,
-    },
-    {
-      _key: 'chemistry',
-      subject: "Chemistry",
-      order: 2,
-    },
-    {
-      _key: 'physics',
-      subject: "Physics",
-      order: 3,
-    },
-    {
-      _key: 'maths',
-      subject: "Maths",
-      order: 4,
-    },
-    {
-      _key: 'further-maths',
-      subject: "Further Maths",
-      order: 5,
-    },
-    {
-      _key: 'economics',
-      subject: "Economics",
-      order: 6,
-    },
-    {
-      _key: 'business',
-      subject: "Business",
-      order: 7,
-    },
-    {
-      _key: 'english-lit',
-      subject: "English Literature",
-      order: 8,
-    },
-    {
-      _key: 'english-lan',
-      subject: "English Language",
-      order: 9,
-    },
-    {
-      _key: 'history',
-      subject: "History",
-      order: 10,
-    },
-    {
-      _key: 'psychology',
-      subject: "Psychology",
-      order: 11,
-    }
-  ]
+const signUpPageData = {
+  _type: 'signUpPage',
+  _id: 'signUpPage',
+  heading: "Sign Up",
+  subheading: "Sign Up For a Free Consultation Call",
 }
 
-async function migrateSubjectsSection() {
-  console.log('Migrating subjects section...')
-  await client.createOrReplace(subjectsSectionData)
-  console.log('Done migrating subjects section!')
+async function migrateSignUpPage() {
+  console.log('Migrating sign up page...')
+  await client.createOrReplace(signUpPageData)
+  console.log('Done migrating sign up page!')
 }
 
-migrateSubjectsSection().catch(console.error)
+migrateSignUpPage().catch(console.error)

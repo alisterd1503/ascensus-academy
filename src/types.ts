@@ -132,6 +132,7 @@ export interface QualificationSection {
 
 export interface MedicineWorkshop {
   heading: string;
+  image: string;
   information: Qualification;
 }
 
@@ -145,4 +146,10 @@ export interface EmailJS {
   serviceId: string;
   templateId: string;
   publicKey: string;
+}
+
+export interface SignUpPage {
+  heading: string;
+  subheading: string;
+  image: string;
 }

@@ -1,4 +1,4 @@
-import { NavItem, Subjects, Contact, EmailJS, HomePage, AboutPage, FeatureSection, TutorSection, FounderSection, QualificationSection, Qualification, MedicineWorkshop, SubjectsSection } from './types';
+import { NavItem, Subjects, Contact, EmailJS, HomePage, AboutPage, FeatureSection, TutorSection, FounderSection, QualificationSection, Qualification, MedicineWorkshop, SubjectsSection, SignUpPage } from './types';
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'About Us', href: '/about-us', preserveCase: false },
@@ -279,6 +279,7 @@ export const QUALIFICATIONS: QualificationSection = {
 
 export const MED_WORKSHOP: MedicineWorkshop = {
   heading: "Medicine Interview Workshop",
+  image: "/uploads/med-workshop.webp",
   information: {
     _key: 'medicine',
     title: "Medicine Workshop",
@@ -291,6 +292,12 @@ export const MED_WORKSHOP: MedicineWorkshop = {
       "Comes with a <b>FREE</b> interview notes PDF collated by our team."
     ],
   }
+}
+
+export const SIGNUPPAGE: SignUpPage = {
+  heading: "Sign Up",
+  subheading: "Sign Up For a Free Consultation Call",
+  image: "/uploads/sign-up.webp",
 }
 
 export const CONTACT: Contact = {
