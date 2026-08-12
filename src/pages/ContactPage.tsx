@@ -1,12 +1,19 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import MainLayout from "../layouts/MainLayout";
 import PageHeader from "../components/PageHeader";
 import { Reveal } from "../components/Reveal";
-import { CONTACT } from "../constants";
 import UsePageMeta from "../hooks/UsePageMeta";
 import ContactForm from "../components/ContactForm";
+import { ContactUsPage } from "../types";
+import { getContactUsPage } from "../lib/queries";
+import { urlFor } from "../lib/sanity";
 
 const ContactPage: React.FC = () => {
+  const [contactUsPage, setContactUsPage] = useState<ContactUsPage | null>(null);
+
+  useEffect(() => {
+    getContactUsPage().then(setContactUsPage);
+  }, []);
 
   UsePageMeta({
     title: "Contact Ascensus Academy – Get in Touch",
@@ -15,9 +22,11 @@ const ContactPage: React.FC = () => {
     image: "/uploads/ascensus-academy.jpg",
   });
 
+  if (!contactUsPage) return null;
+
   return (
     <MainLayout>
-      <PageHeader title="Contact Us" />
+      <PageHeader title={contactUsPage.title} />
 
       {/* Main Content */}
       <Reveal>
@@ -28,7 +37,7 @@ const ContactPage: React.FC = () => {
               {/* Image */}
               <div className="overflow-hidden rounded-md shadow-md">
                 <img
-                  src="/uploads/contact-us.webp"
+                  src={contactUsPage.image ? urlFor(contactUsPage.image).url() : '/uploads/contact-us.webp'}
                   alt="Contact Us"
                   className="w-full h-full object-cover"
                 />
@@ -47,8 +56,8 @@ const ContactPage: React.FC = () => {
           <div className="container mx-auto flex justify-center">
             <div className="w-full max-w-7xl bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center">
 
-              <h3 className="text-xl font-bold mb-2">{CONTACT.title}</h3>
-              <p className="text-gray-700 mb-4">{CONTACT.description}</p>
+              <h3 className="text-xl font-bold mb-2">{contactUsPage.heading}</h3>
+              <p className="text-gray-700 mb-4">{contactUsPage.description}</p>
 
               <div className="flex justify-center items-center text-gray-700">
                 <svg
@@ -67,10 +76,10 @@ const ContactPage: React.FC = () => {
                 </svg>
 
                 <a
-                  href={`mailto:${CONTACT.email}`}
+                  href={`mailto:${contactUsPage.email}`}
                   className="text-primary-600 hover:text-primary-700"
                 >
-                  {CONTACT.email}
+                  {contactUsPage.email}
                 </a>
               </div>
 

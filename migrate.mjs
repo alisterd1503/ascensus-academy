@@ -8,16 +8,19 @@ const client = createClient({
   useCdn: false,
 })
 
-const portalLoginPageData = {
-  _type: 'portalLoginPage',
-  _id: 'portalLoginPage',
-  heading: "Portal Login",
+const contactUsPageData = {
+  _type: 'contactUsPage',
+  _id: 'contactUsPage',
+  title: "Contact Us",
+  heading: "General Queries",
+  description: "For all your general questions about our tutoring services, scheduling, or policies, please reach out to us at",
+  email: "contact@ascensusacademy.com",
 }
 
-async function migratePortalLoginPage() {
-  console.log('Migrating portal login page...')
-  await client.createOrReplace(portalLoginPageData)
-  console.log('Done migrating portal login page!')
+async function migrateContactUsPage() {
+  console.log('Migrating contact us page...')
+  await client.createOrReplace(contactUsPageData)
+  console.log('Done migrating contact us page!')
 }
 
-migratePortalLoginPage().catch(console.error)
+migrateContactUsPage().catch(console.error)

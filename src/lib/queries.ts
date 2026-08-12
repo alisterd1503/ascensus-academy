@@ -43,3 +43,7 @@ export async function getJoinTheTeamPage() {
 export async function getPortalLoginPage() {
   return client.fetch(`*[_type == "portalLoginPage"][0]`)
 }
+
+export async function getContactUsPage() {
+  return client.fetch(`*[_type == "contactUsPage"][0]`)
+}

@@ -136,10 +136,12 @@ export interface MedicineWorkshop {
   information: Qualification;
 }
 
-export interface Contact {
+export interface ContactUsPage {
   title: string;
+  heading: string;
   description: string;
   email: string;
+  image: string;
 }
 
 export interface EmailJS {

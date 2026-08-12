@@ -1,4 +1,4 @@
-import { NavItem, Contact, EmailJS, HomePage, AboutPage, FeatureSection, TutorSection, FounderSection, QualificationSection, MedicineWorkshop, SubjectsSection, SignUpPage, JoinTheTeamPage, PortalLoginPage } from './types';
+import { NavItem, EmailJS, HomePage, AboutPage, FeatureSection, TutorSection, FounderSection, QualificationSection, MedicineWorkshop, SubjectsSection, SignUpPage, JoinTheTeamPage, PortalLoginPage, ContactUsPage } from './types';
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'About Us', href: '/about-us', preserveCase: false },
@@ -310,11 +310,12 @@ export const LOGINPAGE: PortalLoginPage = {
   image: "/uploads/log-in.webp",
 }
 
-export const CONTACT: Contact = {
-    title: "General Queries",
-    description:
-      "For all your general questions about our tutoring services, scheduling, or policies, please reach out to us at",
-    email: "contact@ascensusacademy.com",
+export const CONTACT: ContactUsPage = {
+  title: "Contact Us",
+  heading: "General Queries",
+  description: "For all your general questions about our tutoring services, scheduling, or policies, please reach out to us at",
+  email: "contact@ascensusacademy.com",
+  image: "/uploads/contact-us.webp",
 }
 
 export const EMAILJS: EmailJS = {
