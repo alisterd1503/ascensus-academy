@@ -8,17 +8,16 @@ const client = createClient({
   useCdn: false,
 })
 
-const signUpPageData = {
-  _type: 'signUpPage',
-  _id: 'signUpPage',
-  heading: "Sign Up",
-  subheading: "Sign Up For a Free Consultation Call",
+const joinTheTeamPageData = {
+  _type: 'joinTheTeamPage',
+  _id: 'joinTheTeamPage',
+  heading: "Join The Team",
 }
 
-async function migrateSignUpPage() {
-  console.log('Migrating sign up page...')
-  await client.createOrReplace(signUpPageData)
-  console.log('Done migrating sign up page!')
+async function migrateJoinTheTeamPage() {
+  console.log('Migrating join the team page...')
+  await client.createOrReplace(joinTheTeamPageData)
+  console.log('Done migrating join the team page!')
 }
 
-migrateSignUpPage().catch(console.error)
+migrateJoinTheTeamPage().catch(console.error)

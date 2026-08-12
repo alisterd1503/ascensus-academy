@@ -1,13 +1,22 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import MainLayout from "../layouts/MainLayout";
 import PageHeader from "../components/PageHeader";
 import { Reveal } from "../components/Reveal";
 import UsePageMeta from "../hooks/UsePageMeta";
+import { JoinTheTeamPage } from "../types";
+import { getJoinTheTeamPage } from "../lib/queries";
+import { urlFor } from "../lib/sanity";
 
 const JoinPage: React.FC = () => {
+  const [joinTheTeamPage, setJoinTheTeamPage] = useState<JoinTheTeamPage | null>(null);
   const scriptContainer = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+        getJoinTheTeamPage().then(setJoinTheTeamPage);
+      }, []);
+
+  useEffect(() => {
+    if (!joinTheTeamPage) return;
     if (!scriptContainer.current) return;
 
     // Prevent multiple scripts (React 18 StrictMode)
@@ -18,7 +27,7 @@ const JoinPage: React.FC = () => {
       script.async = true;
       scriptContainer.current.appendChild(script);
     }
-  }, []);
+  }, [joinTheTeamPage]);
 
   UsePageMeta({
     title: "Join The Team – Become a Tutor at Ascensus Academy",
@@ -27,9 +36,11 @@ const JoinPage: React.FC = () => {
     image: "/uploads/ascensus-academy.jpg",
   });
 
+  if (!joinTheTeamPage) return null;
+
   return (
     <MainLayout>
-      <PageHeader title="Join The Team" />
+      <PageHeader title={joinTheTeamPage.heading} />
 
       <Reveal>
         <section className="py-16 bg-white">
@@ -38,7 +49,7 @@ const JoinPage: React.FC = () => {
                 {/* Workshop Image */}
                 <div className="w-full overflow-hidden rounded-md shadow-md h-[200px] sm:h-auto">
                   <img
-                    src="/uploads/join-us.webp"
+                    src={joinTheTeamPage.image ? urlFor(joinTheTeamPage.image).url() : '/uploads/join-us.webp'}
                     alt="Medicine Workshop"
                     className="w-full h-full object-cover"
                   />

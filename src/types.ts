@@ -153,3 +153,8 @@ export interface SignUpPage {
   subheading: string;
   image: string;
 }
+
+export interface JoinTheTeamPage {
+  heading: string;
+  image: string;
+}

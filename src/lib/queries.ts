@@ -35,3 +35,7 @@ export async function getMedicineWorkshop() {
 export async function getSignUpPage() {
   return client.fetch(`*[_type == "signUpPage"][0]`)
 }
+
+export async function getJoinTheTeamPage() {
+  return client.fetch(`*[_type == "joinTheTeamPage"][0]`)
+}
