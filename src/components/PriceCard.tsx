@@ -1,8 +1,8 @@
-import { Pricing } from "@/src/types";
+import { Qualification } from "@/src/types";
 import { Check } from 'lucide-react';
 
 interface Props {
-  item: Pricing;
+  item: Qualification;
 }
 
 const PricingCard: React.FC<Props> = ({ item }) => {

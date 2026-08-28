@@ -6,7 +6,7 @@ export const foundersSection = defineType({
   type: 'document',
   fields: [
     defineField({ name: 'title', title: 'Section Title', type: 'string', initialValue: 'Meet the Founders' }),
-    defineField({ name: 'subtitle', title: 'Section Subtitle', type: 'string', initialValue: "<span className='text-gray-900 font-bold'>Over 7 years of tutoring experience between us</span>, we built Ascensus Academy to deliver the kind of structured, high-impact support we felt was missing; focused not just on understanding, but on achieving top grades." }),
+    defineField({ name: 'subtitle', title: 'Section Subtitle', type: 'string', initialValue: "<span class='text-gray-900 font-bold'>Over 7 years of tutoring experience between us</span>, we built Ascensus Academy to deliver the kind of structured, high-impact support we felt was missing; focused not just on understanding, but on achieving top grades." }),
     defineField({
           name: 'founders',
           title: 'Founders',
