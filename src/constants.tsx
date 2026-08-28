@@ -59,7 +59,7 @@ export const ABOUTPAGE: AboutPage = {
 
 export const FOUNDERSECTION: FounderSection = {
   title: 'Meet The Founders',
-  subtitle: "<span className='text-gray-900 font-bold'>Over 7 years of tutoring experience between us</span>, we built Ascensus Academy to deliver the kind of structured, high-impact support we felt was missing; focused not just on understanding, but on achieving top grades.",
+  subtitle: "<span class='text-gray-900 font-bold'>Over 7 years of tutoring experience between us</span>, we built Ascensus Academy to deliver the kind of structured, high-impact support we felt was missing; focused not just on understanding, but on achieving top grades.",
   founders: [
     {
       _key: 'austin',
