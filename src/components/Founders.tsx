@@ -4,9 +4,9 @@ import { urlFor } from '../lib/sanity';
 import { Founder } from '../types';
 
 interface Props {
-  title: string;
-  subtitle: string;
-  founders: Founder[];
+  title?: string;
+  subtitle?: string;
+  founders?: Founder[];
 }
 
 const Founders: React.FC<Props> = ({ title, subtitle, founders = [] }) => {
@@ -19,7 +19,7 @@ const Founders: React.FC<Props> = ({ title, subtitle, founders = [] }) => {
           <div className="text-center mb-10 md:mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-primary">{title || 'Meet the Founders'}</h2>
             <div className="h-1 w-24 bg-primary mx-auto mt-6"></div>
-            <p className="mt-6 text-gray-600 text-xl font-light" dangerouslySetInnerHTML={{ __html: subtitle }}  />
+            <p className="mt-6 text-gray-600 text-xl font-light" dangerouslySetInnerHTML={{ __html: subtitle || "<span className='text-gray-900 font-bold'>Over 7 years of tutoring experience between us</span>, we built Ascensus Academy to deliver the kind of structured, high-impact support we felt was missing; focused not just on understanding, but on achieving top grades." }}  />
           </div>
         </Reveal>
 
