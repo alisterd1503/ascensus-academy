@@ -4,6 +4,13 @@ module.exports = {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  safelist: [
+    'font-semibold',
+    'font-bold',
+    'font-medium',
+    'text-gray-900',
+    'text-primary',
+  ],
   theme: {
     extend: {
       fontFamily: {
