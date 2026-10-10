@@ -20,8 +20,8 @@ const Footer: React.FC = () => {
                 <span className="text-3xl font-logo text-white leading-tight">
                   Ascensus Academy
                 </span>
-                <p className="text-gray-400 text-[10px] tracking-[0.38em] uppercase">
-                  For Students, By Students.
+                <p className="text-xs sm:text-xs md:text-xs text-gray-200 font-light tracking-[0.20em] md:tracking-[0.20em]">
+                  Your Goals. Our Guidance.
                 </p>
               </div>
             </div>
