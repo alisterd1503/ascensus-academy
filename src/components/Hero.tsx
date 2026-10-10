@@ -28,7 +28,7 @@ const Hero: React.FC<Props> = ({ hero }) => {
           <h1 className="text-4xl md:text-7xl sm:text-4xl text-white mb-0 md:mb-2 sm:mb-0 tracking-tight drop-shadow-lg">
             <span className="font-logo">{hero.title}</span>
           </h1>
-          <p className="text-sm sm:text-sm md:text-xl text-gray-200 mb-12 font-light tracking-[0.20em] md:tracking-[0.50em]">
+          <p className="text-sm sm:text-sm md:text-2xl text-gray-200 mb-12 font-light tracking-[0.20em] md:tracking-[0.20em]">
             {hero.tagline}
           </p>
 
